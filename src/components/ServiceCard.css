@@ -1,0 +1,121 @@
+/* ===========================
+   SERVICE CARD
+=========================== */
+
+.service-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 380px;
+
+  border: 1px solid #e8e8e8;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top blue line */
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #00a8d8,
+    #00c6ff
+  );
+}
+
+/* Hover */
+
+.service-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   ICON
+=========================== */
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #eef9fd;
+
+  color: #0099cc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 34px;
+
+  margin-bottom: 25px;
+
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  background: #0099cc;
+  color: #ffffff;
+
+  transform: rotate(8deg) scale(1.08);
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.service-card h2 {
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: #111;
+
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   DESCRIPTION
+=========================== */
+
+.service-card p {
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: #555;
+
+  margin-bottom: 35px;
+
+  flex-grow: 1;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.service-btn {
+  margin-top: auto;
+}

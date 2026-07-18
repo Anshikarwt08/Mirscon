@@ -1,0 +1,30 @@
+.section-title{
+text-align:center;
+}
+
+.section-title h2{
+
+font-size:58px;
+
+font-weight:700;
+
+color:#0099c7;
+}
+
+.section-line{
+
+width:180px;
+
+height:4px;
+
+margin:20px auto;
+
+border-radius:20px;
+
+background:linear-gradient(
+90deg,
+#00a3d7,
+#00d4ff
+);
+
+}

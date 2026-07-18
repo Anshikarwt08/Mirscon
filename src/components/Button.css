@@ -1,0 +1,35 @@
+.service-btn {
+  margin-top: auto;
+  width: fit-content;
+
+  padding: 14px 30px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #0099cc, #00b8e6);
+  color: #fff;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 18px rgba(0, 153, 204, 0.25);
+}
+
+.service-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #007fb3, #00a6d6);
+  box-shadow: 0 12px 25px rgba(0, 153, 204, 0.4);
+}
+
+.service-btn:active {
+  transform: scale(0.97);
+}
