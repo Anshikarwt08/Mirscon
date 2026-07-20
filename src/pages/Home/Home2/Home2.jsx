@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import "./Home2.css";
 
 const services = [
@@ -28,38 +29,70 @@ const services = [
 ];
 
 const stats = [
-  { number: "150+", title: "Client Base" },
-  { number: "500+", title: "Projects Completed" },
-  { number: "250+", title: "Talented Workforce" },
-  { number: "15+", title: "Awards Winning" },
+  { number: 150, suffix: "+", title: "Client Base" },
+  { number: 500, suffix: "+", title: "Projects Completed" },
+  { number: 250, suffix: "+", title: "Talented Workforce" },
+  { number: 15, suffix: "+", title: "Awards Winning" },
 ];
+
+function Counter({ end, suffix }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+
+    const duration = 2000; // 2 seconds
+    const increment = Math.ceil(end / (duration / 20));
+
+    const timer = setInterval(() => {
+      start += increment;
+
+      if (start >= end) {
+        setCount(end);
+        clearInterval(timer);
+      } else {
+        setCount(start);
+      }
+    }, 20);
+
+    return () => clearInterval(timer);
+  }, [end]);
+
+  return (
+    <h2>
+      {count}
+      {suffix}
+    </h2>
+  );
+}
 
 function Home2() {
   return (
     <section className="home2">
-
+      {/* Services */}
       <div className="services-grid">
         {services.map((service, index) => (
           <div className="service-card" key={index}>
-            <div className="service-icon">{service.icon}</div>
+            <div className="icon-box">
+              <div className="service-icon">{service.icon}</div>
+            </div>
 
             <h3>{service.title}</h3>
 
             <p>{service.description}</p>
-
           </div>
         ))}
       </div>
 
+      {/* Statistics */}
       <div className="stats-section">
         {stats.map((item, index) => (
           <div className="stat-card" key={index}>
-            <h2>{item.number}</h2>
+            <Counter end={item.number} suffix={item.suffix} />
             <p>{item.title}</p>
           </div>
         ))}
       </div>
-
     </section>
   );
 }
