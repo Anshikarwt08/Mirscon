@@ -1,16 +1,17 @@
 import "./App.css";
 import Header from "./pages/header/header";
-import ServiceCard from "./components/ServiceCard";
-import Service from "./pages/services/services";
+import Services from "./pages/services/services";
+import ContactBanner from "./pages/ContactBanner/ContactBanner";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      {/* <Header /> */}
-
-      <Service />
-
+      <Header />
+      <Services />
       
+      <ContactBanner />
+      <Footer />
     </>
   );
 }

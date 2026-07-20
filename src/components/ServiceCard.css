@@ -86,30 +86,25 @@
    TITLE
 =========================== */
 
-.service-card h2 {
-  font-size: 30px;
-
-  font-weight: 700;
-
-  color: #111;
-
-  margin-bottom: 20px;
+.service-card h2{
+    font-size: 22px;
+    margin-bottom: 16px;
+    line-height: 1.3;
 }
-
 /* ===========================
    DESCRIPTION
 =========================== */
 
-.service-card p {
-  font-size: 18px;
-
-  line-height: 1.8;
-
-  color: #555;
-
-  margin-bottom: 35px;
-
-  flex-grow: 1;
+.service-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 380px;   /* was around 450-500px */
+    border: 1px solid #ececec;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .35s;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===========================
