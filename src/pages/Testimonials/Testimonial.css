@@ -1,0 +1,136 @@
+.testimonial-section{
+    padding:100px 8%;
+    background:#f8fbff;
+    border-radius:40px;       /* Rounded corners */
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.testimonial-heading{
+    text-align:center;
+    font-size:42px;
+    color:#222;
+    margin-bottom:60px;
+}
+
+/* Swiper */
+
+.swiper{
+    padding-bottom:60px;
+}
+
+.swiper-slide{
+    transition:.4s;
+    transform:scale(.82);
+    opacity:.45;
+}
+
+.swiper-slide-active{
+    transform:scale(1);
+    opacity:1;
+}
+
+/* Card */
+
+.testimonial-card{
+    background:#fff;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+    position:relative;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-8px);
+}
+
+.testimonial-card::after{
+    content:"";
+    position:absolute;
+    bottom:-15px;
+    left:60px;
+
+    width:0;
+    height:0;
+
+    border-left:15px solid transparent;
+    border-right:15px solid transparent;
+    border-top:15px solid white;
+}
+
+.testimonial-text{
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+    min-height:170px;
+}
+
+/* User */
+
+.testimonial-user{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:30px;
+}
+
+.testimonial-user img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.testimonial-user h3{
+    font-size:22px;
+    color:#222;
+    margin-bottom:5px;
+}
+
+.testimonial-user span{
+    color:#888;
+}
+
+/* Arrows */
+
+.swiper-button-next,
+.swiper-button-prev{
+    color:#0099C7;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    transform:scale(1.1);
+}
+
+/* Pagination */
+
+.swiper-pagination-bullet{
+    width:12px;
+    height:12px;
+    background:#ccc;
+    opacity:1;
+}
+
+.swiper-pagination-bullet-active{
+    background:#0099C7;
+}
+
+/* Mobile */
+
+@media(max-width:992px){
+
+.testimonial-heading{
+    font-size:34px;
+}
+
+.testimonial-card{
+    padding:30px;
+}
+
+.testimonial-text{
+    min-height:auto;
+}
+
+}
