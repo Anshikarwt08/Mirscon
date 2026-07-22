@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function ServiceCard({ title, subTitle, icon, link }) {
   return (
     <div className="service-card">
-
       <div className="service-icon">
         {icon}
       </div>
@@ -17,7 +16,6 @@ function ServiceCard({ title, subTitle, icon, link }) {
       <Link to={link}>
         <Button text="More Details" />
       </Link>
-
     </div>
   );
 }

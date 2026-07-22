@@ -20,7 +20,7 @@ function QualityAutomation() {
 
           <h2>Quality Automation</h2>
 
-          <div className="line"></div>
+
 
           <p>
             Quality automation, also known as QA Automation or Test
@@ -53,8 +53,6 @@ function QualityAutomation() {
         <div className="service-content">
 
           <h2>QA Process</h2>
-
-          <div className="line"></div>
 
           <p>
             QA automation supports organizations that follow Agile and
@@ -93,8 +91,6 @@ function QualityAutomation() {
         <div className="service-content">
 
           <h2>Advantages of Quality Automation</h2>
-
-          <div className="line"></div>
 
           <ol className="advantages-list">
 
