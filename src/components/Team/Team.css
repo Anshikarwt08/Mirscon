@@ -1,0 +1,156 @@
+.team {
+    padding: 90px 8%;
+    background: #f8fbff;
+}
+
+.team-header {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.team-header span {
+    color:  #0077B6;;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.team-header h2 {
+    font-size: 46px;
+    margin: 15px 0;
+    color: #222;
+}
+
+.team-header p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.team-container {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    width: 340px;
+    background: #fff;
+    border-radius: 22px;
+    padding: 35px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0,0,0,.08);
+    transition: .35s;
+}
+
+.team-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 5px;
+    background: #0066CC;
+    transition: .35s;
+}
+
+.team-card:hover::before {
+    width: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,169,216,.18);
+}
+
+.team-image {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #eef8fc;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .35s;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.08);
+}
+
+.team-card h3 {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #222;
+}
+
+.team-card h4 {
+    margin: 10px 0 15px;
+    color: #0066CC;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.team-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.team-card a {
+    width: 48px;
+    height: 48px;
+    margin: 25px auto 0;
+    border-radius: 50%;
+    background: #eef8fc;
+    color: #0066CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: .35s;
+}
+
+.team-card a svg {
+    font-size: 20px;
+}
+
+.team-card a:hover {
+    background: #0066CC;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .team-container {
+        gap: 25px;
+    }
+
+    .team-card {
+        width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team {
+        padding: 70px 6%;
+    }
+
+    .team-header h2 {
+        font-size: 34px;
+    }
+
+    .team-card {
+        width: 100%;
+        max-width: 380px;
+    }
+}

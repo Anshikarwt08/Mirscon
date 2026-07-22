@@ -1,0 +1,98 @@
+import "./Team.css";
+import { FaLinkedinIn } from "react-icons/fa";
+
+import member1 from "../../assets/Mam.jpg";
+import member2 from "../../assets/Asir.jpg";
+import member3 from "../../assets/Rsir.jpg";
+
+function Team() {
+  return (
+    <section className="team">
+
+      <div className="team-header">
+        <span>OUR TEAM</span>
+
+        <h2>Meet Our Experts</h2>
+
+        <p>
+          Our talented professionals combine innovation, expertise, and
+          collaboration to deliver exceptional technology solutions for our
+          clients.
+        </p>
+      </div>
+
+      <div className="team-container">
+
+        <div className="team-card">
+          <div className="team-image">
+            <img src={member1} alt="John Doe, Chief Executive Officer" />
+          </div>
+
+          <h3>John Doe</h3>
+          <h4>Chief Executive Officer</h4>
+
+          <p>
+            Driving innovation and business growth through strategic leadership.
+          </p>
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit John Doe's LinkedIn profile"
+          >
+            <FaLinkedinIn aria-hidden="true" />
+          </a>
+        </div>
+
+        <div className="team-card">
+          <div className="team-image">
+            <img src={member2} alt="Jane Smith, Technical Director" />
+          </div>
+
+          <h3>Jane Smith</h3>
+          <h4>Technical Director</h4>
+
+          <p>
+            Leading engineering teams to build scalable and modern solutions.
+          </p>
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Jane Smith's LinkedIn profile"
+          >
+            <FaLinkedinIn aria-hidden="true" />
+          </a>
+        </div>
+
+        <div className="team-card">
+          <div className="team-image">
+            <img src={member3} alt="Alex Brown, Project Manager" />
+          </div>
+
+          <h3>Alex Brown</h3>
+          <h4>Project Manager</h4>
+
+          <p>
+            Ensuring successful project delivery with quality and efficiency.
+          </p>
+
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Alex Brown's LinkedIn profile"
+          >
+            <FaLinkedinIn aria-hidden="true" />
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default Team;
