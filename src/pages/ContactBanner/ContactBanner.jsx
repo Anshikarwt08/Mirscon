@@ -4,20 +4,24 @@ function ContactBanner() {
   return (
     <section className="contact-banner">
       <div className="banner-content">
-
         <div className="banner-text">
-          <h2>Talk to our expert</h2>
+          <h2>Ready to Transform Your Business?</h2>
 
           <p>
-            We're always looking for people who want to join us in our
-            pursuit and be part of a team that delivers on that promise.
+            Connect with our experienced team to discuss your project,
+            explore innovative solutions, and discover how Mirscon can
+            help you achieve your business goals.
           </p>
         </div>
 
-        <button className="contact-btn">
-          Contact Us
-        </button>
-
+        <a
+          href="YOUR_BOOKING_LINK_HERE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-btn"
+        >
+          Schedule a Consultation
+        </a>
       </div>
     </section>
   );

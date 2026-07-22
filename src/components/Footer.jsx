@@ -1,10 +1,6 @@
 import "./Footer.css";
 
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaGooglePlusG,
-} from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -34,9 +30,34 @@ function Footer() {
           </div>
 
           <div className="social">
-            <FaFacebookF />
-            <FaGooglePlusG />
-            <FaLinkedinIn />
+
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+
+            <a
+              href="https://www.google.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Google"
+            >
+              <FaGoogle />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/mirscon-technologies/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+
           </div>
         </div>
 

@@ -1,35 +1,26 @@
 .service-btn {
-  margin-top: auto;
-  width: fit-content;
-
-  padding: 14px 30px;
-
-  border: none;
-  border-radius: 12px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
 
   background: linear-gradient(135deg, #0099cc, #00b8e6);
-  color: #fff;
+  color: white;
 
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
+  text-decoration: none;
+
+  border: none;
+  border-radius: 50px;
 
   cursor: pointer;
 
   transition: all 0.3s ease;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 8px 18px rgba(0, 153, 204, 0.25);
+  box-shadow: 0 8px 20px rgba(0, 153, 204, 0.3);
 }
 
 .service-btn:hover {
+  background: linear-gradient(135deg, #007fb3, #0099cc);
   transform: translateY(-3px);
-  background: linear-gradient(135deg, #007fb3, #00a6d6);
   box-shadow: 0 12px 25px rgba(0, 153, 204, 0.4);
-}
-
-.service-btn:active {
-  transform: scale(0.97);
 }

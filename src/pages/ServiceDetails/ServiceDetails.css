@@ -1,0 +1,171 @@
+/* ===========================
+   Service Details
+=========================== */
+
+.service-details {
+  width: 92%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 80px 0;
+}
+
+/* ===========================
+   Row Layout
+=========================== */
+
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  margin-bottom: 120px;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===========================
+   Image
+=========================== */
+
+.service-image {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: 0.4s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.service-content {
+  flex: 1.2;
+  max-width: 720px;
+}
+
+.service-content h2 {
+  font-size: 46px;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.service-content p {
+  font-size: 20px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* ===========================
+   Advantages
+=========================== */
+
+.advantages-list {
+  padding-left: 20px;
+}
+
+.advantages-list li {
+  margin-bottom: 30px;
+}
+
+.advantages-list strong {
+  display: block;
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.advantages-list p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 992px) {
+
+  .service-row,
+  .service-row.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .service-content {
+    max-width: 100%;
+  }
+
+  .service-content h2 {
+    font-size: 46px;
+  }
+
+  .service-content p {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .advantages-list {
+    text-align: left;
+  }
+
+  .advantages-list strong {
+    font-size: 15px;
+  }
+
+  .advantages-list p {
+    font-size: 18px;
+  }
+
+  .service-image img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .service-details {
+    width: 94%;
+    padding: 50px 0;
+  }
+
+  .service-content h2 {
+    font-size: 30px;
+  }
+
+  .service-content p {
+    font-size: 17px;
+  }
+
+  .advantages-list strong {
+    font-size: 15px;
+  }
+
+  .advantages-list p {
+    font-size: 17px;
+  }
+
+  .service-image img {
+    max-width: 100%;
+  }
+}

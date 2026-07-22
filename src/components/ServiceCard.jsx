@@ -1,7 +1,8 @@
 import "./ServiceCard.css";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
-function ServiceCard({ title, subTitle, btnText, icon }) {
+function ServiceCard({ title, subTitle, icon, link }) {
   return (
     <div className="service-card">
 
@@ -13,10 +14,9 @@ function ServiceCard({ title, subTitle, btnText, icon }) {
 
       <p>{subTitle}</p>
 
-      <Button
-        text={btnText}
-        className="service-btn"
-      />
+      <Link to={link}>
+        <Button text="More Details" />
+      </Link>
 
     </div>
   );
