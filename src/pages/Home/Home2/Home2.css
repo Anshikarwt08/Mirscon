@@ -48,30 +48,35 @@
 
 /* Icon */
 
-.icon-box{
-    width:75px;
-    height:75px;
-    border-radius:50%;
-    background:#eef6ff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-bottom:25px;
-    transition:.4s;
+.service-icon {
+  font-size: 42px;
+  color: #0099C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.service-icon{
-    font-size:34px;
-    transition:.4s;
+.icon-box {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 153, 199, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
-.service-card:hover .icon-box{
-    background:#0099C7;
-    transform:rotate(10deg) scale(1.08);
+.service-card:hover .icon-box {
+  background: #0099C7;
+  transform: translateY(-6px);
 }
 
-.service-card:hover .service-icon{
-    transform:scale(1.15);
+.service-card:hover .service-icon {
+  color: #fff;
 }
 
 

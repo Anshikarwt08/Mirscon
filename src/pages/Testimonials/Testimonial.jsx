@@ -38,6 +38,12 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "CTO @ABC",
   },
+    {
+    text: "Working with Mirscon has been an amazing experience. Their technical expertise and communication exceeded our expectations.",
+    image: person4,
+    name: "Sarah Johnson",
+    role: "CTO @ABC",
+  },
 ];
 
 function Testimonial() {

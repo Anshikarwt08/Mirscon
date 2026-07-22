@@ -1,30 +1,37 @@
 import React, { useEffect, useState } from "react";
 import "./Home2.css";
 
+import {
+  FaRobot,
+  FaLaptopCode,
+  FaChartLine,
+  FaCloud,
+} from "react-icons/fa";
+
 const services = [
   {
     title: "Intelligent Automation",
     description:
       "Helping customers reap true benefits of automation through Business Process Automation, Robotic Process Automation and Cognitive Automation.",
-    icon: "⚙️",
+    icon: <FaRobot />,
   },
   {
     title: "Digital Transformation",
     description:
       "Transforming businesses with digital solutions to improve productivity and operational efficiency.",
-    icon: "💻",
+    icon: <FaLaptopCode />,
   },
   {
     title: "Differentiated Value",
     description:
       "Flexible delivery models including project based, outcome based and build operate transfer.",
-    icon: "📈",
+    icon: <FaChartLine />,
   },
   {
     title: "Cloud Services",
     description:
       "Cloud migration, maintenance and infrastructure supported by experienced professionals.",
-    icon: "☁️",
+    icon: <FaCloud />,
   },
 ];
 
@@ -41,7 +48,7 @@ function Counter({ end, suffix }) {
   useEffect(() => {
     let start = 0;
 
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
     const increment = Math.ceil(end / (duration / 20));
 
     const timer = setInterval(() => {
