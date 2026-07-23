@@ -55,7 +55,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://www.google.com/"
+              href="https://www.mirscon.com/industry.php/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Google"
@@ -64,7 +64,7 @@ function Footer() {
             </a>
 
             <a
-              href="https://www.linkedin.com/company/mirscon-technologies/"
+              href="https://www.linkedin.com/company/mirscon-consultants-llp/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

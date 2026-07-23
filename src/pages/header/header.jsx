@@ -1,8 +1,4 @@
 import "./header.css";
-// import logo from "./assets/Mirscon.png";
-
-// import mirsconLogo from "../assets/Mirscon.png";
-
 function Header() {
   return (
     <header className="mirscon-header">

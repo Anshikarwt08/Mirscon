@@ -2,8 +2,8 @@ import "./Team.css";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import member1 from "../../assets/Asir.jpg";
-import member2 from "../../assets/Rsir.jpg";
-import member3 from "../../assets/Mam.jpg";
+import member2 from "../../assets/Mam.jpg";
+import member3 from "../../assets/Rsir.jpg";
 
 function Team() {
   return (
@@ -36,7 +36,7 @@ function Team() {
 </p>
 
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/anand-chaudhary-921b2416/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit John Doe's LinkedIn profile"
@@ -50,13 +50,16 @@ function Team() {
             <img src={member2} alt="Jane Smith, Technical Director" />
           </div>
 
-          <h3>Rajat Sinha</h3>
-          <h4>Associate Director</h4>
-<p>
-  Leading cross functional teams to deliver scalable technology solutions and ensure successful project execution.
-</p>
+  
+            
+          <h3>Sunidhi Chauhan</h3>
+          <h4>Associate Vice President</h4>
+
+       <p>
+            Overseeing operations, client success, and strategic initiatives while delivering high quality business outcomes.  
+       </p>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/sunidhi-chauhan-1b71b6180/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Jane Smith's LinkedIn profile"
@@ -70,15 +73,13 @@ function Team() {
             <img src={member3} alt="Alex Brown, Project Manager" />
           </div>
 
-          <h3>Sunidhi Chauhan</h3>
-          <h4>Associate Vice President</h4>
-
-       <p>
-            Overseeing operations, client success, and strategic initiatives while delivering high quality business outcomes.  
-       </p>
-
+        <h3>Rajat Sinha</h3>
+          <h4>Associate Director</h4>
+<p>
+  Leading cross functional teams to deliver scalable technology solutions and ensure successful project execution.
+</p>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/rajat-sinha-949659251/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Alex Brown's LinkedIn profile"

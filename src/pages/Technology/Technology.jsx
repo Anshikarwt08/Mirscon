@@ -91,7 +91,7 @@ function Technology() {
 
             <img src={tech.image} alt={tech.name} />
 
-            <h4>{tech.name}</h4>
+            <h3>{tech.name}</h3>
 
             <p>{tech.category}</p>
 

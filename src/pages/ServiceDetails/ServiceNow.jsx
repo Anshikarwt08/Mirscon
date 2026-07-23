@@ -41,7 +41,7 @@ function ServiceNow() {
 
       {/* ==================== Implementation Process ==================== */}
 
-      <div className="service-row">
+      <div className="service-row reverse">
 
         <div className="service-image">
           <img src={workflow} alt="ServiceNow Implementation" />
@@ -84,7 +84,6 @@ function ServiceNow() {
           <ol className="advantages-list">
 
             <li>
-
               <strong>Workflow Automation</strong>
 
               <p>
@@ -92,11 +91,9 @@ function ServiceNow() {
                 effort, and increases operational efficiency across the
                 organization.
               </p>
-
             </li>
 
             <li>
-
               <strong>Improved Service Delivery</strong>
 
               <p>
@@ -104,11 +101,9 @@ function ServiceNow() {
                 experiences, and enhanced customer satisfaction through
                 streamlined workflows.
               </p>
-
             </li>
 
             <li>
-
               <strong>Scalability and Visibility</strong>
 
               <p>
@@ -116,7 +111,6 @@ function ServiceNow() {
                 supports organizational growth, and allows businesses to
                 adapt quickly to changing requirements.
               </p>
-
             </li>
 
           </ol>
