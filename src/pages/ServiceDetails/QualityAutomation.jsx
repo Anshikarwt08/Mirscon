@@ -20,8 +20,6 @@ function QualityAutomation() {
 
           <h2>Quality Automation</h2>
 
-
-
           <p>
             Quality automation, also known as QA Automation or Test
             Automation, improves the quality of software products.
@@ -50,6 +48,10 @@ function QualityAutomation() {
 
       <div className="service-row reverse">
 
+        <div className="service-image">
+          <img src={process} alt="QA Process" />
+        </div>
+
         <div className="service-content">
 
           <h2>QA Process</h2>
@@ -74,10 +76,6 @@ function QualityAutomation() {
 
         </div>
 
-        <div className="service-image">
-          <img src={process} alt="QA Process" />
-        </div>
-
       </div>
 
       {/* ==================== Advantages ==================== */}
@@ -85,7 +83,7 @@ function QualityAutomation() {
       <div className="service-row">
 
         <div className="service-image">
-          <img src={advantages} alt="Advantages" />
+          <img src={advantages} alt="Advantages of Quality Automation" />
         </div>
 
         <div className="service-content">
@@ -95,7 +93,6 @@ function QualityAutomation() {
           <ol className="advantages-list">
 
             <li>
-
               <strong>Reduces Testing Costs and Time</strong>
 
               <p>
@@ -104,11 +101,9 @@ function QualityAutomation() {
                 reduces operational costs, and delivers software to
                 customers more quickly.
               </p>
-
             </li>
 
             <li>
-
               <strong>Improves Product Quality</strong>
 
               <p>
@@ -116,7 +111,6 @@ function QualityAutomation() {
                 multiple devices and platforms, increasing test coverage,
                 reducing human errors, and improving software quality.
               </p>
-
             </li>
 
           </ol>

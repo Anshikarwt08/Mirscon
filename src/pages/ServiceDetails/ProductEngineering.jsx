@@ -42,7 +42,7 @@ function ProductEngineering() {
 
       {/* ==================== Product Development Lifecycle ==================== */}
 
-      <div className="service-row">
+      <div className="service-row reverse">
 
         <div className="service-image">
           <img src={lifecycle} alt="Product Development Lifecycle" />
@@ -85,7 +85,6 @@ function ProductEngineering() {
           <ol className="advantages-list">
 
             <li>
-
               <strong>Accelerated Time to Market</strong>
 
               <p>
@@ -93,11 +92,9 @@ function ProductEngineering() {
                 processes help businesses launch products faster while
                 maintaining high quality standards.
               </p>
-
             </li>
 
             <li>
-
               <strong>Scalable and Reliable Solutions</strong>
 
               <p>
@@ -105,11 +102,9 @@ function ProductEngineering() {
                 products remain secure, scalable, and capable of supporting
                 future business growth.
               </p>
-
             </li>
 
             <li>
-
               <strong>Continuous Innovation</strong>
 
               <p>
@@ -117,7 +112,6 @@ function ProductEngineering() {
                 emerging technologies enable businesses to remain
                 competitive and deliver exceptional customer experiences.
               </p>
-
             </li>
 
           </ol>

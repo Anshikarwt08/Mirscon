@@ -25,8 +25,22 @@ function Footer() {
           </p>
 
           <div className="contact-info">
-            <span>info@mirscon.com</span>
-            <span>+91 958 2221 555</span>
+            <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mirscon.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="contact-link"
+>
+  info@mirscon.com
+</a>
+
+            <a
+              href="https://wa.me/919582221555"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link">
+              +91 958 2221 555
+            </a>
           </div>
 
           <div className="social">

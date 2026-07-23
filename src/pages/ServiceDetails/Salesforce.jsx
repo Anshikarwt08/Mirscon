@@ -44,6 +44,10 @@ function Salesforce() {
 
       <div className="service-row reverse">
 
+        <div className="service-image">
+          <img src={process} alt="Salesforce Process" />
+        </div>
+
         <div className="service-content">
 
           <h2>Salesforce Process</h2>
@@ -63,10 +67,6 @@ function Salesforce() {
             operational efficiency.
           </p>
 
-        </div>
-
-        <div className="service-image">
-          <img src={process} alt="Salesforce Process" />
         </div>
 
       </div>

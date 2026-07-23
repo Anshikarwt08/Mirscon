@@ -8,16 +8,13 @@ function Integration() {
   return (
     <main className="service-details">
 
-      {/* ==================== Integration Technology Services ==================== */}
-
-      <div className="service-row">
-
+      {/* Integration Technology Services */}
+      <section className="service-row">
         <div className="service-image">
           <img src={integration} alt="Integration Technology Services" />
         </div>
 
         <div className="service-content">
-
           <h2>Integration Technology Services</h2>
 
           <p>
@@ -36,17 +33,16 @@ function Integration() {
             work, eliminate duplicate data, and streamline business
             operations.
           </p>
+        </div>
+      </section>
 
+      {/* Integration Technology Process */}
+      <section className="service-row reverse">
+        <div className="service-image">
+          <img src={process} alt="Integration Technology Process" />
         </div>
 
-      </div>
-
-      {/* ==================== Integration Technology Process ==================== */}
-
-      <div className="service-row reverse">
-
         <div className="service-content">
-
           <h2>Integration Technology Process</h2>
 
           <p>
@@ -64,70 +60,51 @@ function Integration() {
             service, and enables organizations to deliver a better customer
             experience.
           </p>
-
         </div>
+      </section>
 
-        <div className="service-image">
-          <img src={process} alt="Integration Technology Process" />
-        </div>
-
-      </div>
-
-      {/* ==================== Benefits ==================== */}
-
-      <div className="service-row">
-
+      {/* Benefits */}
+      <section className="service-row">
         <div className="service-image">
           <img src={benefits} alt="Benefits of Technology Integration" />
         </div>
 
         <div className="service-content">
-
           <h2>Benefits of Technology Integration</h2>
 
           <ol className="advantages-list">
-
             <li>
               <strong>Improved Productivity and Efficiency</strong>
-
               <p>
                 Integrated systems eliminate repetitive tasks and reduce
                 manual data entry by automatically sharing information
                 across business applications. This saves time, minimizes
                 errors, and improves overall productivity.
               </p>
-
             </li>
 
             <li>
               <strong>Better Communication and Collaboration</strong>
-
               <p>
                 Connected systems allow employees to work with the same
-                real time information, making communication, teamwork, and
+                real-time information, making communication, teamwork, and
                 collaboration more efficient across departments and
                 locations.
               </p>
-
             </li>
 
             <li>
               <strong>Scalability and Business Growth</strong>
-
               <p>
-                Technology integration supports long term business growth
+                Technology integration supports long-term business growth
                 by improving workflows, increasing customer satisfaction,
                 simplifying operations, and making it easier to adopt new
                 technologies as the organization expands.
               </p>
-
             </li>
-
           </ol>
-
         </div>
-
-      </div>
+      </section>
 
     </main>
   );

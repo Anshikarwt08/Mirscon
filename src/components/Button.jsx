@@ -2,9 +2,9 @@ import "./Button.css";
 
 function Button({ text }) {
   return (
-    <button className="service-btn">
+    <div className="service-btn">
       {text}
-    </button>
+    </div>
   );
 }
 

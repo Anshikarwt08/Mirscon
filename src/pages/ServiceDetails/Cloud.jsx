@@ -17,7 +17,6 @@ function Cloud() {
         </div>
 
         <div className="service-content">
-
           <h2>Cloud Services</h2>
 
           <p>
@@ -33,7 +32,6 @@ function Cloud() {
             improve flexibility, and support remote work while ensuring
             high availability and business continuity.
           </p>
-
         </div>
 
       </div>
@@ -41,6 +39,10 @@ function Cloud() {
       {/* ==================== Cloud Process ==================== */}
 
       <div className="service-row reverse">
+
+        <div className="service-image">
+          <img src={cloudProcess} alt="Cloud Process" />
+        </div>
 
         <div className="service-content">
 
@@ -58,10 +60,6 @@ function Cloud() {
             scalability as business demands grow.
           </p>
 
-        </div>
-
-        <div className="service-image">
-          <img src={cloudProcess} alt="Cloud Process" />
         </div>
 
       </div>
@@ -82,34 +80,28 @@ function Cloud() {
 
             <li>
               <strong>Scalability</strong>
-
               <p>
                 Cloud resources can easily be increased or reduced based on
                 business needs, allowing organizations to grow without major
                 infrastructure investments.
               </p>
-
             </li>
 
             <li>
               <strong>Cost Efficiency</strong>
-
               <p>
                 Businesses pay only for the resources they use, reducing
                 hardware, maintenance, and operational costs.
               </p>
-
             </li>
 
             <li>
               <strong>Security and Reliability</strong>
-
               <p>
                 Cloud platforms provide secure data storage, regular
                 backups, disaster recovery, and high system availability to
                 protect business information.
               </p>
-
             </li>
 
           </ol>

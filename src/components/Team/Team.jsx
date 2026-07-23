@@ -1,8 +1,8 @@
 import "./Team.css";
 import { FaLinkedinIn } from "react-icons/fa";
 
-import member1 from "../../assets/Mam.jpg";
-import member2 from "../../assets/Asir.jpg";
+import member1 from "../../assets/Asir.jpg";
+import member2 from "../../assets/Mam.jpg";
 import member3 from "../../assets/Rsir.jpg";
 
 function Team() {
@@ -10,9 +10,9 @@ function Team() {
     <section className="team">
 
       <div className="team-header">
-        <span>OUR TEAM</span>
+    
 
-        <h2>Meet Our Experts</h2>
+        <h2>OUR TEAM</h2>
 
         <p>
           Our talented professionals combine innovation, expertise, and
@@ -28,8 +28,8 @@ function Team() {
             <img src={member1} alt="John Doe, Chief Executive Officer" />
           </div>
 
-          <h3>John Doe</h3>
-          <h4>Chief Executive Officer</h4>
+          <h3>Anand Chaudhary</h3>
+          <h4>Director</h4>
 
           <p>
             Driving innovation and business growth through strategic leadership.
@@ -50,7 +50,7 @@ function Team() {
             <img src={member2} alt="Jane Smith, Technical Director" />
           </div>
 
-          <h3>Jane Smith</h3>
+          <h3>Sunidhi Chauhan</h3>
           <h4>Technical Director</h4>
 
           <p>
@@ -72,7 +72,7 @@ function Team() {
             <img src={member3} alt="Alex Brown, Project Manager" />
           </div>
 
-          <h3>Alex Brown</h3>
+          <h3>Rajat Sinha</h3>
           <h4>Project Manager</h4>
 
           <p>

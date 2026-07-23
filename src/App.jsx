@@ -36,9 +36,9 @@ function App() {
       <Route path="/quality-automation" element={<QualityAutomation />} />
       <Route path="/salesforce" element={<Salesforce />} />
       <Route path="/integration" element={<Integration />} />
-<Route path="/servicenow" element={<ServiceNow />} />
-<Route path="/cloud" element={<Cloud />} />
-<Route path="/product-engineering" element={<ProductEngineering />} />
+      <Route path="/servicenow" element={<ServiceNow />} />
+      <Route path="/cloud" element={<Cloud />} />
+      <Route path="/product-engineering" element={<ProductEngineering />} />
     </Routes>
   );
 }
