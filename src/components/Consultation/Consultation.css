@@ -1,0 +1,92 @@
+.consultation-form{
+    width:100%;
+}
+
+.consultation-form h2{
+    font-size:34px;
+    color:#222;
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.consultation-form p{
+    text-align:center;
+    color:#666;
+    margin-bottom:30px;
+}
+
+.consultation-form form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea{
+
+    width:100%;
+    padding:15px 18px;
+
+    border:1px solid #d8d8d8;
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.consultation-form input:focus,
+.consultation-form select:focus,
+.consultation-form textarea:focus{
+
+    border-color:#00A9D8;
+}
+
+.date-time{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.consultation-form textarea{
+
+    resize:none;
+}
+
+.consultation-form button{
+
+    background:#00A9D8;
+    color:#fff;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:17px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.consultation-form button:hover{
+
+    background:#008dbc;
+}
+
+@media(max-width:768px){
+
+.date-time{
+
+grid-template-columns:1fr;
+
+}
+
+}

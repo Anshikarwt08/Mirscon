@@ -2,8 +2,8 @@ import "./Team.css";
 import { FaLinkedinIn } from "react-icons/fa";
 
 import member1 from "../../assets/Asir.jpg";
-import member2 from "../../assets/Mam.jpg";
-import member3 from "../../assets/Rsir.jpg";
+import member2 from "../../assets/Rsir.jpg";
+import member3 from "../../assets/Mam.jpg";
 
 function Team() {
   return (
@@ -31,9 +31,9 @@ function Team() {
           <h3>Anand Chaudhary</h3>
           <h4>Director</h4>
 
-          <p>
-            Driving innovation and business growth through strategic leadership.
-          </p>
+       <p>
+  Driving business strategy, innovation, and organizational growth through visionary leadership and industry expertise.
+</p>
 
           <a
             href="https://www.linkedin.com/"
@@ -50,13 +50,11 @@ function Team() {
             <img src={member2} alt="Jane Smith, Technical Director" />
           </div>
 
-          <h3>Sunidhi Chauhan</h3>
-          <h4>Technical Director</h4>
-
-          <p>
-            Leading engineering teams to build scalable and modern solutions.
-          </p>
-
+          <h3>Rajat Sinha</h3>
+          <h4>Associate Director</h4>
+<p>
+  Leading cross functional teams to deliver scalable technology solutions and ensure successful project execution.
+</p>
           <a
             href="https://www.linkedin.com/"
             target="_blank"
@@ -72,12 +70,12 @@ function Team() {
             <img src={member3} alt="Alex Brown, Project Manager" />
           </div>
 
-          <h3>Rajat Sinha</h3>
-          <h4>Project Manager</h4>
+          <h3>Sunidhi Chauhan</h3>
+          <h4>Associate Vice President</h4>
 
-          <p>
-            Ensuring successful project delivery with quality and efficiency.
-          </p>
+       <p>
+            Overseeing operations, client success, and strategic initiatives while delivering high quality business outcomes.  
+       </p>
 
           <a
             href="https://www.linkedin.com/"
