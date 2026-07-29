@@ -74,50 +74,95 @@ function Counter({ end, suffix }) {
 }
 
 function Home2() {
+
+  const handleServiceClick = (service) => {
+    console.log(service.title);
+
+    // Example:
+    // navigate("/services");
+    // or
+    // window.location.href = "/services";
+  };
+
   return (
     <section className="home2">
+
       {/* Services Heading */}
 
       <div className="services-heading">
-
         <h2>
           Innovative Technology Solutions for Modern Businesses
         </h2>
 
         <p>
-          We empower organizations with intelligent automation, digital
-          transformation, cloud solutions, and value-driven technology
-          services that accelerate business growth.
+          We empower organizations with intelligent automation,
+          digital transformation, cloud solutions, and
+          value-driven technology services that accelerate
+          business growth.
         </p>
       </div>
 
-      {/* Services Grid */}
+      {/* Services */}
 
       <div className="services-grid">
+
         {services.map((service, index) => (
-          <article className="service-card" key={index}>
+
+          <article
+            key={index}
+            className="service-card"
+            tabIndex={0}
+            role="button"
+            aria-label={service.title}
+            onClick={() => handleServiceClick(service)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleServiceClick(service);
+              }
+            }}
+          >
+
             <div className="icon-box">
-              <div className="service-icon">{service.icon}</div>
+              <div className="service-icon">
+                {service.icon}
+              </div>
             </div>
 
             <h3>{service.title}</h3>
 
             <p>{service.description}</p>
+
           </article>
+
         ))}
+
       </div>
 
       {/* Statistics */}
 
       <div className="stats-section">
+
         {stats.map((item, index) => (
-          <div className="stat-card" key={index}>
-            <Counter end={item.number} suffix={item.suffix} />
+
+          <div
+            key={index}
+            className="stat-card"
+          >
+
+            <Counter
+              end={item.number}
+              suffix={item.suffix}
+            />
 
             <p>{item.title}</p>
+
           </div>
+
         ))}
+
       </div>
+
     </section>
   );
 }

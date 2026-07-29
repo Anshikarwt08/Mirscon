@@ -80,6 +80,9 @@
 /* ===========================
    Navigation
 =========================== */
+/* ===========================
+   Navigation
+=========================== */
 
 .nav-links {
     display: flex;
@@ -94,13 +97,15 @@
     color: #1F2937;
     font-size: 17px;
     font-weight: 500;
-    transition: .3s;
+    transition: color .3s;
 }
 
+/* Mouse hover only */
 .nav-links a:hover {
     color: #0099C7;
 }
 
+/* Underline */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -109,20 +114,53 @@
     width: 0;
     height: 2px;
     background: #0099C7;
-    transition: .3s;
+    transition: width .3s;
 }
 
-.nav-links a:hover::after,
-.nav-links a:focus-visible::after {
+.nav-links a:hover::after {
     width: 100%;
+}
+
+/* Keyboard focus */
+.nav-links a:focus {
+    outline: none;
 }
 
 .nav-links a:focus-visible {
     outline: 3px solid #0099C7;
     outline-offset: 4px;
     border-radius: 4px;
+
+    /* Prevent colour change */
+    color: #1F2937;
 }
 
+.nav-links a:focus-visible::after {
+    width: 0;
+}
+
+.career-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    font: inherit;
+    font-size: 17px;
+    font-weight: 500;
+    color: #1F2937;
+
+    padding: 0;
+}
+
+.career-btn:hover {
+    color: #0099C7;
+}
+
+.career-btn:focus-visible {
+    outline: 3px solid #0099C7;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
 /* ===========================
    Contact Button
 =========================== */
@@ -161,18 +199,21 @@
     font-size: 32px;
 }
 
+.menu-btn:hover {
+    color: #1F2937;
+    background: transparent;
+}
+
+.menu-btn:focus {
+    outline: none;
+}
+
 .menu-btn:focus-visible {
     outline: 3px solid #0099C7;
     outline-offset: 4px;
     border-radius: 6px;
-}
-
-.mobile-contact-btn {
-    display: none;
-}
-
-.menu-overlay {
-    display: none;
+    color: #1F2937;
+    background: transparent;
 }
 
 /* ===========================

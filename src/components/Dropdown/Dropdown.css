@@ -1,0 +1,202 @@
+/* ===============================
+   Dropdown Container
+================================== */
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Remove header underline only for dropdown */
+.dropdown .dropdown-toggle::after,
+.dropdown .dropdown-item::after {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+}
+
+/* ===============================
+   Toggle Button
+================================== */
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 0;
+
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.dropdown-toggle:hover {
+  background: transparent;
+  color: inherit;
+}
+
+.dropdown-toggle:hover::after,
+.dropdown-toggle:focus-visible::after {
+  content: none !important;
+  width: 0 !important;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+}
+
+.dropdown-toggle:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* ===============================
+   Arrow
+================================== */
+
+.dropdown-icon {
+  font-size: 16px;
+  transition: transform 0.25s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* ===============================
+   Dropdown Menu
+================================== */
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+
+  min-width: 240px;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  padding: 8px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+
+  z-index: 999;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ===============================
+   Items
+================================== */
+
+.dropdown-item {
+  display: block;
+
+  padding: 12px 18px;
+
+  text-decoration: none;
+  color: #374151;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  outline: none;
+}
+
+.dropdown-item:hover {
+  background: transparent;
+  color: inherit;
+}
+
+.dropdown-item:hover::after,
+.dropdown-item:focus-visible::after {
+  content: none !important;
+  width: 0 !important;
+}
+
+.dropdown-item:focus {
+  outline: none;
+}
+
+.dropdown-item:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: -3px;
+  border-radius: 4px;
+}
+
+/* ===============================
+   Mobile
+================================== */
+
+@media (max-width: 768px) {
+
+  .dropdown {
+    width: 100%;
+    display: block;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 14px 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+
+    display: none;
+
+    min-width: 100%;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    margin-top: 6px;
+    padding-left: 18px;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    pointer-events: auto;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-item {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}

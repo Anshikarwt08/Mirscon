@@ -1,0 +1,321 @@
+/* ==========================
+   Career Heading
+========================== */
+
+#career-title{
+    font-size:32px;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:10px;
+}
+
+.career-description{
+    color:#6B7280;
+    font-size:15px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+/* ==========================
+   Form Layout
+========================== */
+
+.career-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.file-upload,
+.submit-btn{
+    grid-column:1/-1;
+}
+
+/* ==========================
+   Form Group
+========================== */
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.form-group label{
+    font-size:14px;
+    font-weight:600;
+    color:#374151;
+}
+
+/* ==========================
+   Inputs
+========================== */
+
+.form-group input{
+
+    width:100%;
+    height:56px;
+
+    padding:0 18px;
+
+    border:1px solid #D7DEE7;
+    border-radius:14px;
+
+    background:#F8FAFC;
+
+    font-size:15px;
+    color:#111827;
+
+    transition:all .25s ease;
+}
+
+.form-group input::placeholder{
+    color:#9CA3AF;
+}
+
+.form-group input:hover{
+    border-color:#0099C7;
+}
+
+.form-group input:focus-visible{
+
+    outline:none;
+
+    border-color:#0099C7;
+
+    background:#fff;
+
+    box-shadow:
+    0 0 0 4px rgba(0,153,199,.12);
+
+}
+
+/* ==========================
+   Custom Select
+========================== */
+
+.select-wrapper{
+
+    position:relative;
+
+    width:100%;
+}
+
+.select-wrapper select{
+
+    width:100%;
+    height:56px;
+
+    padding:0 50px 0 18px;
+
+    border:1px solid #D7DEE7;
+    border-radius:14px;
+
+    background:#F8FAFC;
+
+    font-size:15px;
+    color:#111827;
+
+    cursor:pointer;
+
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    transition:all .25s ease;
+}
+
+.select-wrapper select:hover{
+
+    border-color:#0099C7;
+    background:#fff;
+
+}
+
+.select-wrapper select:focus-visible{
+
+    outline:none;
+
+    border-color:#0099C7;
+
+    background:#fff;
+
+    box-shadow:
+    0 0 0 4px rgba(0,153,199,.12);
+
+}
+
+.select-wrapper select option{
+
+    padding:12px;
+}
+
+/* Custom Arrow */
+
+.select-arrow{
+
+    position:absolute;
+
+    right:18px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#0099C7;
+
+    pointer-events:none;
+
+    transition:.3s;
+}
+
+.select-wrapper:hover .select-arrow{
+
+    transform:translateY(-50%) rotate(180deg);
+
+}
+
+/* ==========================
+   Resume Upload
+========================== */
+
+.file-upload input{
+
+    height:auto;
+
+    padding:18px;
+
+    border:2px dashed #CBD5E1;
+
+    background:#F8FAFC;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.file-upload input:hover{
+
+    border-color:#0099C7;
+
+    background:#F3FBFD;
+
+}
+
+.file-upload input::file-selector-button{
+
+    background:#0099C7;
+
+    color:#fff;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+    margin-right:15px;
+}
+
+.file-upload input::file-selector-button:hover{
+
+    background:#0078A3;
+
+}
+
+.file-upload small{
+
+    font-size:13px;
+
+    color:#6B7280;
+
+}
+
+/* ==========================
+   Submit Button
+========================== */
+
+.submit-btn{
+
+    margin-top:8px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#0099C7,#0069A8);
+
+    color:#fff;
+
+    font-size:16px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.submit-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 12px 24px rgba(0,153,199,.25);
+
+}
+
+.submit-btn:active{
+
+    transform:translateY(0);
+
+}
+
+.submit-btn:focus-visible{
+
+    outline:3px solid #0099C7;
+
+    outline-offset:4px;
+
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:768px){
+
+    .career-form{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+
+    }
+
+    .file-upload,
+    .submit-btn{
+
+        grid-column:auto;
+
+    }
+
+    #career-title{
+
+        font-size:26px;
+
+    }
+
+}

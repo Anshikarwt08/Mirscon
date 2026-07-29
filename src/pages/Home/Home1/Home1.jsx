@@ -47,21 +47,21 @@ function Home1() {
             <span className="check" aria-hidden="true">
               ✓
             </span>
-            VPAT
+            PDF Remediation
           </li>
 
           <li className="feature-pill">
             <span className="check" aria-hidden="true">
               ✓
             </span>
-            ADA Compliance
+            EPub
           </li>
 
           <li className="feature-pill">
             <span className="check" aria-hidden="true">
               ✓
             </span>
-            Manual Testing
+            PPT/Word Remediation
           </li>
         </ul>
       </div>

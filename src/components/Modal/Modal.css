@@ -1,0 +1,55 @@
+.modal-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.modal-content{
+    width:min(520px,92%);
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    position:relative;
+
+    animation:popup .25s ease;
+}
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:translateY(20px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+.modal-close{
+
+    position:absolute;
+
+    right:18px;
+    top:16px;
+
+    background:none;
+    border:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}

@@ -88,7 +88,7 @@
 }
 
 .primary-btn:focus-visible {
-    outline: 4px solid #f59e0b; 
+    outline: 4px solid #fff; 
     outline-offset: 4px;
 }
 
