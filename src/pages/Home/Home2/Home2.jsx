@@ -24,7 +24,7 @@ const services = [
   {
     title: "Differentiated Value",
     description:
-      "Flexible delivery models including project based, outcome based and build operate transfer.",
+      "Flexible delivery models including project-based, outcome-based and Build-Operate-Transfer engagements.",
     icon: <FaChartLine />,
   },
   {
@@ -39,7 +39,7 @@ const stats = [
   { number: 150, suffix: "+", title: "Client Base" },
   { number: 500, suffix: "+", title: "Projects Completed" },
   { number: 250, suffix: "+", title: "Talented Workforce" },
-  { number: 15, suffix: "+", title: "Awards Winning" },
+  { number: 15, suffix: "+", title: "Awards Won" },
 ];
 
 function Counter({ end, suffix }) {
@@ -66,20 +66,36 @@ function Counter({ end, suffix }) {
   }, [end]);
 
   return (
-    <h2>
+    <h3 className="counter-number">
       {count}
       {suffix}
-    </h2>
+    </h3>
   );
 }
 
 function Home2() {
   return (
     <section className="home2">
-      {/* Services */}
+      {/* Services Heading */}
+
+      <div className="services-heading">
+
+        <h2>
+          Innovative Technology Solutions for Modern Businesses
+        </h2>
+
+        <p>
+          We empower organizations with intelligent automation, digital
+          transformation, cloud solutions, and value-driven technology
+          services that accelerate business growth.
+        </p>
+      </div>
+
+      {/* Services Grid */}
+
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <article className="service-card" key={index}>
             <div className="icon-box">
               <div className="service-icon">{service.icon}</div>
             </div>
@@ -87,15 +103,17 @@ function Home2() {
             <h3>{service.title}</h3>
 
             <p>{service.description}</p>
-          </div>
+          </article>
         ))}
       </div>
 
       {/* Statistics */}
+
       <div className="stats-section">
         {stats.map((item, index) => (
           <div className="stat-card" key={index}>
             <Counter end={item.number} suffix={item.suffix} />
+
             <p>{item.title}</p>
           </div>
         ))}

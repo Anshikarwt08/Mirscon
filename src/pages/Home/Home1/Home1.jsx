@@ -1,62 +1,73 @@
 import "./Home1.css";
-import heroImg from "../../../assets/accessibility-hero.jpg";
 
 function Home1() {
   return (
-    <section className="hero">
-
-      <div className="hero-left">
-
+    <section
+      className="hero"
+      aria-labelledby="hero-heading"
+    >
+      <div className="hero-content">
         <h1 className="hero-title">
         <span className="line">
-          <span className="highlight">Empowering</span> Every
+          <span className="highlight">Building Digital Experiences</span>
         </span>
 
         <span className="line">
-          User Through <span className="highlight">Accessibility</span>
-        </span>
-
-        <span className="line">
-          Built for <span className="highlight">Impact</span>
+          <span className="highlight">Without</span> Barriers
         </span>
       </h1>
 
         <p className="hero-description">
-          Build accessible websites and applications with expert accessibility
-          testing, WCAG 2.2 compliance, remediation, and VPAT services that
-          create inclusive experiences for everyone.
+          Expert accessibility testing, remediation, and consulting services
+          designed to make your digital products usable for people of all
+          abilities.
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">
-            Get Accessibility Audit
-          </button>
-
-          <button className="secondary-btn">
-            Explore Services
+          <button
+            className="primary-btn"
+            aria-label="Explore Mirscon accessibility services"
+          >
+            Explore Services →
           </button>
         </div>
 
-        <div className="hero-features">
-          <div>✓ WCAG 2.2</div>
-          <div>✓ VPAT</div>
-          <div>✓ ADA Compliance</div>
-          <div>✓ Manual Testing</div>
-        </div>
+        <ul
+          className="hero-features"
+          aria-label="Accessibility services and standards"
+        >
+          <li className="feature-pill">
+            <span className="check" aria-hidden="true">
+              ✓
+            </span>
+            WCAG 2.2
+          </li>
 
+          <li className="feature-pill">
+            <span className="check" aria-hidden="true">
+              ✓
+            </span>
+            VPAT
+          </li>
+
+          <li className="feature-pill">
+            <span className="check" aria-hidden="true">
+              ✓
+            </span>
+            ADA Compliance
+          </li>
+
+          <li className="feature-pill">
+            <span className="check" aria-hidden="true">
+              ✓
+            </span>
+            Manual Testing
+          </li>
+        </ul>
       </div>
 
-      <div className="hero-right">
-
-        <div className="image-wrapper">
-          <img src={heroImg} alt="Accessibility" />
-        </div>
-
-      </div>
-
-      <div className="circle circle1"></div>
-      <div className="circle circle2"></div>
-
+      <div className="circle circle1" aria-hidden="true"></div>
+      <div className="circle circle2" aria-hidden="true"></div>
     </section>
   );
 }
