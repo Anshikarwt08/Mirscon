@@ -6,7 +6,7 @@
     margin-top: 20px;
     padding: 14px 32px;
 
-    background: linear-gradient(135deg, #0099cc, #00b8e6);
+    background: #005F80;
     color: #fff;
 
     font-size: 16px;
@@ -19,15 +19,20 @@
     cursor: pointer;
 
     transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 153, 204, 0.3);
+
+    /* Soft neutral shadow instead of blue glow */
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.10);
 
     outline: none;
 }
 
 .service-btn:hover {
-    background: linear-gradient(135deg, #007fb3, #0099cc);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 153, 204, 0.4);
+    background: #005F80;
+
+    transform: translateY(-2px);
+
+    /* Soft hover shadow */
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
 }
 
 .service-btn:focus {
@@ -35,9 +40,12 @@
 }
 
 .service-btn:focus-visible {
-    outline: none;
+    outline: 3px solid rgba(79, 107, 237, 0.35);
+    outline-offset: 3px;
 }
 
 .service-btn:active {
-    transform: translateY(-1px);
+    transform: translateY(0);
+
+    box-shadow: 0 3px 8px rgba(15, 23, 42, 0.10);
 }

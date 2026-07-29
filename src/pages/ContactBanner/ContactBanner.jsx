@@ -13,20 +13,28 @@ function ContactBanner() {
         <div className="banner-content">
 
           <div className="banner-text">
-            <h2>Ready to Transform Your Business?</h2>
+
+            <span className="banner-tag">
+              Let's Build Together
+            </span>
+
+            <h2>
+              Ready to Transform Your Business?
+            </h2>
 
             <p>
               Connect with our experienced team to discuss your project,
               explore innovative solutions, and discover how Mirscon can
               help you achieve your business goals.
             </p>
+
           </div>
 
           <button
             className="contact-btn"
             onClick={() => setIsConsultationOpen(true)}
           >
-            Schedule a Consultation
+            Schedule a Consultation →
           </button>
 
         </div>

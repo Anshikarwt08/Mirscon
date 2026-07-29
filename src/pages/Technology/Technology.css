@@ -4,11 +4,7 @@
 
 .technology {
     padding: 50px 8%;
-    background:
-        radial-gradient(circle at top left,#EAF8FF 0%,transparent 35%),
-        radial-gradient(circle at bottom right,#F5FBFF 0%,transparent 40%),
-        #ffffff;
-
+    background: #ffffff;
     overflow: hidden;
 }
 
@@ -99,43 +95,14 @@
 
     transition: .35s ease;
 }
-.logo-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    left:-120%;
-
-    width:120%;
-    height:100%;
-
-    background:
-    linear-gradient(
-        90deg,
-        transparent,
-        rgba(0,169,216,.12),
-        transparent
-    );
-
-    transition:.7s;
-}
-
-.logo-card:hover::before{
-
-    left:120%;
-}
 
 .logo-card:hover{
 
-    transform:
-    translateY(-10px);
+    transform:translateY(-6px);
 
-    border-color:#00A9D8;
+    border-color:#4F6BED;
 
-    box-shadow:
-    0 25px 60px rgba(0,169,216,.18);
+    box-shadow:0 12px 28px rgba(15,23,42,.08);
 }
 
 .logo-card img{

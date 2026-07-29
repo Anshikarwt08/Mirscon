@@ -1,92 +1,105 @@
-.consultation-form{
-    width:100%;
+.consultation-form {
+    width: 100%;
 }
 
-.consultation-form h2{
-    font-size:34px;
-    color:#222;
-    text-align:center;
-    margin-bottom:10px;
+.consultation-form h2 {
+    font-size: 34px;
+    color: #1E293B;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.consultation-form p{
-    text-align:center;
-    color:#666;
-    margin-bottom:30px;
+.consultation-form p {
+    text-align: center;
+    color: #64748B;
+    margin-bottom: 30px;
+    line-height: 1.7;
 }
 
-.consultation-form form{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+.consultation-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .consultation-form input,
 .consultation-form select,
-.consultation-form textarea{
+.consultation-form textarea {
+    width: 100%;
+    padding: 15px 18px;
 
-    width:100%;
-    padding:15px 18px;
+    border: 1px solid #D8DEE9;
+    border-radius: 12px;
 
-    border:1px solid #d8d8d8;
-    border-radius:10px;
+    font-size: 16px;
 
-    font-size:16px;
+    outline: none;
 
-    outline:none;
-
-    transition:.3s;
+    transition: 0.3s;
 }
 
 .consultation-form input:focus,
 .consultation-form select:focus,
-.consultation-form textarea:focus{
-
-    border-color:#00A9D8;
+.consultation-form textarea:focus {
+    border-color: #4F6BED;
+    box-shadow: 0 0 0 4px rgba(79,107,237,.12);
 }
 
-.date-time{
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
+.date-time {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
-.consultation-form textarea{
-
-    resize:none;
+.consultation-form textarea {
+    resize: vertical;
+    min-height: 140px;
 }
 
-.consultation-form button{
+/* Submit Button */
 
-    background:#00A9D8;
-    color:#fff;
+.consultation-form button {
 
-    border:none;
+    background: #4F6BED;
+    color: white;
 
-    padding:15px;
+    border: none;
 
-    border-radius:10px;
+    padding: 15px;
 
-    font-size:17px;
-    font-weight:600;
+    border-radius: 12px;
 
-    cursor:pointer;
+    font-size: 17px;
+    font-weight: 600;
 
-    transition:.3s;
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+    box-shadow: 0 6px 18px rgba(15,23,42,.10);
 }
 
-.consultation-form button:hover{
+.consultation-form button:hover {
 
-    background:#008dbc;
+    background: #3656E0;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba(15,23,42,.14);
 }
 
-@media(max-width:768px){
-
-.date-time{
-
-grid-template-columns:1fr;
-
+.consultation-form button:active {
+    transform: translateY(0);
 }
+
+@media (max-width:768px) {
+
+    .date-time {
+        grid-template-columns: 1fr;
+    }
+
+    .consultation-form h2 {
+        font-size: 28px;
+    }
 
 }
