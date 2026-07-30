@@ -7,11 +7,8 @@ import member3 from "../../assets/Rsir.jpg";
 
 function Team() {
   return (
-    <section className="team">
-
+    <section id="team" className="team">
       <div className="team-header">
-    
-
         <h2>OUR TEAM</h2>
 
         <p>
@@ -22,24 +19,24 @@ function Team() {
       </div>
 
       <div className="team-container">
-
         <div className="team-card">
           <div className="team-image">
-            <img src={member1} alt="John Doe, Chief Executive Officer" />
+            <img src={member1} alt="Anand Chaudhary, Director" />
           </div>
 
           <h3>Anand Chaudhary</h3>
           <h4>Director</h4>
 
-       <p>
-  Driving business strategy, innovation, and organizational growth through visionary leadership and industry expertise.
-</p>
+          <p>
+            Driving business strategy, innovation, and organizational growth
+            through visionary leadership and industry expertise.
+          </p>
 
           <a
             href="https://www.linkedin.com/in/anand-chaudhary-921b2416/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit John Doe's LinkedIn profile"
+            aria-label="Visit Anand Chaudhary's LinkedIn profile"
           >
             <FaLinkedinIn aria-hidden="true" />
           </a>
@@ -47,22 +44,22 @@ function Team() {
 
         <div className="team-card">
           <div className="team-image">
-            <img src={member2} alt="Jane Smith, Technical Director" />
+            <img src={member2} alt="Sunidhi Chauhan, Associate Vice President" />
           </div>
 
-  
-            
           <h3>Sunidhi Chauhan</h3>
           <h4>Associate Vice President</h4>
 
-       <p>
-            Overseeing operations, client success, and strategic initiatives while delivering high quality business outcomes.  
-       </p>
+          <p>
+            Overseeing operations, client success, and strategic initiatives
+            while delivering high quality business outcomes.
+          </p>
+
           <a
             href="https://www.linkedin.com/in/sunidhi-chauhan-1b71b6180/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit Jane Smith's LinkedIn profile"
+            aria-label="Visit Sunidhi Chauhan's LinkedIn profile"
           >
             <FaLinkedinIn aria-hidden="true" />
           </a>
@@ -70,26 +67,27 @@ function Team() {
 
         <div className="team-card">
           <div className="team-image">
-            <img src={member3} alt="Alex Brown, Project Manager" />
+            <img src={member3} alt="Rajat Sinha, Associate Director" />
           </div>
 
-        <h3>Rajat Sinha</h3>
+          <h3>Rajat Sinha</h3>
           <h4>Associate Director</h4>
-<p>
-  Leading cross functional teams to deliver scalable technology solutions and ensure successful project execution.
-</p>
+
+          <p>
+            Leading cross functional teams to deliver scalable technology
+            solutions and ensure successful project execution.
+          </p>
+
           <a
             href="https://www.linkedin.com/in/rajat-sinha-949659251/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit Alex Brown's LinkedIn profile"
+            aria-label="Visit Rajat Sinha's LinkedIn profile"
           >
             <FaLinkedinIn aria-hidden="true" />
           </a>
         </div>
-
       </div>
-
     </section>
   );
 }

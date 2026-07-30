@@ -3,10 +3,14 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./pages/Header/Header";
 import Services from "./pages/services/services";
 import Technology from "./pages/Technology/Technology";
-import Team from "./components/Team/Team";
 import ContactBanner from "./pages/ContactBanner/ContactBanner";
+
 import Footer from "./components/Footer/Footer";
 
+// About Page
+import About from "./pages/About/About";
+
+// Service Detail Pages
 import QualityAutomation from "./pages/ServiceDetails/QualityAutomation";
 import Salesforce from "./pages/ServiceDetails/Salesforce";
 import Integration from "./pages/ServiceDetails/Integration";
@@ -18,12 +22,13 @@ function MainPage() {
   return (
     <>
       <Header />
+
       <main>
         <Services />
         <Technology />
-        <Team />
         <ContactBanner />
       </main>
+
       <Footer />
     </>
   );
@@ -32,13 +37,42 @@ function MainPage() {
 function App() {
   return (
     <Routes>
+      {/* Home */}
       <Route path="/" element={<MainPage />} />
-      <Route path="/quality-automation" element={<QualityAutomation />} />
-      <Route path="/salesforce" element={<Salesforce />} />
-      <Route path="/integration" element={<Integration />} />
-      <Route path="/servicenow" element={<ServiceNow />} />
-      <Route path="/cloud" element={<Cloud />} />
-      <Route path="/product-engineering" element={<ProductEngineering />} />
+
+      {/* About */}
+      <Route path="/about" element={<About />} />
+
+      {/* Services */}
+      <Route
+        path="/quality-automation"
+        element={<QualityAutomation />}
+      />
+
+      <Route
+        path="/salesforce"
+        element={<Salesforce />}
+      />
+
+      <Route
+        path="/integration"
+        element={<Integration />}
+      />
+
+      <Route
+        path="/servicenow"
+        element={<ServiceNow />}
+      />
+
+      <Route
+        path="/cloud"
+        element={<Cloud />}
+      />
+
+      <Route
+        path="/product-engineering"
+        element={<ProductEngineering />}
+      />
     </Routes>
   );
 }

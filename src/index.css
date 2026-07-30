@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 /* ===========================
    Global Reset
 =========================== */
@@ -5,9 +7,9 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ===========================
@@ -15,7 +17,7 @@
 =========================== */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* ===========================
@@ -23,17 +25,16 @@ html {
 =========================== */
 
 body {
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 400;
-  color: #222222;
-  background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #222222;
+    background: linear-gradient(to right, #ffffff, #f4f6f8);
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* ===========================
@@ -46,10 +47,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  line-height: 1.3;
-  color: #111827;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111827;
 }
 
 /* ===========================
@@ -57,7 +58,7 @@ h6 {
 =========================== */
 
 p {
-  color: #4b5563;
+    color: #4B5563;
 }
 
 /* ===========================
@@ -65,8 +66,8 @@ p {
 =========================== */
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 /* ===========================
@@ -75,7 +76,7 @@ a {
 
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 /* ===========================
@@ -83,9 +84,9 @@ ol {
 =========================== */
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ===========================
@@ -96,13 +97,13 @@ button,
 input,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 button {
-  cursor: pointer;
-  border: none;
-  background: none;
+    cursor: pointer;
+    border: none;
+    background: none;
 }
 
 /* ===========================
@@ -110,6 +111,14 @@ button {
 =========================== */
 
 :focus-visible {
-  outline: 3px solid #0a84ff;
-  outline-offset: 3px;
+    outline: 3px solid #4F6BED;
+    outline-offset: 3px;
+}
+
+/* ===========================
+   Root
+=========================== */
+
+#root {
+    min-height: 100vh;
 }

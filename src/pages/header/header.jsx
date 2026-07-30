@@ -1,5 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
+
+import MirsconLogo from "../../assets/Mirscon.png";
 
 import { FaGlobe } from "react-icons/fa";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
@@ -30,15 +33,13 @@ function Header() {
     <header className="mirscon-header">
       {/* Logo */}
       <div className="mirscon-logo">
-        <img
-          src="https://www.mirscon.com/assets/images/logo.png"
-          alt="Mirscon Logo"
-        />
+        <Link to="/">
+          <img src={MirsconLogo} alt="Mirscon Logo" />
+        </Link>
       </div>
 
       {/* Navigation */}
       <nav className="mirscon-navbar">
-
         {/* About */}
         <div className="dropdown">
           <button className="dropdown-btn">
@@ -47,8 +48,18 @@ function Header() {
           </button>
 
           <div className="dropdown-content">
-            <a href="#about">{t("header.AboutUs")}</a>
-            <a href="#team">{t("header.OurTeam")}</a>
+            <Link to="/about">
+              {t("header.AboutUs")}
+            </Link>
+
+            <Link
+  to={{
+    pathname: "/about",
+    hash: "#team",
+  }}
+>
+  {t("header.OurTeam")}
+</Link>
           </div>
         </div>
 
@@ -71,14 +82,19 @@ function Header() {
         </div>
 
         {/* Industries */}
-        <a href="#industries">{t("header.Industries")}</a>
+        <a href="#industries">
+          {t("header.Industries")}
+        </a>
 
         {/* Careers */}
-        <a href="#careers">{t("header.Careers")}</a>
+        <a href="#careers">
+          {t("header.Careers")}
+        </a>
 
         {/* Contact */}
-        <a href="#contact">{t("header.ContactUs")}</a>
-
+        <a href="#contact">
+          {t("header.ContactUs")}
+        </a>
       </nav>
 
       {/* Language Selector */}
