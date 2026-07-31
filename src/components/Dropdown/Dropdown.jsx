@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiChevronDown } from "react-icons/fi";
 import "./Dropdown.css";
 
@@ -8,16 +8,10 @@ function Dropdown({ title, items, onItemClick }) {
 
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
+  const navigate = useNavigate();
 
-  const toggleDropdown = () => {
-    setIsOpen((prev) => !prev);
-  };
+  const closeDropdown = () => setIsOpen(false);
 
-  const closeDropdown = () => {
-    setIsOpen(false);
-  };
-
-  // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -29,13 +23,10 @@ function Dropdown({ title, items, onItemClick }) {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
+    return () =>
       document.removeEventListener("mousedown", handleClickOutside);
-    };
   }, []);
 
-  // Close on Escape
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape" && isOpen) {
@@ -45,18 +36,10 @@ function Dropdown({ title, items, onItemClick }) {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
+    return () =>
       document.removeEventListener("keydown", handleKeyDown);
-    };
   }, [isOpen]);
 
-  // Open on keyboard focus
-  const handleFocus = () => {
-    setIsOpen(true);
-  };
-
-  // Close only when focus leaves the entire dropdown
   const handleBlur = (event) => {
     if (
       dropdownRef.current &&
@@ -76,40 +59,56 @@ function Dropdown({ title, items, onItemClick }) {
         ref={buttonRef}
         type="button"
         className="dropdown-toggle"
-        aria-haspopup="menu"
-        aria-expanded={isOpen}
-        aria-controls={`${title}-menu`}
-        onClick={toggleDropdown}
-        onFocus={handleFocus}
+        onClick={() => setIsOpen(!isOpen)}
       >
         {title}
         <FiChevronDown
           className={`dropdown-icon ${isOpen ? "rotate" : ""}`}
-          aria-hidden="true"
         />
       </button>
 
-      <div
-        id={`${title}-menu`}
-        className={`dropdown-menu ${isOpen ? "show" : ""}`}
-        role="menu"
-        aria-hidden={!isOpen}
-      >
-        {items.map((item) => (
-          <Link
-            key={item.label}
-            to={item.to}
-            className="dropdown-item"
-            role="menuitem"
-            tabIndex={isOpen ? 0 : -1}
-            onClick={() => {
-              closeDropdown();
-              onItemClick?.();
-            }}
-          >
-            {item.label}
-          </Link>
-        ))}
+      <div className={`dropdown-menu ${isOpen ? "show" : ""}`}>
+        {items.map((item) => {
+          if (item.hash) {
+            return (
+              <button
+                key={item.label}
+                className="dropdown-item"
+                onClick={() => {
+                  closeDropdown();
+                  onItemClick?.();
+
+                  navigate(item.to);
+
+                  setTimeout(() => {
+                    const el = document.querySelector(item.hash);
+                    if (el) {
+                      el.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }
+                  }, 300);
+                }}
+              >
+                {item.label}
+              </button>
+            );
+          }
+
+          return (
+            <Link
+              key={item.label}
+              to={item.to}
+              className="dropdown-item"
+              onClick={() => {
+                closeDropdown();
+                onItemClick?.();
+              }}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

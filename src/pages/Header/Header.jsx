@@ -47,16 +47,17 @@ function Header() {
   // Dropdown Items
   // -----------------------------
 
-  const aboutItems = [
-    {
-      label: "About Us",
-      to: "/about",
-    },
-    {
-      label: "Our Team",
-      to: "/our-team",
-    },
-  ];
+const aboutItems = [
+  {
+    label: "About Us",
+    to: "/about",
+  },
+  {
+    label: "Our Team",
+    to: "/about",
+    hash: "#team",
+  },
+];
 
   const serviceItems = [
     {

@@ -57,7 +57,7 @@
 
 
 .dropdown-icon {
-  font-size: 16px;
+  font-size: 15px;
   transition: transform 0.25s ease;
 }
 
@@ -111,7 +111,7 @@
   text-decoration: none;
   color: #374151;
 
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
 
   outline: none;

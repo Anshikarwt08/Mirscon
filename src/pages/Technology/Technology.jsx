@@ -9,7 +9,7 @@ import powerBi from "../../assets/technology/PowerBi.png";
 import snapLogic from "../../assets/technology/snapLogic.png";
 import snowflake from "../../assets/technology/snowflake.png";
 import tableau from "../../assets/technology/tableau.png";
-import salesforce from "../../assets/salesforce.jpg";
+import salesforce from "../../assets/salesforce.png";
 
 const technologies = [
   {
