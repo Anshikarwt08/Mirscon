@@ -1,6 +1,4 @@
-/* ===============================
-   Dropdown Container
-================================== */
+
 
 .dropdown {
   position: relative;
@@ -8,7 +6,6 @@
   align-items: center;
 }
 
-/* Remove header underline only for dropdown */
 .dropdown .dropdown-toggle::after,
 .dropdown .dropdown-item::after {
   content: none !important;
@@ -16,9 +13,6 @@
   width: 0 !important;
 }
 
-/* ===============================
-   Toggle Button
-================================== */
 
 .dropdown-toggle {
   display: flex;
@@ -31,15 +25,15 @@
 
   padding: 10px 0;
 
-  color: inherit;
-  font: inherit;
-  font-weight: inherit;
+  color: #1F2937;
+
+  font-size: 19px;       /* Increase weight */
+  font-family: inherit;
 
   outline: none;
   box-shadow: none;
   text-decoration: none;
 }
-
 .dropdown-toggle:hover {
   background: transparent;
   color: inherit;
@@ -61,9 +55,6 @@
   border-radius: 6px;
 }
 
-/* ===============================
-   Arrow
-================================== */
 
 .dropdown-icon {
   font-size: 16px;
@@ -74,9 +65,6 @@
   transform: rotate(180deg);
 }
 
-/* ===============================
-   Dropdown Menu
-================================== */
 
 .dropdown-menu {
   position: absolute;
@@ -114,9 +102,6 @@
   pointer-events: auto;
 }
 
-/* ===============================
-   Items
-================================== */
 
 .dropdown-item {
   display: block;
@@ -153,9 +138,6 @@
   border-radius: 4px;
 }
 
-/* ===============================
-   Mobile
-================================== */
 
 @media (max-width: 768px) {
 

@@ -1,6 +1,5 @@
 import "./Contact.css";
 
-import Header from "../Header/Header";
 import ContactCards from "../../components/ContactCard/ContactCard";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import WhyChoose from "../../components/WhyChoose/WhyChoose";
@@ -9,7 +8,6 @@ import WhyChoose from "../../components/WhyChoose/WhyChoose";
 function Contact() {
   return (
     <>
-      <Header />
 
       <main className="contact-page">
 

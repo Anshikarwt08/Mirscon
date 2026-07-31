@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import Dropdown from "../../components/Dropdown/Dropdown";
-import Modal from "../../components/Modal/Modal";
+import Modal from "../../components/Modal/Modal"
 import CareerForm from "../../components/CareerForm/CareerForm";
 
 function Header() {

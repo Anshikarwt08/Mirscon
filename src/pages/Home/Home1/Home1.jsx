@@ -8,14 +8,18 @@ function Home1() {
     >
       <div className="hero-content">
         <h1 className="hero-title">
-        <span className="line">
-          <span className="highlight">Building Digital Experiences</span>
-        </span>
+          <span className="line">
+            <span className="highlight">Building Digital</span>
+          </span>
 
-        <span className="line">
-          <span className="highlight">Without</span> Barriers
-        </span>
-      </h1>
+          <span className="line">
+            <span className="highlight">Experiences Without</span>
+          </span>
+
+          <span className="line">
+            <span className="highlight">Barriers</span>
+          </span>
+        </h1>
 
         <p className="hero-description">
           Expert accessibility testing, remediation, and consulting services

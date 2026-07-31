@@ -28,9 +28,7 @@
     outline-offset: 2px;
 }
 
-/* ===========================
-   Header
-=========================== */
+
 
 .mirscon-header {
     width: 100%;
@@ -49,9 +47,6 @@
     z-index: 1000;
 }
 
-/* ===========================
-   Logo
-=========================== */
 
 .mirscon-logo {
     display: flex;
@@ -77,13 +72,6 @@
     outline-offset: 4px;
 }
 
-/* ===========================
-   Navigation
-=========================== */
-/* ===========================
-   Navigation
-=========================== */
-
 .nav-links {
     display: flex;
     justify-content: center;
@@ -95,17 +83,15 @@
     position: relative;
     text-decoration: none;
     color: #1F2937;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 500;
     transition: color .3s;
 }
 
-/* Mouse hover only */
 .nav-links a:hover {
     color: #0099C7;
 }
 
-/* Underline */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -121,7 +107,6 @@
     width: 100%;
 }
 
-/* Keyboard focus */
 .nav-links a:focus {
     outline: none;
 }
@@ -145,7 +130,7 @@
     cursor: pointer;
 
     font: inherit;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 500;
     color: #1F2937;
 
@@ -172,7 +157,7 @@
     background: #16191a;
     color: #fff;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: 19px;
     font-weight: 500;
     transition: .3s;
 }
