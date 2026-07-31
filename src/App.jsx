@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
-import ScrollToHash from "./components/ScrollToHash";
+import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
 
 import Header from "./pages/Header/Header";
 import Home from "./pages/Home/Home";
