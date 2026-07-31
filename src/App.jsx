@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 
 import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
 
@@ -30,6 +31,13 @@ function MainPage() {
 }
 
 function App() {
+  useEffect(() => {
+    // Prevent browser from restoring previous scroll position
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+  }, []);
+
   return (
     <>
       <ScrollToHash />

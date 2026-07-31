@@ -5,24 +5,32 @@ function ScrollToHash() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
-
-      const scroll = () => {
-        const element = document.getElementById(id);
-
-        if (element) {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        } else {
-          setTimeout(scroll, 100);
-        }
-      };
-
-      scroll();
+    // If there is no hash, always scroll to the top
+    if (!location.hash) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "auto",
+      });
+      return;
     }
+
+    const id = location.hash.substring(1);
+
+    const scroll = () => {
+      const element = document.getElementById(id);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      } else {
+        setTimeout(scroll, 100);
+      }
+    };
+
+    scroll();
   }, [location]);
 
   return null;
