@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section className="accessibility-hero-section">
-      <div className="accessibility-hero-content">
+      <div className="accessibility-hero-overlay"></div>
 
+      <div className="accessibility-hero-content">
         <h1 className="accessibility-hero-title">
           Accessibility Services
         </h1>
@@ -30,7 +31,6 @@ function Hero() {
             Talk to an Expert
           </Link>
         </div>
-
       </div>
     </section>
   );
