@@ -29,61 +29,51 @@
 
     max-height: 90vh;
     overflow-y: auto;
+
+    animation: popup 0.25s ease;
 }
 
-.close-btn{
+.close-btn {
+    position: absolute;
 
-    position:absolute;
+    top: 18px;
+    right: 20px;
 
-    top:18px;
-    right:20px;
+    width: 36px;
+    height: 36px;
 
-    width:36px;
-    height:36px;
+    border: none;
 
-    border:none;
+    border-radius: 50%;
 
-    border-radius:50%;
+    background: #f2f2f2;
 
-    background:#f2f2f2;
+    font-size: 24px;
 
-    font-size:24px;
+    cursor: pointer;
 
-    cursor:pointer;
-
-    transition:.3s;
+    transition: 0.3s;
 }
 
-.close-btn:hover{
-
-    background:#00A9D8;
-    color:#fff;
+.close-btn:hover {
+    background: #00A9D8;
+    color: #fff;
 }
 
-@keyframes popup{
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(.95);
+    }
 
-from{
-
-opacity:0;
-transform:translateY(25px) scale(.95);
-
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
-to{
-
-opacity:1;
-transform:translateY(0) scale(1);
-
-}
-
-}
-
-@media(max-width:768px){
-
-.modal-content{
-
-padding:30px 20px;
-
-}
-
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 30px 20px;
+    }
 }

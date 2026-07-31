@@ -1,0 +1,19 @@
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #0099C7;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #007ea5;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #005f7a;
+  outline-offset: 3px;
+}
