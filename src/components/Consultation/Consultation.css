@@ -60,7 +60,7 @@
 
 .consultation-form button {
 
-    background: #4F6BED;
+    background: #111827;
     color: white;
 
     border: none;
@@ -81,7 +81,7 @@
 
 .consultation-form button:hover {
 
-    background: #3656E0;
+    background: #111827;
 
     transform: translateY(-2px);
 

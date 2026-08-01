@@ -125,7 +125,7 @@ const aboutItems = [
         {/* Contact Button */}
         <Link
           to="/contact"
-          className="contact-btn desktop-btn"
+          className="contactus-btn desktop-btn"
           aria-label="Contact Us"
           onClick={closeMenu}
         >

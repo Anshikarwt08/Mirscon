@@ -6,8 +6,8 @@ function Modal({ isOpen, onClose, children }) {
   return (
     <div
       className="modal-overlay"
+      role="presentation"
       onClick={onClose}
-      aria-hidden="true"
     >
       <div
         className="modal-content"
@@ -17,9 +17,10 @@ function Modal({ isOpen, onClose, children }) {
         onClick={(e) => e.stopPropagation()}
       >
         <button
+          type="button"
           className="close-btn"
-          onClick={onClose}
           aria-label="Close dialog"
+          onClick={onClose}
         >
           ×
         </button>

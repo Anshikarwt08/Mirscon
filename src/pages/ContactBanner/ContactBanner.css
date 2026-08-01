@@ -46,7 +46,7 @@
 
     padding: 18px 40px;
 
-    background: #4F6BED;
+    background: #16191a;
     color: #fff;
 
     border: none;
@@ -63,7 +63,7 @@
 }
 
 .contact-btn:hover {
-    background: #3656E0;
+    background: #16191a;
     transform: translateY(-3px);
     box-shadow: 0 14px 30px rgba(79,107,237,.22);
 }
