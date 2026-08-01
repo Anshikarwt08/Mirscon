@@ -1,89 +1,171 @@
+import { useState } from "react";
 import "./Services.css";
 
 import pdf from "../../../assets/pdf.png";
-import epub from "../../../assets/epub.png";
 import ebook from "../../../assets/ebook.jpeg";
-import word from "../../../assets/word.png";
+import epub from "../../../assets/epub.png";
 import alttext from "../../../assets/alttext.png";
 
-const services = [
-  {
-    title: "PDF Remediation",
-    image: pdf,
-    description:
-      "We transform PDF documents into fully accessible files that comply with WCAG, PDF/UA, and Section 508 standards. Our remediation process improves document structure, reading order, tables, forms, and alternative text to ensure compatibility with assistive technologies.",
-    points: [
-      "Tagged PDF Structure",
-      "Reading Order Optimization",
-      "Accessible Forms & Tables",,
-      "Screen Reader Compatibility",
-    ],
-  },
-  {
-    title: "EPUB Accessibility",
-    image: epub,
-    description:
-      "Our EPUB accessibility services ensure digital publications meet EPUB 3 accessibility requirements. We enhance navigation, semantic markup, multimedia, and content structure to deliver an inclusive reading experience across all major eReaders.",
-    points: [
-      "EPUB 3 Accessibility",
-      "Semantic Content Structure",
-      "Accessible Navigation",
-      "Media Accessibility",
-      "Assistive Technology Support",
-    ],
-  },
-  {
-    title: "eBook Accessibility",
-    image: ebook,
-    description:
-      "We create accessible eBooks that provide equal access for every reader. From proper heading structures and navigation to image descriptions and logical reading flow, every publication is optimized for accessibility and usability.",
-    points: [
-      "Structured Content",
-      "Accessible Navigation",
-      "Alternative Text",
-      "Logical Reading Flow",
-      "Screen Reader Ready",
-    ],
-  },
-  {
-    title: "Word & PowerPoint Remediation",
-    image: word,
-    description:
-      "Our experts remediate Microsoft Word documents and PowerPoint presentations by improving document structure, headings, tables, lists, reading order, and alternative text. Every file is optimized to meet accessibility standards and support assistive technologies.",
-    points: [
-      "Accessible Word Documents",
-      "Accessible Presentations",
-      "Reading Order Improvements",
-      "WCAG & Section 508 Compliance",
-    ],
-  },
-   {
-    title: "Alternate Text Services",
-    image: alttext,
-    description:
-      "We create accurate, meaningful, and standards-compliant alternate text for images, charts, graphs, diagrams, infographics, and other visual content. Every description is written to improve accessibility, support screen reader users, and meet WCAG, PDF/UA, EPUB Accessibility, and Section 508 requirements.",
-    points: [
-      "WCAG & Section 508 Compliance",
-      "Meaningful Image Descriptions",
-      "Charts & Infographics",
-      "Decorative Image Identification",
-      "Expert Human Quality Review",
-    ],
-  },
-];
-
 function Services() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const services = [
+    {
+      title: "Alt Text Services",
+      image: alttext,
+      description:
+        "We create accurate, meaningful, and standards-compliant alternative text for images, charts, graphs, diagrams, tables, and other visual content. With nearly a decade of experience, we help publishers, EdTech organizations, and enterprises deliver accessible digital content that complies with global accessibility standards.",
+
+      details: [
+        {
+          title: "STEM, Medical, Engineering & Social Sciences",
+          description:
+            "Our accessibility experts create domain-specific alternative text for highly technical and academic content while maintaining accuracy and clarity."
+        },
+        {
+          title: "WCAG 2.2, Section 508 & ADA Compliant",
+          description:
+            "Every description follows global accessibility standards to ensure compliance across educational, publishing, and enterprise platforms."
+        },
+        {
+          title: "High-volume Project Delivery",
+          description:
+            "Our scalable production workflows enable us to deliver thousands of high-quality alt texts efficiently without compromising accuracy."
+        },
+        {
+          title: "Multilingual Support",
+          description:
+            "We provide professional alternative text in English, Spanish, German, and French for global accessibility projects."
+        },
+        {
+          title: "Human-reviewed Quality Assurance",
+          description:
+            "Every alt text undergoes expert review to ensure consistency, context, and accessibility compliance."
+        }
+      ]
+    },
+
+    {
+      title: "Document Remediation",
+      image: pdf,
+      description:
+        "Our document remediation services transform inaccessible files into fully accessible documents compatible with screen readers and assistive technologies. Every document is remediated according to international accessibility standards.",
+
+      details: [
+        {
+          title: "PDF Remediation",
+          description:
+            "Convert PDF documents into fully tagged and accessible PDFs compliant with PDF/UA and WCAG."
+        },
+        {
+          title: "Microsoft Word Remediation",
+          description:
+            "Improve Word documents with accessible headings, tables, lists, reading order, and alternative text."
+        },
+        {
+          title: "PowerPoint Remediation",
+          description:
+            "Create accessible presentations with correct reading order, image descriptions, and keyboard navigation."
+        },
+        {
+          title: "Excel Accessibility",
+          description:
+            "Make spreadsheets accessible through proper headers, labels, formulas, and navigation."
+        },
+        {
+          title: "Standards Compliance",
+          description:
+            "Ensure every document complies with WCAG, Section 508, and PDF/UA accessibility requirements."
+        }
+      ]
+    },
+
+    {
+      title: "Digital Publishing Services",
+      image: ebook,
+      description:
+        "We provide end-to-end digital publishing solutions for publishers, educational institutions, and enterprises. Our workflows ensure accurate, standards-compliant, and high-quality digital publications.",
+
+      details: [
+        {
+          title: "eBook Creation & Conversion",
+          description:
+            "Convert print and digital publications into accessible eBooks for multiple platforms."
+        },
+        {
+          title: "EPUB 3 Reflowable",
+          description:
+            "Develop responsive EPUB publications that adapt to different screen sizes and devices."
+        },
+        {
+          title: "EPUB 3 Fixed Layout",
+          description:
+            "Produce visually rich EPUBs while maintaining accessibility compliance."
+        },
+        {
+          title: "XML Conversion & Validation",
+          description:
+            "Convert structured content into industry-standard XML formats with validation."
+        },
+        {
+          title: "Zero-error Content Transformation",
+          description:
+            "Quality-controlled publishing workflows designed for high accuracy and consistency."
+        }
+      ]
+    },
+
+    {
+      title: "Multimedia Accessibility",
+      image: epub,
+      description:
+        "We make multimedia content accessible by providing professional captioning, transcription, audio description, and video accessibility services that ensure an inclusive experience for every user.",
+
+      details: [
+        {
+          title: "Closed Captioning",
+          description:
+            "Accurate captions synchronized with multimedia content for deaf and hard-of-hearing users."
+        },
+        {
+          title: "SRT File Creation & Synchronization",
+          description:
+            "Professional subtitle creation and synchronization compatible with major video platforms."
+        },
+        {
+          title: "Transcription Services",
+          description:
+            "High-quality transcripts for webinars, lectures, podcasts, meetings, and multimedia content."
+        },
+        {
+          title: "Audio Description Services",
+          description:
+            "Narration describing important visual information for people with visual impairments."
+        },
+        {
+          title: "Video Annotation & Accessibility Support",
+          description:
+            "Accessibility enhancements, metadata, and annotations to improve usability and compliance."
+        }
+      ]
+    }
+  ];
+
   return (
     <section className="services" id="services">
-
       {services.map((service, index) => (
         <div
-          className={`service-row ${index % 2 !== 0 ? "reverse" : ""}`}
+          className={`service-row ${
+            index % 2 !== 0 ? "reverse" : ""
+          }`}
           key={index}
         >
           {/* Image */}
           <div className="service-image">
-            <img src={service.image} alt={service.title} />
+            <img
+              src={service.image}
+              alt={service.title}
+            />
           </div>
 
           {/* Content */}
@@ -92,13 +174,33 @@ function Services() {
 
             <p>{service.description}</p>
 
-            <h4>What We Deliver</h4>
+            <button
+              className="details-btn"
+              onClick={() =>
+                setOpenIndex(
+                  openIndex === index ? null : index
+                )
+              }
+            >
+              {openIndex === index
+                ? "Hide Details"
+                : "View Details"}
+            </button>
 
-            <ul>
-              {service.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
+            {openIndex === index && (
+              <div className="service-details">
+                {service.details.map((detail, i) => (
+                  <div
+                    className="detail-item"
+                    key={i}
+                  >
+                    <h5>{detail.title}</h5>
+
+                    <p>{detail.description}</p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       ))}

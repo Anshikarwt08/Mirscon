@@ -22,15 +22,6 @@ function Hero() {
           Our accessibility experts help ensure every user can access,
           navigate, and interact with your digital content confidently.
         </p>
-
-        <div className="accessibility-hero-buttons">
-          <Link
-            to="/contact"
-            className="accessibility-hero-btn accessibility-hero-btn-primary"
-          >
-            Talk to an Expert
-          </Link>
-        </div>
       </div>
     </section>
   );
