@@ -42,7 +42,8 @@ function ContactForm() {
         <h2>Let's Build the Right Solution for Your Business</h2>
 
         <p>
-        Share your project requirements, and our specialists will contact you with the best approach tailored to your business needs.
+          Share your project requirements, and our specialists will contact you
+          with the best approach tailored to your business needs.
         </p>
       </div>
 
@@ -138,7 +139,10 @@ function ContactForm() {
 
         </div>
 
-        <button type="submit" className="submit-btn">
+        <button
+          type="submit"
+          className="contact-submit-btn"
+        >
           Send Message
         </button>
 

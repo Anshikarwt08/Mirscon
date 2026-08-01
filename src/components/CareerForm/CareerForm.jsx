@@ -1,155 +1,125 @@
+import { useState } from "react";
 import "./CareerForm.css";
 
-const CareerForm = () => {
+function CareerForm() {
+  const [resumeName, setResumeName] = useState("No file selected");
+
+  const handleFileChange = (e) => {
+    if (e.target.files.length > 0) {
+      setResumeName(e.target.files[0].name);
+    } else {
+      setResumeName("No file selected");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add your submit logic here
-    alert("Application submitted successfully!");
+    // Submit Logic
+
+    alert("Application Submitted Successfully!");
   };
 
   return (
-    <>
-      <h2 id="career-title">Join Our Team</h2>
+    <form className="career-form" onSubmit={handleSubmit}>
+      <h2>Join Our Team </h2>
 
-      <p className="career-description">
-        Fill out the form below and our recruitment team will get in touch with
-        you.
-      </p>
+      <div className="form-group">
+        <label htmlFor="name">
+          Full Name <span>*</span>
+        </label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your full name"
+          required
+        />
+      </div>
 
-      <form className="career-form" onSubmit={handleSubmit}>
-        {/* Full Name */}
-        <div className="form-group">
-          <label htmlFor="fullName">Full Name</label>
+      <div className="form-group">
+        <label htmlFor="email">
+          Email <span>*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
 
-          <input
-            id="fullName"
-            type="text"
-            name="fullName"
-            placeholder="Enter your full name"
-            required
-          />
-        </div>
+      <div className="form-group">
+        <label htmlFor="phone">
+          Phone Number <span>*</span>
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your phone number"
+          required
+        />
+      </div>
 
-        {/* Email */}
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
+      <div className="form-group">
+        <label htmlFor="experience">
+          Experience
+        </label>
+        <input
+          type="text"
+          id="experience"
+          placeholder="Enter your experience"
+        />
+      </div>
 
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Enter your email address"
-            required
-          />
-        </div>
+      <div className="form-group">
+        <label htmlFor="resume">
+          Resume <span>*</span>
+        </label>
 
-        {/* Phone */}
-        <div className="form-group">
-          <label htmlFor="phone">Phone Number</label>
+        <div className="file-upload">
+          <label htmlFor="resume" className="upload-btn">
+            Upload Your Resume
+          </label>
 
-          <input
-            id="phone"
-            type="tel"
-            name="phone"
-            placeholder="Enter your phone number"
-            required
-          />
-        </div>
-
-        {/* Position */}
-        <div className="form-group">
-          <label htmlFor="position">Position</label>
-
-          <div className="select-wrapper">
-            <select
-              id="position"
-              name="position"
-              defaultValue=""
-              required
-            >
-              <option value="" disabled>
-                Select a Position
-              </option>
-
-              <option value="Accessibility Tester">
-                Accessibility Tester
-              </option>
-
-              <option value="Accessibility Developer">
-                Accessibility Developer
-              </option>
-
-              <option value="Frontend Developer">
-                Frontend Developer
-              </option>
-
-              <option value="Project Manager">
-                Project Manager
-              </option>
-
-              <option value="UI/UX Designer">
-                UI/UX Designer
-              </option>
-
-              <option value="HR Executive">
-                HR Executive
-              </option>
-
-              <option value="Intern">
-                Intern
-              </option>
-
-              <option value="Other">
-                Other
-              </option>
-            </select>
-
-            <span className="select-arrow">
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 9L12 15L18 9"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-
-        {/* Resume */}
-        <div className="form-group file-upload">
-          <label htmlFor="resume">Upload Resume</label>
+          <span className="file-name">
+            {resumeName}
+          </span>
 
           <input
-            id="resume"
             type="file"
-            name="resume"
+            id="resume"
             accept=".pdf,.doc,.docx"
+            hidden
             required
+            onChange={handleFileChange}
           />
-
-          <small>Accepted formats: PDF, DOC, DOCX</small>
         </div>
 
-        {/* Submit */}
-        <button
-          type="submit"
-          className="submit-btn"
-        >
-          Submit Application
-        </button>
-      </form>
-    </>
+        <small className="upload-note">
+          Accepted formats: PDF, DOC, DOCX
+        </small>
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Tell us about yourself..."
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="submit-btn"
+      >
+        Submit Application
+      </button>
+    </form>
   );
-};
+}
 
 export default CareerForm;

@@ -5,19 +5,15 @@ import { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import Dropdown from "../../components/Dropdown/Dropdown";
-import Modal from "../../components/Modal/Modal"
-import CareerForm from "../../components/CareerForm/CareerForm";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [careerOpen, setCareerOpen] = useState(false);
 
-  // Close menu & modal with Escape
+  // Close menu with Escape
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         setMenuOpen(false);
-        setCareerOpen(false);
       }
     };
 
@@ -26,38 +22,32 @@ function Header() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Prevent body scroll
+  // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    document.body.style.overflow =
-      menuOpen || careerOpen ? "hidden" : "auto";
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
 
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [menuOpen, careerOpen]);
+  }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
-
-  const openCareerModal = () => {
-    closeMenu();
-    setCareerOpen(true);
-  };
 
   // -----------------------------
   // Dropdown Items
   // -----------------------------
 
-const aboutItems = [
-  {
-    label: "About Us",
-    to: "/about",
-  },
-  {
-    label: "Our Team",
-    to: "/about",
-    hash: "#team",
-  },
-];
+  const aboutItems = [
+    {
+      label: "About Us",
+      to: "/about",
+    },
+    {
+      label: "Our Team",
+      to: "/about",
+      hash: "#team",
+    },
+  ];
 
   const serviceItems = [
     {
@@ -80,7 +70,7 @@ const aboutItems = [
       <header className="mirscon-header">
         {/* Logo */}
         <div className="mirscon-logo">
-          <Link to="/" aria-label="Go to Home page">
+          <Link to="/" aria-label="Go to Home page" onClick={closeMenu}>
             <img src={logo} alt="Mirscon Logo" />
           </Link>
         </div>
@@ -111,15 +101,13 @@ const aboutItems = [
           </Link>
 
           {/* Career */}
-          <button
-            type="button"
+          <Link
+            to="/career"
             className="career-btn"
-            onClick={openCareerModal}
-            aria-haspopup="dialog"
-            aria-expanded={careerOpen}
+            onClick={closeMenu}
           >
-            Career
-          </button>
+            Careers
+          </Link>
         </nav>
 
         {/* Contact Button */}
@@ -156,14 +144,6 @@ const aboutItems = [
           aria-hidden="true"
         />
       )}
-
-      {/* Career Modal */}
-      <Modal
-        isOpen={careerOpen}
-        onClose={() => setCareerOpen(false)}
-      >
-        <CareerForm />
-      </Modal>
     </>
   );
 }
