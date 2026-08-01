@@ -1,8 +1,9 @@
 import "./ContactBanner.css";
 import { useState } from "react";
 
-import Modal from "../../components/Modal/Modal";
+
 import ConsultationForm from "../../components/Consultation/Consultation";
+import Modal from "../../components/Modal/Modal";
 
 function ContactBanner() {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);

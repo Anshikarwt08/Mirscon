@@ -9,10 +9,12 @@ import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import Accessibility from "./pages/Accessiblity/Accessibility";
 import About from "./pages/About/About";
+import Career from "./pages/Careers/Careers";
 
 import Technology from "./pages/Technology/Technology";
 import ContactBanner from "./pages/ContactBanner/ContactBanner";
 import Footer from "./components/Footer/Footer";
+import Careers from "./pages/Careers/Careers";
 
 function MainPage() {
   return (
@@ -48,6 +50,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/accessibility" element={<Accessibility />} />
+        <Route path="/career" element={<Careers />} />
       </Routes>
     </>
   );
