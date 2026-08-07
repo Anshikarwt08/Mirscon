@@ -60,33 +60,21 @@
     margin-bottom:20px;
 }
 
-.contact-card h3{
-
-    font-size:1.7rem;
-
-    color:#111827;
-
-    margin-bottom:12px;
+.contact-card h3 {
+    color: #0F172A; 
 }
 
-.contact-card p{
-
-    color:#6B7280;
-
-    line-height:1.6;
-
-    margin-bottom:18px;
-
-    font-size:.98rem;
+.contact-card p {
+    color: #374151;   
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-size: 1.2rem;
 }
 
-.contact-card span{
-
-    color:#0099C7;
-
-    font-weight:600;
-
-    font-size:1rem;
+.contact-card span {
+    color: #111827;   /* Almost black */
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 @media(max-width:992px){

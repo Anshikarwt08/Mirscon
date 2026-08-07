@@ -115,14 +115,6 @@
     transition: color .3s ease;
 }
 
-/* Hover */
-
-.nav-links a:hover,
-.dropdown-toggle:hover,
-.career-btn:hover {
-    color: #0099C7;
-}
-
 /* Underline Animation */
 
 .nav-links a::after,
@@ -130,15 +122,10 @@
 .career-btn::after {
     content: "";
     position: absolute;
-
     left: 0;
     bottom: -6px;
-
     width: 0;
     height: 2px;
-
-    background: #0099C7;
-
     transition: width .3s ease;
 }
 
@@ -148,7 +135,6 @@
     width: 100%;
 }
 
-/* Keyboard Focus */
 
 .nav-links a:focus-visible,
 .dropdown-toggle:focus-visible,
@@ -167,13 +153,6 @@
     transform: rotate(180deg);
 }
 
-/* ===========================
-   Dropdown
-=========================== */
-
-/* ===========================
-   Dropdown
-=========================== */
 
 .dropdown {
     position: relative;
@@ -233,10 +212,7 @@
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-.dropdown-item:hover {
-    background: #EEF4FF;
-    color: #0099C7;
-}
+
 /* ===========================
    Contact Button
 =========================== */

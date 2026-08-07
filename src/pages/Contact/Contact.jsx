@@ -21,10 +21,7 @@ function Contact() {
           </h1>
 
           <p>
-            Whether you need accessibility testing, QA services,
-            Salesforce development, staffing solutions, or custom
-            software, our experts are here to help you turn your
-            ideas into impactful digital solutions.
+            Partner with us to create accessible, innovative, and scalable digital solutions that empower your business and deliver exceptional user experiences.
           </p>
 
         </section>
@@ -40,12 +37,6 @@ function Contact() {
             <h2>
               Tell Us About Your Project
             </h2>
-
-            <p>
-              Have a project in mind or need expert guidance? Fill out
-              the form below and our team will get back to you within
-              one business day.
-            </p>
 
           </div>
 
