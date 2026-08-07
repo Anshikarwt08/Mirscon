@@ -31,7 +31,7 @@
 .contact-hero p {
     max-width: 650px;
     margin: 0 auto;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     color: #6b7280;
 }
@@ -52,14 +52,6 @@
     font-weight: 700;
     color: #111827;
     margin-bottom: 16px;
-}
-
-.contact-heading p {
-    max-width: 650px;
-    margin: auto;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #6b7280;
 }
 
 

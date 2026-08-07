@@ -3,6 +3,7 @@ import "./ContactCard.css";
 import {
   FaPhoneAlt,
   FaEnvelope,
+  FaMapMarkerAlt,
   FaRegClock,
 } from "react-icons/fa";
 
@@ -37,20 +38,19 @@ function ContactCard() {
         <span>info@mirscon.com</span>
 
       </div>
-
       <div className="contact-card">
-
         <div className="card-icon">
-          <FaRegClock />
+          <FaMapMarkerAlt />
         </div>
 
-        <h3>Quick Response</h3>
+        <h3>Visit Us</h3>
 
-        <p>We usually reply within one business day.</p>
+        <p>Meet our team and discuss your business requirements.</p>
 
-        <span>Within 24 Hours</span>
-
+        <span>Plot No. 21, Iksana Workspace, 3rd Floor,
+          IT Park, Dehradun</span>
       </div>
+
 
     </section>
   );

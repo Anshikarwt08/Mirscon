@@ -27,47 +27,8 @@ function Home1() {
           abilities.
         </p>
 
-        <div className="hero-buttons">
-          <button
-            className="primary-btn"
-            aria-label="Explore Mirscon accessibility services"
-          >
-            Explore Services →
-          </button>
-        </div>
+        
 
-        <ul
-          className="hero-features"
-          aria-label="Accessibility services and standards"
-        >
-          <li className="feature-pill">
-            <span className="check" aria-hidden="true">
-              ✓
-            </span>
-            WCAG 2.2
-          </li>
-
-          <li className="feature-pill">
-            <span className="check" aria-hidden="true">
-              ✓
-            </span>
-            PDF Remediation
-          </li>
-
-          <li className="feature-pill">
-            <span className="check" aria-hidden="true">
-              ✓
-            </span>
-            EPub
-          </li>
-
-          <li className="feature-pill">
-            <span className="check" aria-hidden="true">
-              ✓
-            </span>
-            PPT/Word Remediation
-          </li>
-        </ul>
       </div>
 
       <div className="circle circle1" aria-hidden="true"></div>

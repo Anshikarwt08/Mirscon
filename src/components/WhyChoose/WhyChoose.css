@@ -19,7 +19,7 @@
     border-radius: 30px;
     background: #fff;
     color: #374151;
-    font-size: .85rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 18px;
 }
@@ -120,7 +120,7 @@
 .large span{
     display:inline-block;
     margin-top:25px;
-    color:#0099C7;
+    color:#111827;
     font-weight:600;
 }
 
