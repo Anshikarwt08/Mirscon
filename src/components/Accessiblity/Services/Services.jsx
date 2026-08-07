@@ -44,7 +44,7 @@ function Services() {
   ];
 
   return (
-    <>
+    <section className="services">
       {services.map((service, index) => (
         <div
           id={service.id}
@@ -73,7 +73,7 @@ function Services() {
           </div>
         </div>
       ))}
-    </>
+    </section>
   );
 }
 

@@ -1,203 +1,79 @@
-/* ======================================================
-   GLOBAL
-====================================================== */
+/* ===========================
+   Service Details Page
+=========================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .service-details-page{
-    width:min(1400px,95%);
-    margin:40px auto 100px;
+    width: min(1400px,95%);
+    margin: 40px auto 80px;
 }
 
-/* ======================================================
-   HERO
-====================================================== */
+/* ===========================
+Hero
+=========================== */
 
 .service-hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
 
-    position:relative;
+    padding: 70px;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:80px;
+    background: linear-gradient(135deg,#0f4c81,#1565c0);
 
-    overflow:hidden;
+    border-radius: 32px;
 
-    padding:90px 80px;
-
-    border-radius:36px;
-
-    background:
-    radial-gradient(circle at top right,#6ba8ff 0%,transparent 35%),
-    radial-gradient(circle at bottom left,#0b4f9c 0%,transparent 40%),
-    linear-gradient(135deg,#0b4f9c,#1565c0,#2878dd);
-
-    box-shadow:
-    0 30px 80px rgba(13,65,132,.22);
+    color: white;
 }
-
-/* Floating circles */
-
-.service-hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:430px;
-    height:430px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    top:-180px;
-    right:-120px;
-
-    filter:blur(5px);
-}
-
-.service-hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:260px;
-    height:260px;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.06);
-
-    left:-90px;
-    bottom:-90px;
-}
-
-/* ======================================================
-   LEFT
-====================================================== */
 
 .service-hero-content{
-
-    flex:1;
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:650px;
+    flex: 1;
 }
-
-/* Badge */
 
 .service-tag{
 
-    display:inline-flex;
+    display: inline-block;
 
-    align-items:center;
+    padding: 8px 18px;
 
-    gap:10px;
+    background: rgba(255,255,255,.15);
 
-    padding:11px 22px;
+    border:1px solid rgba(255,255,255,.25);
 
-    margin-bottom:28px;
+    border-radius: 100px;
 
-    border-radius:100px;
+    font-size: .9rem;
 
-    color:#fff;
-
-    font-size:.95rem;
-
-    font-weight:600;
-
-    border:1px solid rgba(255,255,255,.22);
-
-    background:rgba(255,255,255,.12);
-
-    backdrop-filter:blur(14px);
-
-    -webkit-backdrop-filter:blur(14px);
+    margin-bottom:20px;
 }
-
-/* Heading */
 
 .service-hero h1{
 
-    font-size:clamp(3rem,5vw,4.7rem);
+    font-size: clamp(2.5rem,5vw,4rem);
 
-    font-weight:800;
+    line-height:1.1;
 
-    line-height:1.05;
-
-    letter-spacing:-2px;
-
-    color:#fff;
-
-    margin-bottom:28px;
+    margin-bottom:25px;
 }
-
-/* Paragraph */
 
 .service-hero p{
 
-    font-size:1.15rem;
+    font-size:1.1rem;
 
-    line-height:1.9;
+    line-height:1.8;
 
-    color:rgba(255,255,255,.92);
+    opacity:.95;
 
-    margin-bottom:42px;
+    max-width:650px;
+
+    margin-bottom:35px;
 }
-
-/* Button */
-
-.contact-btn{
-
-    display:inline-flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:18px 42px;
-
-    border:none;
-
-    border-radius:60px;
-
-    background:#fff;
-
-    color:#1565c0;
-
-    font-size:1rem;
-
-    font-weight:700;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.18);
-}
-
-.contact-btn:hover{
-
-    transform:translateY(-6px);
-
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.22);
-}
-
-/* ======================================================
-   IMAGE
-====================================================== */
 
 .service-hero-image{
 
@@ -206,47 +82,54 @@
     display:flex;
 
     justify-content:center;
-
-    position:relative;
-
-    z-index:2;
 }
 
 .service-hero-image img{
 
     width:100%;
 
-    max-width:520px;
+    max-width:470px;
 
-    padding:18px;
+    border-radius:22px;
 
-    background:#fff;
-
-    border-radius:30px;
-
-    box-shadow:
-    0 35px 70px rgba(0,0,0,.22);
+    box-shadow:0 30px 60px rgba(0,0,0,.25);
 }
 
-@keyframes floatImage{
+/* ===========================
+Button
+=========================== */
 
-0%{
-transform:translateY(0px);
+.contact-btn{
+
+    padding:16px 34px;
+
+    background:white;
+
+    color:#1565c0;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
 }
 
-50%{
-transform:translateY(-14px);
+.contact-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
 }
 
-100%{
-transform:translateY(0px);
-}
-
-}
-
-/* ======================================================
-   FEATURES
-====================================================== */
+/* ===========================
+Features
+=========================== */
 
 .features-section{
 
@@ -257,11 +140,11 @@ transform:translateY(0px);
 
     text-align:center;
 
-    font-size:clamp(2rem,4vw,3rem);
+    font-size:2.4rem;
 
     color:#14387f;
 
-    margin-bottom:60px;
+    margin-bottom:50px;
 }
 
 .features-grid{
@@ -275,39 +158,35 @@ transform:translateY(0px);
 
 .feature-card{
 
-    background:#fff;
-
-    border-radius:24px;
+    background:white;
 
     padding:35px;
 
+    border-radius:22px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
     transition:.35s;
-
-    border:1px solid #edf2fb;
-
-    box-shadow:
-    0 12px 30px rgba(0,0,0,.05);
 }
 
 .feature-card:hover{
 
-    transform:translateY(-10px);
+    transform:translateY(-8px);
 
-    box-shadow:
-    0 25px 50px rgba(0,0,0,.12);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
 }
 
 .feature-number{
 
-    width:60px;
+    width:55px;
 
-    height:60px;
+    height:55px;
 
     border-radius:50%;
 
-    background:linear-gradient(135deg,#1565c0,#0d47a1);
+    background:#1565c0;
 
-    color:#fff;
+    color:white;
 
     display:flex;
 
@@ -315,11 +194,11 @@ transform:translateY(0px);
 
     align-items:center;
 
-    font-size:1.2rem;
+    font-size:1.3rem;
 
     font-weight:700;
 
-    margin-bottom:25px;
+    margin-bottom:22px;
 }
 
 .feature-card h3{
@@ -328,103 +207,94 @@ transform:translateY(0px);
 
     margin-bottom:15px;
 
-    font-size:1.35rem;
+    font-size:1.3rem;
 }
 
 .feature-card p{
 
-    color:#666;
+    color:#555;
 
     line-height:1.8;
 }
 
-/* ======================================================
-   CTA
-====================================================== */
+/* ===========================
+CTA
+=========================== */
 
 .cta-section{
 
     margin-top:90px;
 
-    padding:80px 50px;
+    padding:70px;
 
-    border-radius:30px;
+    border-radius:28px;
+
+    background:#f4f8fc;
 
     text-align:center;
-
-    background:linear-gradient(135deg,#eef5ff,#f8fbff);
 }
 
 .cta-section h2{
 
+    font-size:2.3rem;
+
     color:#14387f;
 
-    font-size:2.5rem;
-
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .cta-section p{
 
-    max-width:700px;
-
-    margin:auto;
+    font-size:1.05rem;
 
     color:#666;
 
-    line-height:1.9;
-
     margin-bottom:35px;
-}
 
-/* ======================================================
-   NOT FOUND
-====================================================== */
-
-.service-not-found{
-
-    padding:120px 20px;
-
-    text-align:center;
-}
-
-.service-not-found h2{
-
-    color:#14387f;
-
-    margin-bottom:25px;
-}
-
-/* ======================================================
-   RESPONSIVE
-====================================================== */
-
-@media(max-width:1100px){
-
-.service-hero{
-
-    flex-direction:column;
-
-    text-align:center;
-
-    padding:70px 40px;
-
-    gap:50px;
-}
-
-.service-hero-content{
-
-    max-width:100%;
-}
-
-.service-hero p{
+    max-width:700px;
 
     margin-inline:auto;
 }
 
+/* ===========================
+Not Found
+=========================== */
+
+.service-not-found{
+
+    text-align:center;
+
+    padding:120px 20px;
+}
+
+.service-not-found h2{
+
+    margin-bottom:25px;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.service-hero{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:50px 35px;
+}
+
 .service-hero-image{
 
-    order:-1;
+order:-1;
+}
+
+.service-hero p{
+
+margin-inline:auto;
 }
 
 }
@@ -433,66 +303,46 @@ transform:translateY(0px);
 
 .service-hero{
 
-    padding:45px 25px;
+padding:35px 25px;
 }
 
-.service-hero h1{
+.features-section h2{
 
-    font-size:2.5rem;
-}
-
-.service-hero p{
-
-    font-size:1rem;
-}
-
-.contact-btn{
-
-    width:100%;
-}
-
-.features-grid{
-
-    gap:20px;
-}
-
-.feature-card{
-
-    padding:28px;
+font-size:2rem;
 }
 
 .cta-section{
 
-    padding:60px 25px;
+padding:50px 25px;
 }
 
 .cta-section h2{
 
-    font-size:2rem;
+font-size:1.8rem;
 }
 
 }
 
 @media(max-width:480px){
 
-.service-tag{
-
-    font-size:.85rem;
-}
-
 .service-hero h1{
 
-    font-size:2rem;
+font-size:2rem;
 }
 
-.service-hero{
+.service-hero p{
 
-    border-radius:24px;
+font-size:.95rem;
 }
 
-.service-hero-image img{
+.contact-btn{
 
-    border-radius:22px;
+width:100%;
+}
+
+.feature-card{
+
+padding:25px;
 }
 
 }
