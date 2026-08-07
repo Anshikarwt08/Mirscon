@@ -15,6 +15,7 @@ import Technology from "./pages/Technology/Technology";
 import ContactBanner from "./pages/ContactBanner/ContactBanner";
 import Footer from "./components/Footer/Footer";
 import Careers from "./pages/Careers/Careers";
+import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 
 function MainPage() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/accessibility" element={<Accessibility />} />
+        <Route path="/services/:id" element={<ServiceDetails />} />
         <Route path="/career" element={<Careers />} />
       </Routes>
     </>
