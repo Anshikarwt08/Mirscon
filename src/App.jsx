@@ -15,6 +15,7 @@ import Technology from "./pages/Technology/Technology";
 import ContactBanner from "./pages/ContactBanner/ContactBanner";
 import Footer from "./components/Footer/Footer";
 import Careers from "./pages/Careers/Careers";
+
 function MainPage() {
   return (
     <>
