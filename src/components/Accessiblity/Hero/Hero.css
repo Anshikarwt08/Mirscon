@@ -44,9 +44,15 @@
 
 
 .accessibility-hero-content{
-    max-width:900px;
-    position:relative;
-    z-index:2;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
 }
 
 
@@ -73,16 +79,72 @@
 
 
 .accessibility-hero-description{
-    max-width:760px;
-    margin:0 auto 45px;
+    max-width:850px;
+    margin:30px auto 45px;
+
+    text-align:center;
 
     font-size:1.1rem;
     line-height:1.9;
-
     color:#6b7280;
 }
 
+/* ===========================
+   Hero Service Cards
+=========================== */
 
+.hero-service-cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    margin:40px auto 45px;
+    max-width:1100px;
+}
+.hero-service-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    padding:18px 20px;
+
+    text-decoration:none;
+
+    background:#ffffff;
+    border:1px solid #e8edf5;
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(15,23,42,.06);
+
+    transition:.3s ease;
+}
+
+.hero-service-card:hover{
+    transform:translateY(-5px);
+    border-color:#2563eb;
+    box-shadow:0 18px 40px rgba(37,99,235,.12);
+}
+
+.hero-service-card img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+
+    padding:10px;
+    border-radius:14px;
+
+    background:#eef4ff;
+
+    flex-shrink:0;
+}
+
+.hero-service-card span{
+    color:#132b63;
+
+    font-family:"Poppins",sans-serif;
+    font-size:18px;
+    font-weight:600;
+    line-height:1.4;
+}
 .accessibility-hero-buttons{
     display:flex;
     justify-content:center;

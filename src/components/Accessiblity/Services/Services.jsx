@@ -11,6 +11,7 @@ function Services() {
 
   const services = [
     {
+       id: "alt-text",
       title: "Alt Text Services",
       image: alttext,
       description:
@@ -36,16 +37,12 @@ function Services() {
           title: "Multilingual Support",
           description:
             "We provide professional alternative text in English, Spanish, German, and French for global accessibility projects."
-        },
-        {
-          title: "Human-reviewed Quality Assurance",
-          description:
-            "Every alt text undergoes expert review to ensure consistency, context, and accessibility compliance."
         }
       ]
     },
 
     {
+       id: "document-remediation",
       title: "Document Remediation",
       image: pdf,
       description:
@@ -71,16 +68,12 @@ function Services() {
           title: "Excel Accessibility",
           description:
             "Make spreadsheets accessible through proper headers, labels, formulas, and navigation."
-        },
-        {
-          title: "Standards Compliance",
-          description:
-            "Ensure every document complies with WCAG, Section 508, and PDF/UA accessibility requirements."
         }
       ]
     },
 
     {
+       id: "digital-publishing",
       title: "Digital Publishing Services",
       image: ebook,
       description:
@@ -106,16 +99,12 @@ function Services() {
           title: "XML Conversion & Validation",
           description:
             "Convert structured content into industry-standard XML formats with validation."
-        },
-        {
-          title: "Zero-error Content Transformation",
-          description:
-            "Quality-controlled publishing workflows designed for high accuracy and consistency."
         }
       ]
     },
 
     {
+      id: "multimedia-accessibility",
       title: "Multimedia Accessibility",
       image: epub,
       description:
@@ -143,69 +132,60 @@ function Services() {
             "Narration describing important visual information for people with visual impairments."
         },
         {
-          title: "Video Annotation & Accessibility Support",
+          title: "Video Annotation ",
           description:
-            "Accessibility enhancements, metadata, and annotations to improve usability and compliance."
+            "We provide accurate video annotation services by identifying, labeling, and tagging visual elements, objects, scenes, and events within video content to improve organization, searchability, AI model training, and content analysis."
         }
       ]
     }
   ];
 
-  return (
-    <section className="services" id="services">
-      {services.map((service, index) => (
-        <div
-          className={`service-row ${
-            index % 2 !== 0 ? "reverse" : ""
-          }`}
-          key={index}
-        >
-          {/* Image */}
-          <div className="service-image">
-            <img
-              src={service.image}
-              alt={service.title}
-            />
-          </div>
+return (
+  <>
+    {/* Service Sections */}
 
-          {/* Content */}
-          <div className="service-info">
-            <h3>{service.title}</h3>
-
-            <p>{service.description}</p>
-
-            <button
-              className="details-btn"
-              onClick={() =>
-                setOpenIndex(
-                  openIndex === index ? null : index
-                )
-              }
-            >
-              {openIndex === index
-                ? "Hide Details"
-                : "View Details"}
-            </button>
-
-            {openIndex === index && (
-              <div className="service-details">
-                {service.details.map((detail, i) => (
-                  <div
-                    className="detail-item"
-                    key={i}
-                  >
-                    <h5>{detail.title}</h5>
-
-                    <p>{detail.description}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+    {services.map((service, index) => (
+      <div
+        id={service.id}
+        key={service.id}
+        className={`service-row ${
+          index % 2 !== 0 ? "reverse" : ""
+        }`}
+      >
+        {/* Image */}
+        <div className="service-image">
+          <img src={service.image} alt={service.title} />
         </div>
-      ))}
-    </section>
-  );
-}
 
+        {/* Content */}
+        <div className="service-info">
+          <h3>{service.title}</h3>
+
+          <p>{service.description}</p>
+
+          <button
+            className="details-btn"
+            onClick={() =>
+              setOpenIndex(openIndex === index ? null : index)
+            }
+          >
+            {openIndex === index ? "Hide Details" : "View Details"}
+          </button>
+
+          {openIndex === index && (
+            <div className="service-details">
+              {service.details.map((detail, i) => (
+                <div className="detail-item" key={i}>
+                  <h5>{detail.title}</h5>
+                  <p>{detail.description}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    ))}
+  </>
+);
+}
 export default Services;
