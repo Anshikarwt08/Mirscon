@@ -49,23 +49,27 @@ function Services() {
         <div
           id={service.id}
           key={service.id}
-          className={`service-row ${index % 2 !== 0 ? "reverse" : ""}`}
+          className={`accessibility-service-row ${
+            index % 2 !== 0 ? "accessibility-reverse" : ""
+          }`}
         >
           {/* Image */}
-          <div className="service-image">
+          <div className="accessibility-service-image">
             <img src={service.image} alt={service.title} />
           </div>
 
           {/* Content */}
-          <div className="service-info">
+          <div className="accessibility-service-content">
             <h3
-              className="service-title"
+              className="accessibility-service-title"
               onClick={() => navigate(`/services/${service.id}`)}
             >
               {service.title}
             </h3>
 
-            <p>{service.description}</p>
+            <p className="accessibility-service-description">
+              {service.description}
+            </p>
           </div>
         </div>
       ))}
