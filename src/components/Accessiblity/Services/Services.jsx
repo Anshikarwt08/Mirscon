@@ -1,5 +1,5 @@
 import "./Services.css";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import pdf from "../../../assets/pdf.png";
 import ebook from "../../../assets/ebook.jpeg";
@@ -7,8 +7,6 @@ import epub from "../../../assets/epub.png";
 import alttext from "../../../assets/alttext.png";
 
 function Services() {
-  const navigate = useNavigate();
-
   const services = [
     {
       id: "alt-text",
@@ -45,6 +43,7 @@ function Services() {
 
   return (
     <section className="services">
+
       {services.map((service, index) => (
         <div
           id={service.id}
@@ -53,26 +52,64 @@ function Services() {
             index % 2 !== 0 ? "accessibility-reverse" : ""
           }`}
         >
-          {/* Image */}
+
+          {/* =========================
+              Image
+          ========================= */}
+
           <div className="accessibility-service-image">
-            <img src={service.image} alt={service.title} />
+            <img
+              src={service.image}
+              alt={service.title}
+            />
           </div>
 
-          {/* Content */}
+
+          {/* =========================
+              Content
+          ========================= */}
+
           <div className="accessibility-service-content">
-            <h3
-              className="accessibility-service-title"
-              onClick={() => navigate(`/services/${service.id}`)}
-            >
+
+            
+
+
+            {/* Service Heading */}
+            <h3 className="accessibility-service-title">
               {service.title}
             </h3>
 
+
+            {/* Description */}
             <p className="accessibility-service-description">
               {service.description}
             </p>
+
+
+            {/* =========================
+                Explore Service Button
+            ========================= */}
+
+            <Link
+              to={`/services/${service.id}`}
+              className="accessibility-service-explore"
+              aria-label={`Explore ${service.title}`}
+            >
+              <span>Explore Service</span>
+
+              <span
+                className="explore-arrow"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </Link>
+
           </div>
+
         </div>
       ))}
+
     </section>
   );
 }

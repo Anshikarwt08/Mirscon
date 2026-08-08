@@ -66,30 +66,27 @@ function Counter({ end, suffix }) {
   }, [end]);
 
   return (
-    <h3 className="counter-number">
+    <div className="counter-number">
       {count}
       {suffix}
-    </h3>
+    </div>
   );
 }
 
 function Home2() {
-
   const handleServiceClick = (service) => {
     console.log(service.title);
-
-    // Example:
-    // navigate("/services");
-    // or
-    // window.location.href = "/services";
   };
 
   return (
     <section className="home2">
 
-      {/* Services Heading */}
+      {/* ===========================
+          Services Heading
+      ============================ */}
 
       <div className="services-heading">
+
         <h2>
           Innovative Technology Solutions for Modern Businesses
         </h2>
@@ -100,9 +97,13 @@ function Home2() {
           value-driven technology services that accelerate
           business growth.
         </p>
+
       </div>
 
-      {/* Services */}
+
+      {/* ===========================
+          Services
+      ============================ */}
 
       <div className="services-grid">
 
@@ -124,14 +125,20 @@ function Home2() {
           >
 
             <div className="icon-box">
+
               <div className="service-icon">
                 {service.icon}
               </div>
+
             </div>
 
-            <h3>{service.title}</h3>
+            <h3>
+              {service.title}
+            </h3>
 
-            <p>{service.description}</p>
+            <p>
+              {service.description}
+            </p>
 
           </article>
 
@@ -139,7 +146,10 @@ function Home2() {
 
       </div>
 
-      {/* Statistics */}
+
+      {/* ===========================
+          Statistics
+      ============================ */}
 
       <div className="stats-section">
 
@@ -155,7 +165,9 @@ function Home2() {
               suffix={item.suffix}
             />
 
-            <p>{item.title}</p>
+            <p>
+              {item.title}
+            </p>
 
           </div>
 
