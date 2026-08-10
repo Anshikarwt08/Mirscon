@@ -2,211 +2,416 @@
    Accessibility Hero Section
 ========================================== */
 
-.accessibility-hero-section{
-    width:min(1380px,95%);
-    margin:30px auto 90px;
-    padding:110px 40px;
+.accessibility-hero-section {
+  width: min(1380px, 95%);
 
-    position:relative;
-    overflow:hidden;
+  margin: 30px auto 90px;
 
-    border-radius:36px;
-    border:1px solid #e7edf4;
+  padding: 100px 40px;
 
-    background:
-        radial-gradient(circle at left center,
-        rgba(14,165,233,.12),
-        transparent 40%),
+  position: relative;
+  overflow: hidden;
 
-        radial-gradient(circle at right center,
-        rgba(14,165,233,.10),
-        transparent 40%),
+  border-radius: 36px;
 
-        linear-gradient(180deg,#ffffff,#fbfcfd);
-}
+  border: 1px solid #e7edf4;
 
-/* Decorative Glow */
-
-.accessibility-hero-section::before{
-    content:"";
-    position:absolute;
-    width:420px;
-    height:420px;
-    left:-180px;
-    top:-120px;
-    border-radius:50%;
-    background:#dff5ff;
-    filter:blur(100px);
-}
-
-.accessibility-hero-section::after{
-    content:"";
-    position:absolute;
-    width:380px;
-    height:380px;
-    right:-140px;
-    bottom:-120px;
-    border-radius:50%;
-    background:#d8f3ff;
-    filter:blur(100px);
-}
-
-.accessibility-hero-content{
-    position:relative;
-    z-index:2;
-    text-align:center;
-    max-width:980px;
-    margin:auto;
-}
-
-/* Heading */
-
-.accessibility-hero-title{
-
-    font-size:clamp(3rem,6vw,3.5rem);
-
-    font-weight:700;
-
-    line-height:1.1;
-
-    letter-spacing:-2px;
-
-    color:#0f172a;
-
-    margin-bottom:18px;
+  background:
+    radial-gradient(
+      circle at left center,
+      rgba(14, 165, 233, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at right center,
+      rgba(14, 165, 233, 0.10),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #fbfcfd
+    );
 }
 
 
-/* Description */
+/* ==========================================
+   Decorative Glow
+========================================== */
 
-.accessibility-hero-description{
+.accessibility-hero-section::before {
+  content: "";
 
-    max-width:980px;
+  position: absolute;
 
-    margin: 50px auto 45px;
+  width: 420px;
+  height: 420px;
 
-    font-size:1.4rem;
+  left: -180px;
+  top: -120px;
 
-    line-height:1.8;
+  border-radius: 50%;
 
-    color:#64748b;
+  background: #dff5ff;
+
+  filter: blur(100px);
+
+  pointer-events: none;
 }
 
-/* Feature Pills */
+.accessibility-hero-section::after {
+  content: "";
 
-.hero-service-cards{
+  position: absolute;
 
-    display:flex;
+  width: 380px;
+  height: 380px;
 
-    justify-content:center;
+  right: -140px;
+  bottom: -120px;
 
-    flex-wrap:wrap;
+  border-radius: 50%;
 
-    gap:18px;
+  background: #d8f3ff;
+
+  filter: blur(100px);
+
+  pointer-events: none;
 }
 
-.hero-service-card{
 
-    display:flex;
+/* ==========================================
+   Hero Content
+========================================== */
 
-    align-items:center;
+.accessibility-hero-content {
+  position: relative;
 
-    gap:10px;
+  z-index: 2;
 
-    padding:14px 22px;
+  max-width: 980px;
 
-    border-radius:999px;
+  margin: 0 auto;
 
-    background:#0f172a;
-
-    color:#ffffff;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    font-size:.96rem;
-
-    transition:all .3s ease;
-
-    box-shadow:0 10px 25px rgba(15,23,42,.15);
+  text-align: center;
 }
 
-.hero-service-card:hover{
 
-    transform:translateY(-3px);
+/* ==========================================
+   Heading
+========================================== */
+
+.accessibility-hero-title {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: clamp(2.8rem, 5vw, 3.5rem);
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.8px;
 }
 
-.service-icon{
 
-    font-size:1rem;
+/* ==========================================
+   Description
+========================================== */
 
-    color:#ffffff;
+.accessibility-hero-description {
+  max-width: 900px;
 
-    flex-shrink:0;
+  margin: 34px auto 38px;
+
+  color: #64748b;
+
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+
+  font-weight: 400;
 }
 
-/* ==========================
+
+
+.hero-service-cards {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+
+
+.hero-service-card {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  min-height: 40px;
+
+  border-radius: 999px;
+
+  background: #0f172a;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 1.07rem;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 7px 18px rgba(15, 23, 42, 0.12);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-service-card:hover {
+  transform: translateY(-3px);
+
+  background: #172033;
+
+  box-shadow:
+    0 12px 25px rgba(15, 23, 42, 0.17);
+}
+
+
+/* ==========================================
+   Pill Focus
+========================================== */
+
+.hero-service-card:focus-visible {
+  outline: 3px solid #7aa5ff;
+
+  outline-offset: 3px;
+}
+
+
+/* ==========================================
+   Service Icons
+========================================== */
+
+.hero-service-card .service-icon {
+  width: 16px;
+  height: 16px;
+
+  color: #ffffff;
+
+  flex-shrink: 0;
+}
+
+
+/* ==========================================
    Tablet
-========================== */
+========================================== */
 
-@media (max-width:992px){
+@media (max-width: 992px) {
 
-.accessibility-hero-section{
+  .accessibility-hero-section {
+    padding: 80px 30px;
 
-    padding:80px 30px;
+    margin-bottom: 70px;
+  }
+
+  .accessibility-hero-title {
+    font-size: 3rem;
+  }
+
+  .accessibility-hero-description {
+    max-width: 800px;
+
+    margin-top: 28px;
+
+    font-size: 1.05rem;
+  }
+
+  .hero-service-cards {
+    gap: 10px;
+  }
+
+  .hero-service-card {
+    padding: 9px 15px;
+
+    font-size: 0.8rem;
+  }
 }
 
-.accessibility-hero-title{
 
-    font-size:3rem;
-}
-
-.accessibility-hero-subtitle{
-
-    font-size:1.25rem;
-}
-}
-
-/* ==========================
+/* ==========================================
    Mobile
-========================== */
+========================================== */
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-.accessibility-hero-section{
+  .accessibility-hero-section {
+    width: calc(100% - 30px);
 
-    width:calc(100% - 30px);
+    padding: 60px 20px;
 
-    padding:60px 20px;
+    margin: 20px auto 60px;
 
-    border-radius:24px;
+    border-radius: 26px;
+  }
+
+  .accessibility-hero-section::before {
+    width: 280px;
+    height: 280px;
+
+    left: -140px;
+    top: -80px;
+
+    filter: blur(80px);
+  }
+
+  .accessibility-hero-section::after {
+    width: 260px;
+    height: 260px;
+
+    right: -120px;
+    bottom: -100px;
+
+    filter: blur(80px);
+  }
+
+  .accessibility-hero-title {
+    font-size: 2.3rem;
+
+    letter-spacing: -1px;
+  }
+
+  .accessibility-hero-description {
+    margin: 24px auto 30px;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+  }
+
+  .hero-service-cards {
+    gap: 9px;
+
+    margin-top: 24px;
+  }
+
+  .hero-service-card {
+    width: auto;
+
+    padding: 9px 13px;
+
+    min-height: 38px;
+
+    font-size: 0.76rem;
+
+    gap: 7px;
+  }
+
+  .hero-service-card .service-icon {
+    width: 15px;
+    height: 15px;
+  }
 }
 
-.accessibility-hero-title{
 
-    font-size:2.3rem;
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width: 480px) {
+
+  .accessibility-hero-section {
+    width: calc(100% - 20px);
+
+    padding: 50px 16px;
+
+    border-radius: 22px;
+  }
+
+  .accessibility-hero-title {
+    font-size: 2rem;
+  }
+
+  .accessibility-hero-description {
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+
+    margin-top: 22px;
+  }
+
+  .hero-service-cards {
+    gap: 8px;
+  }
+
+  .hero-service-card {
+    padding: 8px 11px;
+
+    min-height: 36px;
+
+    font-size: 0.7rem;
+  }
+
+  .hero-service-card .service-icon {
+    width: 14px;
+    height: 14px;
+  }
 }
 
-.accessibility-hero-subtitle{
 
-    font-size:1.1rem;
+/* ==========================================
+   Very Small Screens
+========================================== */
+
+@media (max-width: 360px) {
+
+  .accessibility-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .accessibility-hero-description {
+    font-size: 0.88rem;
+  }
+
+  .hero-service-card {
+    padding: 8px 10px;
+
+    font-size: 0.67rem;
+  }
 }
 
-.accessibility-hero-description{
 
-    font-size:1rem;
-}
+/* ==========================================
+   Reduced Motion
+========================================== */
 
-.hero-service-cards{
+@media (prefers-reduced-motion: reduce) {
 
-    gap:14px;
-}
-
-.hero-service-card{
-
-    width:100%;
-
-    justify-content:center;
-}
+  .hero-service-card {
+    transition: none;
+  }
 }

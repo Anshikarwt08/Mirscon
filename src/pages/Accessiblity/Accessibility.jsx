@@ -10,7 +10,7 @@ function Accessibility() {
     
     <main id="main-content" className="accessibility-page">
       <Hero />
-     <Services/>
+     <Services/>     
     </main>
     </>
   );
