@@ -80,13 +80,12 @@ function Footer() {
           <h3>Services</h3>
 
           <ul>
-            <li>Quality Automation</li>
-            <li>Accessibility Testing</li>
-            <li>Salesforce</li>
-            <li>Integration Technology</li>
-            <li>Service Now</li>
-            <li>Cloud</li>
-            <li>Product Engineering</li>
+            <li>Accessibility Services</li>
+<li>Resource Outsourcing</li>
+<li>Alt Text Services</li>
+<li>Document Remediation</li>
+<li>Digital Publishing Services</li>
+<li>Multimedia Accessibility</li>
           </ul>
         </div>
 

@@ -1,0 +1,644 @@
+/* =========================================
+   RESOURCE OUTSOURCING PAGE
+========================================= */
+
+.resource-outsourcing-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #14213d;
+}
+
+
+/* =========================================
+   COMMON
+========================================= */
+
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.resource-hero {
+  width: min(1400px, 94%);
+
+  min-height: 430px;
+
+  margin: 35px auto 90px;
+
+  padding: 70px 65px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  overflow: hidden;
+
+  border: 1px solid #dce8f7;
+
+  border-radius: 32px;
+
+  background:
+    radial-gradient(
+      circle at 10% 30%,
+      rgba(194, 236, 255, 0.8),
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(214, 225, 255, 0.8),
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #eefaff 0%,
+      #ffffff 50%,
+      #f0f4ff 100%
+    );
+
+  box-shadow:
+    0 20px 50px rgba(26, 63, 125, 0.08);
+}
+
+
+/* Decorative circles */
+
+.resource-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: 80px;
+  top: -220px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.resource-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 30%;
+  bottom: -430px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(37, 99, 235, 0.07);
+}
+
+
+/* Hero content */
+
+.resource-hero-content {
+  width: 60%;
+
+  position: relative;
+  z-index: 2;
+}
+
+.resource-label {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  padding: 8px 16px;
+
+  border-radius: 30px;
+
+  background: #e4efff;
+
+  color: #2457b8;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.resource-hero h1 {
+  margin: 0 0 22px;
+
+  max-width: 800px;
+
+  color: #142b60;
+
+  font-size: clamp(2.7rem, 5vw, 4.4rem);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.04em;
+}
+
+.resource-hero p {
+  max-width: 720px;
+
+  margin: 0 0 32px;
+
+  color: #5d6c85;
+
+  font-size: 18px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.resource-primary-btn {
+  border: none;
+
+  padding: 14px 28px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.resource-primary-btn:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   HERO VISUAL
+========================================= */
+
+.resource-hero-visual {
+  width: 390px;
+  height: 320px;
+
+  position: relative;
+
+  flex-shrink: 0;
+}
+
+
+/* Connecting lines */
+
+.resource-hero-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  left: 90px;
+  top: 55px;
+
+  border: 1px dashed #9bbcff;
+
+  border-radius: 50%;
+}
+
+
+/* Main circle */
+
+.resource-circle {
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 2px solid #3b82f6;
+
+  box-shadow:
+    0 8px 25px rgba(37, 99, 235, 0.12);
+
+  font-size: 24px;
+}
+
+.resource-circle-main {
+  width: 110px;
+  height: 110px;
+
+  left: 140px;
+  top: 105px;
+
+  border-width: 1.5px;
+
+  font-size: 38px;
+
+  z-index: 2;
+}
+
+.resource-circle-top {
+  left: 163px;
+  top: 0;
+}
+
+.resource-circle-left {
+  left: 35px;
+  top: 105px;
+}
+
+.resource-circle-right {
+  right: 30px;
+  top: 105px;
+}
+
+.resource-circle-bottom {
+  left: 163px;
+  bottom: 0;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.resource-intro {
+  width: min(950px, 90%);
+
+  margin: 0 auto 95px;
+
+  text-align: center;
+}
+
+.resource-intro h2 {
+  margin: 0 0 20px;
+
+  color: #173474;
+
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+
+  font-weight: 750;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.025em;
+}
+
+.resource-intro p {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: #65738a;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.resource-services {
+  width: min(1200px, 92%);
+
+  margin: 0 auto 110px;
+
+  text-align: center;
+}
+
+.resource-services h2 {
+  margin: 0 0 42px;
+
+  color: #173474;
+
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+
+/* Grid */
+
+.resource-service-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+
+  text-align: left;
+}
+
+
+/* Card */
+
+.resource-service-card {
+  min-height: 275px;
+
+  padding: 30px 26px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #dfe7f3;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(30, 64, 175, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.resource-service-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #c8d9ff;
+
+  box-shadow:
+    0 18px 40px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Blue top line */
+
+.resource-service-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 25px;
+  right: 25px;
+
+  height: 3px;
+
+  border-radius: 0 0 10px 10px;
+
+  background: #2563eb;
+}
+
+
+/* Number */
+
+.resource-card-number {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #eaf2ff;
+
+  color: #2563eb;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+/* Card content */
+
+.resource-card-content h3 {
+  margin: 0 0 15px;
+
+  color: #173474;
+
+  font-size: 21px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
+}
+
+.resource-card-content p {
+  margin: 0;
+
+  color: #66748b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.resource-cta {
+  width: min(1200px, 92%);
+
+  margin: 0 auto 100px;
+
+  padding: 45px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  border: 1px solid #d8e5f7;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf7ff,
+      #f3f6ff
+    );
+}
+
+.resource-cta-content {
+  max-width: 760px;
+}
+
+.resource-cta h2 {
+  margin: 0 0 12px;
+
+  color: #173474;
+
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+  font-weight: 750;
+
+  line-height: 1.2;
+}
+
+.resource-cta p {
+  margin: 0;
+
+  color: #66748b;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .resource-hero {
+    padding: 60px 45px;
+  }
+
+  .resource-hero-content {
+    width: 55%;
+  }
+
+  .resource-hero-visual {
+    transform: scale(0.85);
+    margin-right: -30px;
+  }
+
+  .resource-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .resource-hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 60px 30px;
+  }
+
+  .resource-hero-content {
+    width: 100%;
+  }
+
+  .resource-hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resource-hero-visual {
+    margin: 10px auto 0;
+  }
+
+  .resource-cta {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .resource-hero {
+    width: 94%;
+
+    margin-top: 20px;
+
+    padding: 50px 22px;
+
+    border-radius: 25px;
+  }
+
+  .resource-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .resource-hero p {
+    font-size: 16px;
+  }
+
+  .resource-hero-visual {
+    width: 300px;
+    height: 250px;
+
+    transform: scale(0.8);
+  }
+
+  .resource-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-service-card {
+    min-height: auto;
+
+    padding: 28px 24px;
+  }
+
+  .resource-intro {
+    margin-bottom: 75px;
+  }
+
+  .resource-cta {
+    width: 94%;
+
+    padding: 40px 25px;
+
+    margin-bottom: 70px;
+  }
+
+}

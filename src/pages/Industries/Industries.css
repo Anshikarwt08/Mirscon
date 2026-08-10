@@ -1,0 +1,540 @@
+/* =========================================
+   INDUSTRIES PAGE
+========================================= */
+
+.industries-page {
+  width: 100%;
+  background: #ffffff;
+  color: #10182b;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.industries-hero {
+  width: min(1400px, 94%);
+
+  margin: 35px auto 90px;
+
+  padding: 100px 60px;
+
+  border-radius: 36px;
+
+  border: 1px solid #e0e9f5;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(77, 143, 255, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #eaf8ff,
+      #ffffff 55%,
+      #edf3ff
+    );
+
+  text-align: center;
+}
+
+
+.industries-hero-content {
+  max-width: 950px;
+  margin: auto;
+}
+
+
+.industries-label,
+.section-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  color: #2563eb;
+}
+
+
+.industries-hero h1 {
+  margin: 0 0 25px;
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  line-height: 1.05;
+
+  letter-spacing: -0.045em;
+
+  color: #10182b;
+}
+
+
+.industries-hero p {
+  max-width: 800px;
+
+  margin: auto;
+
+  font-size: 19px;
+
+  line-height: 1.8;
+
+  color: #61708a;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.industries-intro {
+  width: min(900px, 92%);
+
+  margin: 0 auto 80px;
+
+  text-align: center;
+}
+
+
+.industries-intro h2 {
+  margin: 0 0 22px;
+
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+
+  line-height: 1.15;
+
+  letter-spacing: -0.035em;
+
+  color: #15336f;
+}
+
+
+.industries-intro p {
+  margin: auto;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  color: #68758b;
+}
+
+
+/* =========================================
+   INDUSTRY GRID
+========================================= */
+
+.industries-section {
+  width: min(1250px, 92%);
+
+  margin: 0 auto 110px;
+}
+
+
+.industries-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 24px;
+}
+
+
+.industry-card {
+  position: relative;
+
+  padding: 34px;
+
+  min-height: 310px;
+
+  border-radius: 24px;
+
+  border: 1px solid #e0e8f4;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(31, 61, 110, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.industry-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #c6d9f5;
+
+  box-shadow:
+    0 20px 45px rgba(31, 61, 110, 0.11);
+}
+
+
+.industry-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+
+.industry-number {
+  font-size: 14px;
+
+  font-weight: 800;
+
+  color: #2563eb;
+
+  letter-spacing: 0.08em;
+}
+
+
+.industry-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 25px;
+
+  line-height: 1.25;
+
+  color: #163573;
+}
+
+
+.industry-card p {
+  margin: 0 0 25px;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #68758b;
+}
+
+
+.industry-services {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.industry-services span {
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: #f1f6ff;
+
+  color: #31558f;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   WHY Mirscon
+========================================= */
+
+.industries-why {
+  width: min(1250px, 92%);
+
+  margin: 0 auto 110px;
+
+  padding: 65px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4f9ff,
+      #ffffff
+    );
+
+  border: 1px solid #e0e9f5;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+
+.industries-why-content h2 {
+  margin: 0 0 22px;
+
+  font-size: clamp(2.2rem, 3.5vw, 3.3rem);
+
+  line-height: 1.15;
+
+  color: #15336f;
+}
+
+
+.industries-why-content p {
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #68758b;
+}
+
+
+.industry-benefits {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+.industry-benefit {
+  padding: 25px;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2eaf5;
+}
+
+
+.industry-benefit > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  color: #2563eb;
+}
+
+
+.industry-benefit h3 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+
+  color: #19386f;
+}
+
+
+.industry-benefit p {
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #6c7890;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.industries-cta {
+  width: min(1250px, 92%);
+
+  margin: 0 auto 80px;
+
+  padding: 55px 60px;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf6ff,
+      #f1f5ff
+    );
+
+  border: 1px solid #dce7f6;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+
+.industries-cta > div {
+  max-width: 750px;
+}
+
+
+.industries-cta > div > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  color: #2563eb;
+}
+
+
+.industries-cta h2 {
+  margin: 0 0 10px;
+
+  font-size: clamp(2rem, 3vw, 2.8rem);
+
+  color: #15336f;
+}
+
+
+.industries-cta p {
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+
+  color: #68758b;
+}
+
+
+.industries-cta button {
+  flex-shrink: 0;
+
+  padding: 16px 25px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transition: 0.2s ease;
+}
+
+
+.industries-cta button:hover {
+  background: #174fc4;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.22);
+}
+
+
+.industries-cta button span {
+  font-size: 20px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-why {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 45px;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .industries-hero {
+    padding: 65px 25px;
+
+    border-radius: 24px;
+  }
+
+  .industries-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .industries-hero p {
+    font-size: 16px;
+  }
+
+  .industry-card {
+    padding: 27px;
+  }
+
+  .industry-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .industries-why {
+    padding: 30px;
+
+    border-radius: 22px;
+  }
+
+  .industries-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 35px 25px;
+  }
+
+  .industries-cta button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}

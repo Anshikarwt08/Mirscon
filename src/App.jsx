@@ -16,6 +16,9 @@ import ContactBanner from "./pages/ContactBanner/ContactBanner";
 import Footer from "./components/Footer/Footer";
 import Careers from "./pages/Careers/Careers";
 import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
+import ResourceOutsourcing from "./pages/ResourceOutsourcing/ResourceOutsourcing";
+import GetStarted from "./pages/GetStarted/GetStarted";
+import Industries from "./pages/Industries/Industries";
 
 function MainPage() {
   return (
@@ -51,7 +54,22 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/accessibility" element={<Accessibility />} />
-        <Route path="/services/:id" element={<ServiceDetails />} />
+        <Route
+  path="/services/:id"
+  element={<ServiceDetails />}
+/>
+<Route
+  path="/resource-outsourcing"
+  element={<ResourceOutsourcing />}
+/>
+<Route
+  path="/get-started"
+  element={<GetStarted />}
+/>
+<Route
+  path="/industries"
+  element={<Industries />}
+/>
         <Route path="/career" element={<Careers />} />
       </Routes>
     </>
