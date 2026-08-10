@@ -18,7 +18,7 @@
 }
 
 .service-details-page section {
-    width: min(1200px, 92%);
+    width: min(1350px, 94%);
     margin-left: auto;
     margin-right: auto;
 }
@@ -185,13 +185,13 @@
 }
 
 .service-details-section-heading p {
-    max-width: 720px;
+    max-width: none;
 
     margin: 18px 0 0;
 
     color: #687386;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     line-height: 1.8;
 }
@@ -284,7 +284,7 @@
 
     color: #687386;
 
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 
     line-height: 1.85;
 }
@@ -331,7 +331,7 @@
 
     color: #687386;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     line-height: 1.8;
 }
@@ -346,52 +346,28 @@
 
 .service-details-benefit-item {
     display: flex;
-
     align-items: flex-start;
-
-    gap: 13px;
+    gap: 15px;
 
     padding: 19px;
 
     border: 1px solid #dfe8f5;
-
     border-radius: 17px;
 
     background: #ffffff;
 
     color: #374151;
 
-    font-size: 0.93rem;
-
-    line-height: 1.6;
+    font-size: 1.07rem;   /* increased from 0.93rem */
+    line-height: 1.65;
 
     box-shadow:
         0 6px 20px rgba(19, 43, 99, 0.035);
 }
 
 .service-details-check {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: 25px;
-    height: 25px;
-
-    flex-shrink: 0;
-
-    border-radius: 50%;
-
-    background: #eaf1ff;
-
-    color: #2962ff;
-
-    font-size: 0.75rem;
-
-    font-weight: 700;
+    display: none;
 }
-
 
 /* =========================================================
    INDUSTRIES
@@ -432,7 +408,7 @@
 
     text-align: center;
 
-    font-size: 0.9rem;
+    font-size: 1.09rem;
 
     font-weight: 600;
 
@@ -514,7 +490,7 @@
 
     color: #132b63;
 
-    font-size: 1.1rem;
+    font-size: 1.5rem;
 
     font-weight: 600;
 }
@@ -524,7 +500,7 @@
 
     color: #687386;
 
-    font-size: 0.9rem;
+    font-size: 1.05rem;
 
     line-height: 1.7;
 }
@@ -668,28 +644,6 @@
 }
 
 
-/* Arrow */
-
-.floating-back-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 28px;
-  height: 28px;
-
-  border-radius: 50%;
-
-  background: #eef4ff;
-  color: #2962ff;
-
-  font-size: 17px;
-  line-height: 1;
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
-}
 
 
 /* Hover */

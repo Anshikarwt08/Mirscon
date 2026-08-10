@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import pdf from "../../../assets/pdf.png";
 import ebook from "../../../assets/ebook.jpeg";
-import epub from "../../../assets/epub.png";
 import alttext from "../../../assets/alttext.png";
+import srt from "../../../assets/srt.png";
 
 function Services() {
   const services = [
@@ -35,7 +35,7 @@ function Services() {
     {
       id: "multimedia-accessibility",
       title: "Multimedia Accessibility",
-      image: epub,
+      image: srt,
       description:
         "We make multimedia content accessible by providing professional captioning, transcription, audio description, and video accessibility services that ensure an inclusive experience for every user."
     }

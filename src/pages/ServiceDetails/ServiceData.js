@@ -1,7 +1,7 @@
 import pdf from "../../assets/pdf.png";
 import ebook from "../../assets/ebook.jpeg";
-import epub from "../../assets/epub.png";
 import alttext from "../../assets/alttext.png";
+import srt from "../../assets/srt.png";
 
 const serviceData = {
   /* =========================================================
@@ -182,13 +182,6 @@ const serviceData = {
           "Yes. Our workflows can support large-scale accessibility and publishing projects while maintaining quality and consistency."
       }
     ],
-
-    cta: {
-      title: "Make Your Digital Content More Accessible",
-      description:
-        "Talk to our accessibility experts about your next project.",
-      buttonText: "Get Started"
-    }
   },
 
 
@@ -344,13 +337,6 @@ const serviceData = {
       "EdTech"
     ],
 
-    standards: [
-      "WCAG 2.2",
-      "PDF/UA",
-      "Section 508",
-      "ADA"
-    ],
-
     process: [
       {
         step: "01",
@@ -378,29 +364,6 @@ const serviceData = {
       }
     ],
 
-    whyChooseUs: [
-      {
-        title: "Multi-format Expertise",
-        description:
-          "We work with PDF, Word, PowerPoint, Excel, and other digital document formats."
-      },
-      {
-        title: "Accessibility Knowledge",
-        description:
-          "Our workflows focus on structural and functional accessibility requirements."
-      },
-      {
-        title: "Quality Assurance",
-        description:
-          "Documents go through detailed review before final delivery."
-      },
-      {
-        title: "Scalable Workflows",
-        description:
-          "Our processes can support both individual documents and large document collections."
-      }
-    ],
-
     faqs: [
       {
         question: "What types of documents can you remediate?",
@@ -419,12 +382,6 @@ const serviceData = {
       }
     ],
 
-    cta: {
-      title: "Make Your Documents Accessible",
-      description:
-        "Let our accessibility experts help transform your documents into accessible digital content.",
-      buttonText: "Get Started"
-    }
   },
 
 
@@ -580,13 +537,6 @@ const serviceData = {
       "Enterprise Publishing"
     ],
 
-    standards: [
-      "EPUB 3",
-      "WCAG 2.2",
-      "Accessible Publishing Practices",
-      "XML Standards"
-    ],
-
     process: [
       {
         step: "01",
@@ -614,29 +564,6 @@ const serviceData = {
       }
     ],
 
-    whyChooseUs: [
-      {
-        title: "Publishing Expertise",
-        description:
-          "Our workflows support academic, educational, professional, and digital publishing requirements."
-      },
-      {
-        title: "Multiple Formats",
-        description:
-          "We support a range of digital publishing formats and structured content workflows."
-      },
-      {
-        title: "Quality Focus",
-        description:
-          "Every project includes structured review and validation processes."
-      },
-      {
-        title: "Scalable Production",
-        description:
-          "Our workflows can support both individual publications and large publishing programs."
-      }
-    ],
-
     faqs: [
       {
         question: "What digital formats do you support?",
@@ -655,12 +582,6 @@ const serviceData = {
       }
     ],
 
-    cta: {
-      title: "Transform Your Content for Digital Publishing",
-      description:
-        "Work with our digital publishing team to create high-quality digital publications.",
-      buttonText: "Get Started"
-    }
   },
 
 
@@ -671,7 +592,7 @@ const serviceData = {
   "multimedia-accessibility": {
     title: "Multimedia Accessibility",
 
-    image: epub,
+    image: srt,
 
     description:
       "Professional captioning, transcription, subtitles, audio description, and video accessibility services for inclusive multimedia experiences.",
@@ -816,13 +737,6 @@ const serviceData = {
       "Healthcare"
     ],
 
-    standards: [
-      "WCAG 2.2",
-      "Section 508",
-      "ADA",
-      "Accessible Multimedia Practices"
-    ],
-
     process: [
       {
         step: "01",
@@ -850,29 +764,6 @@ const serviceData = {
       }
     ],
 
-    whyChooseUs: [
-      {
-        title: "Accessibility Expertise",
-        description:
-          "Our workflows are designed to address accessibility requirements for multimedia content."
-      },
-      {
-        title: "Accurate Production",
-        description:
-          "We focus on accuracy, synchronization, consistency, and content quality."
-      },
-      {
-        title: "Multiple Services",
-        description:
-          "Captioning, transcription, subtitles, audio description, and annotation can be combined within a single workflow."
-      },
-      {
-        title: "Scalable Delivery",
-        description:
-          "Our production workflows can support both individual videos and large multimedia libraries."
-      }
-    ],
-
     faqs: [
       {
         question: "What multimedia services do you provide?",
@@ -890,13 +781,6 @@ const serviceData = {
           "Yes. Captioning and subtitle files can be synchronized with the corresponding multimedia content."
       }
     ],
-
-    cta: {
-      title: "Make Your Multimedia Content Accessible",
-      description:
-        "Talk to our accessibility specialists about your multimedia accessibility requirements.",
-      buttonText: "Get Started"
-    }
   }
 };
 

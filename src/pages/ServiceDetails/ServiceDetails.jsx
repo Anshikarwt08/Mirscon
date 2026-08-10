@@ -381,9 +381,7 @@ function ServiceDetails() {
         onClick={() => navigate("/accessibility")}
         aria-label="Back to Accessibility"
       >
-        <span className="floating-back-arrow" aria-hidden="true">
-          ←
-        </span>
+        
 
         <span className="floating-back-text">
           Back to Accessibility
