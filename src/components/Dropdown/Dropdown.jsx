@@ -10,8 +10,11 @@ function Dropdown({ title, items, onItemClick }) {
   const buttonRef = useRef(null);
   const navigate = useNavigate();
 
-  const closeDropdown = () => setIsOpen(false);
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
 
+  // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -23,10 +26,13 @@ function Dropdown({ title, items, onItemClick }) {
     };
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () =>
+
+    return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
+  // Close with Escape
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape" && isOpen) {
@@ -36,44 +42,43 @@ function Dropdown({ title, items, onItemClick }) {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    return () =>
+
+    return () => {
       document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [isOpen]);
 
-  const handleBlur = (event) => {
-    if (
-      dropdownRef.current &&
-      !dropdownRef.current.contains(event.relatedTarget)
-    ) {
-      closeDropdown();
-    }
-  };
-
   return (
-    <div
-      className="dropdown"
-      ref={dropdownRef}
-      onBlur={handleBlur}
-    >
+    <div className="mirscon-dropdown" ref={dropdownRef}>
+      {/* Dropdown Button */}
       <button
         ref={buttonRef}
         type="button"
         className="dropdown-toggle"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen((prev) => !prev)}
+        aria-expanded={isOpen}
       >
-        {title}
+        <span>{title}</span>
+
         <FiChevronDown
           className={`dropdown-icon ${isOpen ? "rotate" : ""}`}
         />
       </button>
 
-      <div className={`dropdown-menu ${isOpen ? "show" : ""}`}>
+      {/* Dropdown Menu */}
+      <div
+        className={`dropdown-menu ${isOpen ? "show" : ""}`}
+        role="menu"
+      >
         {items.map((item) => {
+          // Items with hash
           if (item.hash) {
             return (
               <button
                 key={item.label}
+                type="button"
                 className="dropdown-item"
+                role="menuitem"
                 onClick={() => {
                   closeDropdown();
                   onItemClick?.();
@@ -81,10 +86,12 @@ function Dropdown({ title, items, onItemClick }) {
                   navigate(item.to);
 
                   setTimeout(() => {
-                    const el = document.querySelector(item.hash);
-                    if (el) {
-                      el.scrollIntoView({
+                    const element = document.querySelector(item.hash);
+
+                    if (element) {
+                      element.scrollIntoView({
                         behavior: "smooth",
+                        block: "start",
                       });
                     }
                   }, 300);
@@ -95,11 +102,13 @@ function Dropdown({ title, items, onItemClick }) {
             );
           }
 
+          // Normal links
           return (
             <Link
               key={item.label}
               to={item.to}
               className="dropdown-item"
+              role="menuitem"
               onClick={() => {
                 closeDropdown();
                 onItemClick?.();

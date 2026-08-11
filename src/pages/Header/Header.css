@@ -4,19 +4,16 @@
     box-sizing: border-box;
 }
 
-/* ===========================
-   Skip Link
-=========================== */
 
 .skip-link {
     position: absolute;
     left: -9999px;
     top: 12px;
-    padding: 10px 16px;
+    padding: 4px 10px;
     background: #ffffff;
     color: #000;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     z-index: 10000;
@@ -29,9 +26,7 @@
     outline-offset: 2px;
 }
 
-/* ===========================
-   Header
-=========================== */
+/*  Header */
 
 .mirscon-header {
     width: 100%;
@@ -50,15 +45,14 @@
     z-index: 1000;
 }
 
-/* ===========================
-   Logo
-=========================== */
+/* Logo */
 
 .mirscon-logo {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 90px;
+
+    transform: translateX(150px);
 }
 
 .mirscon-logo a {
@@ -77,10 +71,7 @@
     outline-offset: 4px;
     border-radius: 6px;
 }
-
-/* ===========================
-   Navigation
-=========================== */
+/*Navigation */
 
 .nav-links {
     display: flex;
@@ -89,9 +80,7 @@
     gap: 50px;
 }
 
-/* Links + Dropdown + Career */
-
-.nav-links a,
+.nav-links > a,
 .dropdown-toggle,
 .career-btn {
     position: relative;
@@ -115,7 +104,6 @@
     transition: color .3s ease;
 }
 
-/* Underline Animation */
 
 .nav-links a::after,
 .dropdown-toggle::after,
@@ -213,9 +201,7 @@
 }
 
 
-/* ===========================
-   Contact Button
-=========================== */
+/* Contact Button */
 
 .contactus-btn {
     justify-self: end;
@@ -244,9 +230,7 @@
     outline-offset: 4px;
 }
 
-/* ===========================
-   Hamburger Button
-=========================== */
+/* Hamburger Button */
 
 .menu-btn {
     display: none;
@@ -274,9 +258,7 @@
     background: transparent;
 }
 
-/* ===========================
-   Mobile
-=========================== */
+/* Mobile */
 
 @media (max-width:768px){
 
@@ -303,7 +285,6 @@
         display:none;
     }
 
-    /* Menu button fixed to the right */
 
     .menu-btn{
         display:flex;

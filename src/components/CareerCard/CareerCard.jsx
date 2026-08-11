@@ -18,9 +18,9 @@ function CareerCard({ job, onApply }) {
         ))}
       </ul>
 
-      <button onClick={onApply}>
-        Apply Now
-      </button>
+          <button type="button" onClick={onApply} className="apply-btn">
+            Apply Now
+          </button>
 
     </div>
   );

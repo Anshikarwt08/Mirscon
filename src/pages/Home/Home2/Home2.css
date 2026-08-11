@@ -5,9 +5,7 @@
 }
 
 
-/* ===========================
-   Home 2 Section
-=========================== */
+/* Home 2 Section */
 
 .home2 {
   padding: 100px 8%;
@@ -38,9 +36,7 @@
 }
 
 
-/* ===========================
-   Services Heading
-=========================== */
+/* Services Heading */
 
 .services-heading {
   max-width: 760px;
@@ -77,9 +73,7 @@
 }
 
 
-/* ===========================
-   Services Grid
-=========================== */
+/* Services Grid*/
 
 .services-grid {
   display: grid;
@@ -90,9 +84,7 @@
 }
 
 
-/* ===========================
-   Service Card
-=========================== */
+/* Service Card */
 
 .service-card {
   background: #ffffff;
@@ -159,9 +151,7 @@
 }
 
 
-/* ===========================
-   Icon Box
-=========================== */
+/* Icon Box*/
 
 .icon-box {
   width: 84px;
@@ -227,9 +217,7 @@
 }
 
 
-/* ===========================
-   Service Heading
-=========================== */
+/* Service Heading */
 
 .service-card h3 {
   font-size: 1.45rem;
@@ -244,9 +232,7 @@
 }
 
 
-/* ===========================
-   Service Description
-=========================== */
+/* Service Description */
 
 .service-card p {
   color: #4b5563;
@@ -257,9 +243,7 @@
 }
 
 
-/* ===========================
-   Statistics
-=========================== */
+/* Statistics */
 
 .stats-section {
   margin-top: 100px;
@@ -272,9 +256,7 @@
 }
 
 
-/* ===========================
-   Stat Card
-=========================== */
+/* Stat Card*/
 
 .stat-card {
   background: #ffffff;
@@ -304,9 +286,7 @@
 }
 
 
-/* ===========================
-   Counter
-=========================== */
+/* Counter*/
 
 .counter-number {
   font-size: clamp(2.4rem, 5vw, 3.5rem);
@@ -321,9 +301,7 @@
 }
 
 
-/* ===========================
-   Stat Title
-=========================== */
+/* Stat Title */
 
 .stat-card p {
   color: #4b5563;
@@ -336,9 +314,7 @@
 }
 
 
-/* ===========================
-   Accessibility Focus
-=========================== */
+/* Accessibility Focus */
 
 .service-card:focus-visible,
 .stat-card:focus-visible {
@@ -348,9 +324,7 @@
 }
 
 
-/* ===========================
-   Tablet
-=========================== */
+/* Tablet*/
 
 @media (max-width: 1200px) {
 
@@ -362,9 +336,7 @@
 }
 
 
-/* ===========================
-   Mobile
-=========================== */
+/* Mobile */
 
 @media (max-width: 768px) {
 
@@ -405,9 +377,7 @@
 }
 
 
-/* ===========================
-   Small Mobile
-=========================== */
+/* Small Mobile*/
 
 @media (max-width: 480px) {
 
@@ -426,9 +396,7 @@
 }
 
 
-/* ===========================
-   Reduced Motion
-=========================== */
+/* Reduced Motion*/
 
 @media (prefers-reduced-motion: reduce) {
 

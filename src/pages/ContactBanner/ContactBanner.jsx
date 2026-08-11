@@ -15,10 +15,6 @@ function ContactBanner() {
 
           <div className="banner-text">
 
-            <span className="banner-tag">
-              Let's Build Together
-            </span>
-
             <h2>
               Ready to Transform Your Business?
             </h2>

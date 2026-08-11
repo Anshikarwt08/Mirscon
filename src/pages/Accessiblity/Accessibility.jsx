@@ -3,6 +3,7 @@ import "./Accessibility.css";
 import Hero from "../../components/Accessiblity/Hero/Hero";
 import Header from "../Header/Header";
 import Services from "../../components/Accessiblity/Services/Services";
+import Footer from "../../components/Footer/Footer";
 function Accessibility() {
   return (
     <>
@@ -10,7 +11,8 @@ function Accessibility() {
     
     <main id="main-content" className="accessibility-page">
       <Hero />
-     <Services/>     
+     <Services/> 
+     <Footer/>    
     </main>
     </>
   );
