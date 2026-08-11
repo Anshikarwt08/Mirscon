@@ -1,6 +1,6 @@
 import "./ContactBanner.css";
 import { useState } from "react";
-
+import { LiaLocationArrowSolid } from "react-icons/lia";
 
 import ConsultationForm from "../../components/Consultation/Consultation";
 import Modal from "../../components/Modal/Modal";
@@ -16,13 +16,12 @@ function ContactBanner() {
           <div className="banner-text">
 
             <h2>
-              Ready to Transform Your Business?
+              Talk to an Expert
             </h2>
 
             <p>
-              Connect with our experienced team to discuss your project,
-              explore innovative solutions, and discover how Mirscon can
-              help you achieve your business goals.
+              Have a complex accessibility requirement, a large content backlog, or questions about compliance?
+              Let's discuss your requirements and explore the right approach for your content, workflows and accessibility goals.
             </p>
 
           </div>
@@ -31,7 +30,7 @@ function ContactBanner() {
             className="contact-btn"
             onClick={() => setIsConsultationOpen(true)}
           >
-            Schedule a Consultation →
+            Let's Connect <LiaLocationArrowSolid className="right-arrow" />
           </button>
 
         </div>

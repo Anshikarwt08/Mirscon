@@ -1,7 +1,8 @@
 import "./Footer.css";
 import MirsconLogo from "../../assets/Mirscon.png";
 
-import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
+import {FaGoogle, FaLinkedinIn } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 
 function Footer() {
   return (
@@ -16,13 +17,14 @@ function Footer() {
               alt="Mirscon Logo"
             />
           </div>
-
+          <p>Platina Heights, C-24, Sector 62,
+            <br/>
+             Noida, Uttar Pradesh 201301</p>
           <p>
-            Plot No. 21, Iksana Workspace, 3rd Floor,
+            Plot No. 21, Iksana Workspace, IT Park,<br/> Sahastradhara Road,
+            
             <br />
-            IT Park, Sahastradhara Road,
-            <br />
-            Dehradun, Uttarakhand 248013
+             Dehradun, Uttarakhand 248013
           </p>
 
           <div className="contact-info">
@@ -47,12 +49,12 @@ function Footer() {
 
           <div className="social">
             <a
-              href="https://www.facebook.com/"
+              href="https://www.twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook"
+              aria-label="Twitter"
             >
-              <FaFacebookF />
+              <BsTwitterX />
             </a>
 
             <a
@@ -91,16 +93,16 @@ function Footer() {
 
         {/* Industry */}
         <div>
-          <h3>Industry</h3>
+          <h3>Industries</h3>
 
           <ul>
-            <li>Gaming</li>
-            <li>Finance & Insurance</li>
+            <li>Publishing and Media</li>
+            <li>EdTech and Learning</li>
             <li>Healthcare & Life Sciences</li>
-            <li>Retail & Ecommerce</li>
-            <li>Technology</li>
-            <li>Media Entertainment</li>
-            <li>Telecom</li>
+            <li>Finance and Insurance</li>
+            <li>Enterprise and Technology</li>
+            <li>Legal and Professional </li>
+            
           </ul>
         </div>
 
@@ -118,7 +120,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        © 2022 Copyright MIRSCON. All Rights Reserved.
+        © 2026 Copyright MIRSCON. All Rights Reserved.
       </div>
     </footer>
   );

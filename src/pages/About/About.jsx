@@ -45,18 +45,14 @@ function About() {
 
             <div className="about-left">
               <h1>
-                Bridging the Gap Between
-                Inaccessible Content
-                and Inclusive Digital Experiences
+                Engineering Accessibility for Digital Content
               </h1>
 
               <p>
-                We bridge the gap between inaccessible digital content and
-                inclusive user experiences. Our experts help organizations
-                transform PDFs, presentations, websites, applications, and
-                enterprise platforms into accessible solutions that comply with
-                WCAG, PDF/UA, Section 508, and other global accessibility
-                standards.
+                Mirscon Technologies is a digital accessibility and content services company with an experience of over a decade in helping organizations become more 
+                accessible, useable and inclusive. We work across the content lifecycle-from accessibility assessment and remediation to 
+                structured publishing, testing and validation. Our expertise spans accessible PDFs, EPUB 3, alt text, complex STEM visuals, MathML,
+                document remediation, captioning and accessibility QA.
               </p>
             </div>
 
@@ -78,15 +74,11 @@ function About() {
         >
           <div className="about-container">
 
-            <h2>Creating Inclusive Digital Experiences</h2>
+            <h2>Creating Inclusive Experiences</h2>
 
             <p className="section-description">
-              Mirscon Technologies is a technology consulting and digital
-              accessibility company committed to creating a world where digital
-              experiences are accessible to everyone. We partner with
-              organizations across industries to remove accessibility barriers,
-              modernize digital platforms, and deliver innovative technology
-              solutions that meet international accessibility standards.
+              Mirscon Technologies is an IT and technology services organization combining software, automation, artifial intelligence and human expertise
+              to solve complex content and accessibility challenges.
             </p>
 
             <div className="about-grid">
@@ -94,7 +86,7 @@ function About() {
               <div className="about-card">
                 <h3>Our Mission</h3>
 
-                <p>
+                <p className="section1-desc">
                   Deliver innovative accessibility and technology solutions
                   that empower organizations to build inclusive, compliant,
                   and user-friendly digital experiences.
@@ -104,7 +96,7 @@ function About() {
               <div className="about-card">
                 <h3>Our Vision</h3>
 
-                <p>
+                <p className="section1-desc">
                   Become a trusted global leader in digital accessibility,
                   helping businesses create technology that everyone can access,
                   regardless of ability.
@@ -114,7 +106,7 @@ function About() {
               <div className="about-card">
                 <h3>Our Purpose</h3>
 
-                <p>
+                <p className="section1-desc">
                   Bridge the gap between inaccessible digital content and the
                   people who rely on accessible technology every day.
                 </p>
@@ -123,7 +115,7 @@ function About() {
               <div className="about-card">
                 <h3>Our Commitment</h3>
 
-                <p>
+                <p className="section1-desc">
                   We combine innovation, quality, accessibility, and customer
                   success to deliver solutions that create meaningful digital
                   impact.

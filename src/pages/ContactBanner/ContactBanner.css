@@ -46,13 +46,13 @@
 
     padding: 18px 40px;
 
-    background: #16191a;
+    background: #040c11;
     color: #fff;
 
     border: none;
-    border-radius: 14px;
+    border-radius: 50px;
 
-    font-size: 17px;
+    font-size: 1.3rem;
     font-weight: 600;
 
     cursor: pointer;
@@ -67,7 +67,11 @@
     transform: translateY(-3px);
     box-shadow: 0 14px 30px rgba(79,107,237,.22);
 }
-
+.right-arrow {
+  transform: rotate(90deg) translateX(2px);
+  font-size: 18px;
+  fill: #fff;
+}
 @media (max-width: 992px) {
 
     .banner-content {
