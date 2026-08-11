@@ -1,79 +1,101 @@
+/* ==========================================
+   Mirscon Dropdown
+========================================== */
 
-
-.dropdown {
+.mirscon-dropdown {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.dropdown .dropdown-toggle::after,
-.dropdown .dropdown-item::after {
-  content: none !important;
-  display: none !important;
-  width: 0 !important;
-}
 
+/* ==========================================
+   Dropdown Toggle
+========================================== */
 
-.dropdown-toggle {
+.mirscon-dropdown .dropdown-toggle {
   display: flex;
   align-items: center;
   gap: 6px;
 
   background: transparent;
   border: none;
+
   cursor: pointer;
 
   padding: 10px 0;
 
-  color: #1F2937;
+  color: #1f2937;
 
-  font-size: 19px;       /* Increase weight */
-  font-family: inherit;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 
   outline: none;
   box-shadow: none;
+
   text-decoration: none;
 }
-.dropdown-toggle:hover {
-  background: transparent;
-  color: inherit;
-}
 
-.dropdown-toggle:hover::after,
-.dropdown-toggle:focus-visible::after {
+
+/* Remove underline from toggle */
+
+.mirscon-dropdown .dropdown-toggle::after {
   content: none !important;
-  width: 0 !important;
+  display: none !important;
 }
 
-.dropdown-toggle:focus {
+
+/* Hover */
+
+.mirscon-dropdown .dropdown-toggle:hover {
+  background: transparent;
+  color: #1f2937;
+}
+
+
+/* Focus */
+
+.mirscon-dropdown .dropdown-toggle:focus {
   outline: none;
 }
 
-.dropdown-toggle:focus-visible {
-  outline: 3px solid #2563eb;
+.mirscon-dropdown .dropdown-toggle:focus-visible {
+  outline: 3px solid #0099c7;
   outline-offset: 4px;
   border-radius: 6px;
 }
 
 
-.dropdown-icon {
-  font-size: 15px;
+/* ==========================================
+   Dropdown Icon
+========================================== */
+
+.mirscon-dropdown .dropdown-icon {
+  font-size: 16px;
+
   transition: transform 0.25s ease;
 }
 
-.dropdown-icon.rotate {
+.mirscon-dropdown .dropdown-icon.rotate {
   transform: rotate(180deg);
 }
 
 
-.dropdown-menu {
+/* ==========================================
+   Dropdown Menu
+========================================== */
+
+.mirscon-dropdown .dropdown-menu {
   position: absolute;
+
   top: calc(100% + 10px);
   left: 0;
 
   min-width: 240px;
 
-  background: #fff;
+  background: #ffffff;
+
   border: 1px solid #e5e7eb;
   border-radius: 12px;
 
@@ -83,6 +105,7 @@
 
   opacity: 0;
   visibility: hidden;
+
   transform: translateY(8px);
 
   pointer-events: none;
@@ -95,64 +118,124 @@
   z-index: 999;
 }
 
-.dropdown-menu.show {
+
+/* Open */
+
+.mirscon-dropdown .dropdown-menu.show {
   opacity: 1;
   visibility: visible;
+
   transform: translateY(0);
+
   pointer-events: auto;
 }
 
 
-.dropdown-item {
+/* ==========================================
+   Dropdown Items
+========================================== */
+
+/*
+   IMPORTANT:
+   This selector is intentionally specific so
+   Header.css does not make these items bold.
+*/
+
+.mirscon-dropdown .dropdown-menu .dropdown-item {
   display: block;
+
+  width: 100%;
 
   padding: 12px 18px;
 
-  text-decoration: none;
+  text-align: left;
+
+  background: transparent;
+  border: none;
+
   color: #374151;
 
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
+
+  line-height: 1.4;
+
+  cursor: pointer;
 
   outline: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
-.dropdown-item:hover {
-  background: transparent;
-  color: inherit;
-}
 
-.dropdown-item:hover::after,
-.dropdown-item:focus-visible::after {
+/* Remove underline */
+
+.mirscon-dropdown
+.dropdown-menu
+.dropdown-item::after {
   content: none !important;
+  display: none !important;
   width: 0 !important;
 }
 
-.dropdown-item:focus {
+
+/* Hover */
+
+.mirscon-dropdown .dropdown-item:hover {
+  background: #f8fafc;
+  color: #1f2937;
+}
+
+
+/* Focus */
+
+.mirscon-dropdown .dropdown-item:focus {
   outline: none;
 }
 
-.dropdown-item:focus-visible {
-  outline: 3px solid #2563eb;
+.mirscon-dropdown .dropdown-item:focus-visible {
+  outline: 3px solid #0099c7;
   outline-offset: -3px;
+
   border-radius: 4px;
 }
 
 
+/* ==========================================
+   Mobile
+========================================== */
+
 @media (max-width: 768px) {
 
-  .dropdown {
+  .mirscon-dropdown {
     width: 100%;
     display: block;
   }
 
-  .dropdown-toggle {
+
+  /* Toggle */
+
+  .mirscon-dropdown .dropdown-toggle {
     width: 100%;
+
     justify-content: space-between;
+
     padding: 14px 0;
+
+    font-size: 18px;
+    font-weight: 600;
   }
 
-  .dropdown-menu {
+
+  /* Menu */
+
+  .mirscon-dropdown .dropdown-menu {
     position: static;
 
     display: none;
@@ -160,25 +243,39 @@
     min-width: 100%;
 
     background: transparent;
+
     border: none;
+
     box-shadow: none;
 
     margin-top: 6px;
-    padding-left: 18px;
+
+    padding: 0 0 0 18px;
 
     opacity: 1;
+
     visibility: visible;
+
     transform: none;
 
     pointer-events: auto;
   }
 
-  .dropdown-menu.show {
+
+  /* Show menu */
+
+  .mirscon-dropdown .dropdown-menu.show {
     display: block;
   }
 
-  .dropdown-item {
+
+  /* Mobile dropdown items */
+
+  .mirscon-dropdown .dropdown-menu .dropdown-item {
     padding: 10px 0;
-    font-size: 14px;
+
+    font-size: 16px;
+
+    font-weight: 400;
   }
 }

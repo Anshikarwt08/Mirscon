@@ -10,8 +10,8 @@ import CareerModal from "../../components/CareerModal/CareerModal";
 const jobs = [
   {
     id: 1,
-    title: "Technical Content Writer",
-    experience: "2–3 Years",
+    title: "Accessibility Trainee",
+    experience: "Fresher",
     responsibilities: [
       "Create technical content.",
       "Research industry trends.",
@@ -21,8 +21,8 @@ const jobs = [
   },
   {
     id: 2,
-    title: "PHP Developer",
-    experience: "2–4 Years",
+    title: "Accessibility Tester",
+    experience: "6 months",
     responsibilities: [
       "Write clean PHP code.",
       "Build reusable modules.",
@@ -32,8 +32,8 @@ const jobs = [
   },
   {
     id: 3,
-    title: "Graphic Designer",
-    experience: "2–3 Years",
+    title: "Manager",
+    experience: "4-5 Years",
     responsibilities: [
       "Design graphics.",
       "Create marketing material.",
@@ -43,7 +43,7 @@ const jobs = [
   },
   {
     id: 4,
-    title: "SEO Executive",
+    title: "Quality Analyst",
     experience: "2–3 Years",
     responsibilities: [
       "Keyword research.",
@@ -78,9 +78,7 @@ function Careers() {
             the next step in your career.
           </p>
 
-          <div className="career-count">
-            {jobs.length} Open Positions
-          </div>
+          
 
         </section>
 

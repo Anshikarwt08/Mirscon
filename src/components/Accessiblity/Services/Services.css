@@ -107,9 +107,7 @@
 }
 
 
-/* =========================================================
-   SUBTLE IMAGE HOVER
-========================================================= */
+/* SUBTLE IMAGE HOVER */
 
 .accessibility-service-image:hover {
     transform: translateY(-3px);
@@ -119,9 +117,7 @@
 }
 
 
-/* =========================================================
-   DECORATIVE CIRCLES
-========================================================= */
+/* DECORATIVE CIRCLES */
 
 .accessibility-service-image::before {
     content: "";
@@ -156,9 +152,7 @@
 }
 
 
-/* =========================================================
-   IMAGE
-========================================================= */
+/* IMAGE */
 
 .accessibility-service-image img {
     position: relative;
@@ -183,9 +177,7 @@
 }
 
 
-/* =========================================================
-   CONTENT
-========================================================= */
+/* CONTENT */
 
 .accessibility-service-content {
     display: flex;
@@ -198,9 +190,7 @@
 }
 
 
-/* =========================================================
-   SERVICE TITLE
-========================================================= */
+/* SERVICE TITLE */
 
 .accessibility-service-title {
     margin: 0 0 20px;
@@ -219,9 +209,7 @@
 }
 
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
+/* DESCRIPTION */
 
 .accessibility-service-description {
     max-width: 570px;
@@ -238,9 +226,7 @@
 }
 
 
-/* =========================================================
-   EXPLORE SERVICE BUTTON
-========================================================= */
+/* EXPLORE SERVICE BUTTON */
 
 .accessibility-service-explore {
     display: inline-flex;
