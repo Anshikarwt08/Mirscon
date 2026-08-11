@@ -152,19 +152,7 @@ function Industries() {
               className="industry-card"
               key={industry.number}
             >
-
-              <div className="industry-card-top">
-
-  <span className="industry-number">
-    {industry.number}
-  </span>
-
-</div>
-
-              <h3>
-                {industry.title}
-              </h3>
-
+<h3>{industry.title}</h3>
 
               <p>
                 {industry.description}

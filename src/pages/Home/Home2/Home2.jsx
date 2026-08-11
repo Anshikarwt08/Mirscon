@@ -2,36 +2,36 @@ import React, { useEffect, useState } from "react";
 import "./Home2.css";
 
 import {
-  FaRobot,
+  FaUniversalAccess,
   FaLaptopCode,
-  FaChartLine,
-  FaCloud,
+  FaGraduationCap,
+  FaClipboardCheck,
 } from "react-icons/fa";
 
 const services = [
   {
-    title: "Intelligent Automation",
+    title: "Accessibility Testing",
     description:
-      "Helping customers reap true benefits of automation through Business Process Automation, Robotic Process Automation and Cognitive Automation.",
-    icon: <FaRobot />,
+      "Identify accessibility barriers through comprehensive testing and audits to improve usability and support WCAG 2.1 and 2.2 compliance.",
+    icon: <FaUniversalAccess aria-hidden="true" />,
   },
   {
-    title: "Digital Transformation",
+    title: "Accessible Design & Development",
     description:
-      "Transforming businesses with digital solutions to improve productivity and operational efficiency.",
-    icon: <FaLaptopCode />,
+      "Build inclusive websites and applications with accessible design, semantic HTML, keyboard navigation, and screen reader compatibility.",
+    icon: <FaLaptopCode aria-hidden="true" />,
   },
   {
-    title: "Differentiated Value",
+    title: "Training & Awareness",
     description:
-      "Flexible delivery models including project-based, outcome-based and Build-Operate-Transfer engagements.",
-    icon: <FaChartLine />,
+      "Empower your teams with practical accessibility knowledge, inclusive design practices, and training for accessible digital experiences.",
+    icon: <FaGraduationCap aria-hidden="true" />,
   },
   {
-    title: "Cloud Services",
+    title: "Compliance & Reporting",
     description:
-      "Cloud migration, maintenance and infrastructure supported by experienced professionals.",
-    icon: <FaCloud />,
+      "Understand accessibility gaps with detailed reports, recommendations, and guidance aligned with global accessibility standards.",
+    icon: <FaClipboardCheck aria-hidden="true" />,
   },
 ];
 
@@ -66,70 +66,66 @@ function Counter({ end, suffix }) {
   }, [end]);
 
   return (
-    <div className="counter-number">
+    <span
+      className="counter-number"
+      aria-label={`${end}${suffix}`}
+    >
       {count}
       {suffix}
-    </div>
+    </span>
   );
 }
 
 function Home2() {
-  const handleServiceClick = (service) => {
-    console.log(service.title);
-  };
-
   return (
-    <section className="home2">
+    <section
+      className="accessibility-home-section"
+      aria-labelledby="accessibility-heading"
+    >
 
       {/* ===========================
-          Services Heading
+          HOW WE HELP
       ============================ */}
 
       <div className="services-heading">
-
-        <h2>
-          Innovative Technology Solutions for Modern Businesses
+        <h2 id="accessibility-heading">
+          Creating Accessible Digital Experiences
         </h2>
 
         <p>
-          We empower organizations with intelligent automation,
-          digital transformation, cloud solutions, and
-          value-driven technology services that accelerate
-          business growth.
+          We help organizations create digital experiences that are
+          accessible, inclusive, and usable for everyone. From
+          accessibility testing and accessible development to training
+          and compliance support, we help remove digital barriers and
+          build experiences that work for all users.
         </p>
 
       </div>
 
 
       {/* ===========================
-          Services
+          ACCESSIBILITY SERVICES
       ============================ */}
 
-      <div className="services-grid">
+      <div
+        className="services-grid"
+        aria-label="Accessibility services"
+      >
 
-        {services.map((service, index) => (
+        {services.map((service) => (
 
           <article
-            key={index}
+            key={service.title}
             className="service-card"
-            tabIndex={0}
-            role="button"
-            aria-label={service.title}
-            onClick={() => handleServiceClick(service)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                handleServiceClick(service);
-              }
-            }}
           >
 
-            <div className="icon-box">
-
+            <div
+              className="icon-box"
+              aria-hidden="true"
+            >
               <div className="service-icon">
                 {service.icon}
               </div>
-
             </div>
 
             <h3>
@@ -148,15 +144,18 @@ function Home2() {
 
 
       {/* ===========================
-          Statistics
+          STATISTICS
       ============================ */}
 
-      <div className="stats-section">
+      <div
+        className="stats-section"
+        aria-label="Company statistics"
+      >
 
-        {stats.map((item, index) => (
+        {stats.map((item) => (
 
           <div
-            key={index}
+            key={item.title}
             className="stat-card"
           >
 
