@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "./CareerForm.css";
+import { submitForm, fileToBase64 } from "../../utils/api";
 
 function CareerForm() {
   const [resumeName, setResumeName] = useState("No file selected");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleFileChange = (e) => {
     if (e.target.files.length > 0) {
@@ -12,12 +14,41 @@ function CareerForm() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
-    // Submit Logic
+    try {
+      const form = e.target;
+      const resumeFile = form.resume.files[0];
+      if (!resumeFile) {
+        alert("Please attach your resume (PDF, DOC or DOCX).");
+        return;
+      }
 
-    alert("Application Submitted Successfully!");
+      const payload = {
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        experience: form.experience.value,
+        message: form.message.value,
+        resume: {
+          name: resumeFile.name,
+          type: resumeFile.type,
+          data: await fileToBase64(resumeFile),
+        },
+      };
+
+      await submitForm("/careers", payload);
+      alert("Application Submitted Successfully!");
+      form.reset();
+      setResumeName("No file selected");
+    } catch (error) {
+      alert(error.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -31,6 +62,7 @@ function CareerForm() {
         <input
           type="text"
           id="name"
+          name="name"
           placeholder="Enter your full name"
           required
         />
@@ -43,6 +75,7 @@ function CareerForm() {
         <input
           type="email"
           id="email"
+          name="email"
           placeholder="Enter your email"
           required
         />
@@ -55,6 +88,7 @@ function CareerForm() {
         <input
           type="tel"
           id="phone"
+          name="phone"
           placeholder="Enter your phone number"
           required
         />
@@ -67,6 +101,7 @@ function CareerForm() {
         <input
           type="text"
           id="experience"
+          name="experience"
           placeholder="Enter your experience"
         />
       </div>
@@ -88,6 +123,7 @@ function CareerForm() {
           <input
             type="file"
             id="resume"
+            name="resume"
             accept=".pdf,.doc,.docx"
             hidden
             required
@@ -107,6 +143,7 @@ function CareerForm() {
 
         <textarea
           id="message"
+          name="message"
           rows="5"
           placeholder="Tell us about yourself..."
         />
@@ -115,8 +152,9 @@ function CareerForm() {
       <button
         type="submit"
         className="submit-btn"
+        disabled={isSubmitting}
       >
-        Submit Application
+        {isSubmitting ? "Submitting..." : "Submit Application"}
       </button>
     </form>
   );

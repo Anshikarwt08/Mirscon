@@ -1,16 +1,38 @@
 import "./GetStarted.css";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { submitForm } from "../../utils/api";
 
 function GetStarted() {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
-    // For now, just show confirmation
-    alert("Thank you! We will get in touch with you soon.");
+    try {
+      const form = e.target;
+      const payload = {
+        fullName: form.fullName.value,
+        email: form.email.value,
+        company: form.company.value,
+        phone: form.phone.value,
+        service: form.service.value,
+        requirements: form.requirements.value,
+      };
+
+      await submitForm("/get-started", payload);
+      alert("Thank you! We will get in touch with you soon.");
+      form.reset();
+    } catch (error) {
+      alert(error.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -160,6 +182,7 @@ function GetStarted() {
 
                 <input
                   id="fullName"
+                  name="fullName"
                   type="text"
                   placeholder="Enter your name"
                   required
@@ -174,6 +197,7 @@ function GetStarted() {
 
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="Enter your email"
                   required
@@ -192,6 +216,7 @@ function GetStarted() {
 
                 <input
                   id="company"
+                  name="company"
                   type="text"
                   placeholder="Enter company name"
                 />
@@ -205,6 +230,7 @@ function GetStarted() {
 
                 <input
                   id="phone"
+                  name="phone"
                   type="tel"
                   placeholder="Enter phone number"
                 />
@@ -219,7 +245,7 @@ function GetStarted() {
                 Service Required
               </label>
 
-              <select id="service" required>
+              <select id="service" name="service" required>
 
                 <option value="">
                   Select a service
@@ -258,6 +284,7 @@ function GetStarted() {
 
               <textarea
                 id="requirements"
+                name="requirements"
                 rows="5"
                 placeholder="Tell us about your project, required skills, team size, timeline, or any other requirements..."
                 required
@@ -269,8 +296,9 @@ function GetStarted() {
             <button
               type="submit"
               className="submit-requirement-btn"
+              disabled={isSubmitting}
             >
-              Submit Requirement
+              {isSubmitting ? "Sending..." : "Submit Requirement"}
               <span>→</span>
             </button>
 
