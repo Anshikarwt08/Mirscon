@@ -43,7 +43,7 @@
 
 .accessibility-engine-image {
   width: 100%;
-  height: auto;
+  height: 40%;
   display: block;
   object-fit: contain;
   border-radius: 20px;

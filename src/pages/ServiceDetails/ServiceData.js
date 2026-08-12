@@ -391,7 +391,8 @@ const serviceData = {
 
     features: [
       {
-        title: "eBook Creation & Conversion",
+        title: "eBook Production & Audio Integration",
+        image: pdfImage,
 
         paragraphs: [
           "We convert print-ready and digital source content into professionally structured eBooks suitable for modern digital publishing workflows.",
