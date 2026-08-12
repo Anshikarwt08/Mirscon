@@ -2,7 +2,7 @@
 
 .about-page {
     font-family: "Poppins", sans-serif;
-    background: #b1dae5;
+    background: #011A4A;
 }
 
 /* ===========================
@@ -87,18 +87,23 @@
 }
 .about-section h2{
     font-size:38px;
-    color:#111827;
+    color:#fff;
     margin-bottom:30px;
     position:relative;
 }
 
-.about-section p{
-    color:#002558;
+.section-description{
+    color:#fff;
     font-size:17px;
     line-height:1.9;
     margin-bottom:20px;
 }
-
+.section1-desc{
+    color: #000;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
 /* ===========================
    Cards
 =========================== */

@@ -10,27 +10,27 @@ import {
 
 const services = [
   {
-    title: "Accessibility Testing",
+    title: "Expertise",
     description:
-      "Identify accessibility barriers through comprehensive testing and audits to improve usability and support WCAG 2.1 and 2.2 compliance.",
+      "Deep domain knowledge and accessibility expertise across content formats, standards and complex content.",
     icon: <FaUniversalAccess aria-hidden="true" />,
   },
   {
-    title: "Accessible Design & Development",
+    title: "Delivery",
     description:
-      "Build inclusive websites and applications with accessible design, semantic HTML, keyboard navigation, and screen reader compatibility.",
+      "Structured process, skilled teams and scalable capacity enables us to manage projects of varied sizes and complexity.",
     icon: <FaLaptopCode aria-hidden="true" />,
   },
   {
-    title: "Training & Awareness",
+    title: "Quality",
     description:
-      "Empower your teams with practical accessibility knowledge, inclusive design practices, and training for accessible digital experiences.",
+      "Quality is built into every stage through defined processes, multiple levels of review, validation and continuous improvement.",
     icon: <FaGraduationCap aria-hidden="true" />,
   },
   {
-    title: "Compliance & Reporting",
+    title: "Innovation",
     description:
-      "Understand accessibility gaps with detailed reports, recommendations, and guidance aligned with global accessibility standards.",
+      "Automate and include new workflows in smarter ways to improve efficiency keeping human expertise at the core of delivery.",
     icon: <FaClipboardCheck aria-hidden="true" />,
   },
 ];
@@ -89,15 +89,12 @@ function Home2() {
 
       <div className="services-heading">
         <h2 id="accessibility-heading">
-          Creating Accessible Digital Experiences
+          Accessibility at Scale<br></br> Quality at Every Touchpoint
         </h2>
 
         <p>
-          We help organizations create digital experiences that are
-          accessible, inclusive, and usable for everyone. From
-          accessibility testing and accessible development to training
-          and compliance support, we help remove digital barriers and
-          build experiences that work for all users.
+        Mirscon brings human expertise and technology together at every stage, combining the scale
+        and efficiency of technology with the insight, judgement and quality control of experienced accessibility professionals.
         </p>
 
       </div>

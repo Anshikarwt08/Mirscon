@@ -11,12 +11,10 @@ function Team() {
     <section className="team-section">
 
       <div className="team-heading">
-        <h2>OUR TEAM</h2>
+        <h2>Technology enables what we do Our people define how we do it</h2>
 
         <p>
-          Our talented professionals combine innovation, expertise, and
-          collaboration to deliver exceptional technology solutions for our
-          clients.
+          Together we shape our strategy, build our capabilities and ensure every experience is a commitment to delivering meaningful results.
         </p>
       </div>
 
@@ -32,9 +30,8 @@ function Team() {
     <h4>Founder & CEO</h4>
 
     <p>
-      Driving the company's vision, strategic growth, and innovation
-      while building strong relationships and delivering long term
-      business value.
+      Driving the company's vision, strategic growth and innovation
+      to build strong relationships and deliver value.
     </p>
 
     <a
@@ -58,8 +55,8 @@ function Team() {
     <h4>Director</h4>
 
     <p>
-      Driving business strategy, innovation, and organizational growth
-      through visionary leadership and industry expertise.
+      Driving business strategy, innovation and organizational growth
+      through visionary leadership and expertise.
     </p>
 
     <a
