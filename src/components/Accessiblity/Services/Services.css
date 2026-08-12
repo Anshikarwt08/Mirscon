@@ -82,7 +82,7 @@
 .service-subtitle {
   margin: 0 0 24px;
 
-  color: #2962ff;
+  color: #1b1b1b;
 
   font-family: "Poppins", sans-serif;
 
@@ -165,7 +165,7 @@
 .accessibility-service-explore:hover {
   transform: translateY(-3px);
 
-  background: #2962ff;
+  background: #1f48b8;
 
   border-color: #2962ff;
 
@@ -313,7 +313,6 @@
     font-size: 19px;
 
     line-height: 1.4;
-
     margin-bottom: 20px;
   }
 
