@@ -2,7 +2,6 @@ import "./Consultation.css";
 import { useState } from "react";
 
 function ConsultationForm() {
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,7 +40,9 @@ function ConsultationForm() {
   return (
     <div className="consultation-form">
 
-      <h2 id="consultation-title">Schedule a Consultation</h2>
+      <h2 id="consultation-title">
+       Talk to an Expert
+      </h2>
 
       <p>
         Tell us about your project and our experts will contact you.
@@ -49,88 +50,172 @@ function ConsultationForm() {
 
       <form onSubmit={handleSubmit}>
 
-        <input
-          type="text"
-          placeholder="Full Name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-
-        <input
-          type="email"
-          placeholder="Email Address"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-
-        <input
-          type="tel"
-          placeholder="Phone Number"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          required
-        />
-
-        <input
-          type="text"
-          placeholder="Company Name"
-          name="company"
-          value={formData.company}
-          onChange={handleChange}
-        />
-
-        <select
-          name="service"
-          value={formData.service}
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Service</option>
-          <option>Quality Automation</option>
-          <option>Salesforce</option>
-          <option>Integration Technology</option>
-          <option>ServiceNow</option>
-          <option>Cloud</option>
-          <option>Product Engineering</option>
-        </select>
-
-        <div className="date-time">
+        {/* Full Name */}
+        <div className="consultation-field">
+          <label for="name">
+            Full Name <span>*</span>
+          </label>
 
           <input
-            type="date"
-            name="date"
-            value={formData.date}
+            id="name"
+            type="text"
+            placeholder="John Doe"
+            name="name"
+            value={formData.name}
             onChange={handleChange}
+            required
           />
+        </div>
+
+
+        {/* Email */}
+        <div className="consultation-field">
+          <label for="email">
+            Email Address <span>*</span>
+          </label>
 
           <input
-            type="time"
-            name="time"
-            value={formData.time}
+            id="email"
+            type="email"
+            placeholder="john@company.com"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+
+        {/* Phone */}
+        <div className="consultation-field">
+          <label for="phone">
+            Phone Number <span>*</span>
+          </label>
+
+          <input
+            id="phone"
+            type="tel"
+            placeholder="+91 9876543210"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+
+        {/* Company */}
+        <div className="consultation-field">
+          <label for="company">
+            Company
+          </label>
+
+          <input
+            id="company"
+            type="text"
+            placeholder="ABC Technologies"
+            name="company"
+            value={formData.company}
             onChange={handleChange}
           />
+        </div>
+
+
+        {/* Service */}
+        <div className="consultation-field consultation-full">
+          <label for="service">
+            Service Required <span>*</span>
+          </label>
+
+          <select
+            id="service"
+            name="service"
+            value={formData.service}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select a Service</option>
+            <option value="Quality Automation">
+              Quality Automation
+            </option>
+            <option value="Salesforce">
+              Salesforce
+            </option>
+            <option value="Integration Technology">
+              Integration Technology
+            </option>
+            <option value="ServiceNow">
+              ServiceNow
+            </option>
+            <option value="Cloud">
+              Cloud
+            </option>
+            <option value="Product Engineering">
+              Product Engineering
+            </option>
+          </select>
+        </div>
+
+
+        {/* Date + Time */}
+        <div className="consultation-date-time">
+
+          <div className="consultation-field">
+            <label for="date">
+              Preferred Date
+            </label>
+
+            <input
+              id="date"
+              type="date"
+              name="date"
+              value={formData.date}
+              onChange={handleChange}
+            />
+          </div>
+
+
+          <div className="consultation-field">
+            <label for="time">
+              Preferred Time
+            </label>
+
+            <input
+              id="time"
+              type="time"
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+            />
+          </div>
 
         </div>
 
-        <textarea
-          rows="4"
-          placeholder="Project Details"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-        ></textarea>
 
+        {/* Project Details */}
+        <div className="consultation-field consultation-full">
+          <label for="message">
+            Project Details <span>*</span>
+          </label>
+
+          <textarea
+            id="message"
+            rows="5"
+            placeholder="Tell us about your project..."
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+
+        {/* Submit */}
         <button type="submit">
           Schedule Consultation
         </button>
 
       </form>
-
     </div>
   );
 }

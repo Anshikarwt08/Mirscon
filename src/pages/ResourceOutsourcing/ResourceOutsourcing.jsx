@@ -128,32 +128,7 @@ function ResourceOutsourcing() {
         </div>
 
 
-        {/* Right Side Visual */}
-
-        <div className="resource-hero-visual">
-
-          <div className="resource-circle resource-circle-main">
-            <span>👥</span>
-          </div>
-
-          <div className="resource-circle resource-circle-top">
-            <span>👤</span>
-          </div>
-
-          <div className="resource-circle resource-circle-left">
-            <span>💻</span>
-          </div>
-
-          <div className="resource-circle resource-circle-right">
-            <span>⚙</span>
-          </div>
-
-          <div className="resource-circle resource-circle-bottom">
-            <span>▥</span>
-          </div>
-
-        </div>
-
+      
       </section>
 
 
@@ -162,10 +137,6 @@ function ResourceOutsourcing() {
       ========================= */}
 
       <section className="resource-intro">
-
-        <span className="section-label">
-          Why Outsource
-        </span>
 
         <h2>
           Supporting Your Business With the Right Resources
@@ -187,9 +158,6 @@ function ResourceOutsourcing() {
 
       <section className="resource-services">
 
-        <span className="section-label">
-          What We Provide
-        </span>
 
         <h2>
           Our Resource Outsourcing Services
