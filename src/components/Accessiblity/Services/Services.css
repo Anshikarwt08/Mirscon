@@ -3,605 +3,468 @@
 ========================================================= */
 
 .services {
-    width: 100%;
-    margin: 0;
-
-    padding: 80px max(4%, calc((100% - 1250px) / 2));
-
-    background: #f5f9ff;
-
-    box-shadow: none;
+  width: 100%;
+  margin: 0;
+  padding: 80px 5%;
+  background: #f5f9ff;
+  box-shadow: none;
 }
-
 
 /* =========================================================
    SERVICE ROW
 ========================================================= */
 
 .accessibility-service-row {
-    scroll-margin-top: 120px;
+  scroll-margin-top: 120px;
 
-    display: grid;
+  width: 100%;
+  min-height: 300px;
 
-    grid-template-columns:
-        minmax(420px, 1fr)
-        minmax(420px, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    align-items: center;
+  padding: 90px 0;
+  margin: 0;
 
-    gap: 65px;
-
-    padding: 100px 0;
-
-    max-width: 1200px;
-
-    margin: 0 auto;
-
-    position: relative;
+  position: relative;
 }
-
-
-/* Divider */
-
-.accessibility-service-row:not(:last-child) {
-    border-bottom: 1px solid #dfe8f5;
-}
-
-
-/* Reverse layout */
-
-.accessibility-service-row.accessibility-reverse {
-    direction: rtl;
-}
-
-.accessibility-service-row.accessibility-reverse > * {
-    direction: ltr;
-}
-
 
 /* =========================================================
-   IMAGE CONTAINER
+   DIVIDER
 ========================================================= */
 
-.accessibility-service-image {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 440px;
-
-    padding: 45px;
-
-    overflow: hidden;
-
-    border-radius: 34px;
-
-    background:
-        radial-gradient(
-            circle at top right,
-            rgba(94, 139, 255, 0.18),
-            transparent 40%
-        ),
-        radial-gradient(
-            circle at bottom left,
-            rgba(0, 185, 255, 0.12),
-            transparent 45%
-        ),
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #f5f8ff
-        );
-
-    border: 1px solid rgba(80, 120, 255, 0.14);
-
-    box-shadow:
-        0 18px 45px rgba(19, 43, 99, 0.08);
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
+.accessibility-service-row:not(:last-child) {
+  border-bottom: 1px solid #dfe8f5;
 }
 
-
-/* SUBTLE IMAGE HOVER */
-
-.accessibility-service-image:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 18px 40px rgba(19, 43, 99, 0.08);
-}
-
-
-/* DECORATIVE CIRCLES */
-
-.accessibility-service-image::before {
-    content: "";
-
-    position: absolute;
-
-    width: 270px;
-    height: 270px;
-
-    border-radius: 50%;
-
-    top: -125px;
-    right: -105px;
-
-    background: rgba(79, 124, 255, 0.09);
-}
-
-.accessibility-service-image::after {
-    content: "";
-
-    position: absolute;
-
-    width: 190px;
-    height: 190px;
-
-    border-radius: 50%;
-
-    bottom: -75px;
-    left: -75px;
-
-    background: rgba(0, 183, 255, 0.07);
-}
-
-
-/* IMAGE */
-
-.accessibility-service-image img {
-    position: relative;
-
-    z-index: 2;
-
-    display: block;
-
-    width: 100%;
-
-    max-width: 390px;
-
-    height: auto;
-
-    object-fit: contain;
-
-    transition: transform 0.45s ease;
-}
-
-.accessibility-service-image:hover img {
-    transform: scale(1.01);
-}
-
-
-/* CONTENT */
+/* =========================================================
+   SERVICE CONTENT
+========================================================= */
 
 .accessibility-service-content {
-    display: flex;
+  width: 100%;
+  max-width: 1250px;
 
-    flex-direction: column;
+  margin-left: 3%;
+  margin-right: auto;
 
-    justify-content: center;
-
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-
-/* SERVICE TITLE */
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
 
 .accessibility-service-title {
-    margin: 0 0 20px;
+  margin: 0 0 12px;
 
-    color: #132b63;
+  color: #132b63;
 
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 
-    font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 3rem);
 
-    font-weight: 700;
+  font-weight: 700;
 
-    line-height: 1.1;
+  line-height: 1.1;
 
-    letter-spacing: -1px;
+  letter-spacing: -1px;
 }
 
+/* =========================================================
+   SERVICE SUBTITLE
+========================================================= */
 
-/* DESCRIPTION */
+.service-subtitle {
+  margin: 0 0 24px;
+
+  color: #2962ff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
 .accessibility-service-description {
-    max-width: 570px;
+  display: block;
 
-    margin: 0 0 28px;
+  width: 100%;
+  max-width: 100%;
 
-    color: #5d6678;
+  margin: 0 0 28px;
 
-    font-family: "Poppins", sans-serif;
+  color: #5d6678;
 
-    font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
 
-    line-height: 1.9;
+  font-size: 1.2rem;
+
+  line-height: 1.9;
+
+  font-weight: 400;
 }
 
-
-/* EXPLORE SERVICE BUTTON */
+/* =========================================================
+   EXPLORE SERVICE BUTTON
+========================================================= */
 
 .accessibility-service-explore {
-    display: inline-flex;
+  display: inline-flex;
 
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-    gap: 10px;
+  gap: 10px;
 
-    padding: 12px 21px;
+  padding: 12px 21px;
 
-    border: 1px solid #d7e3f7;
+  border: 1px solid #d7e3f7;
 
-    border-radius: 50px;
+  border-radius: 50px;
 
-    background: #ffffff;
+  background: #ffffff;
 
-    color: #2962ff;
+  color: #2962ff;
 
-    text-decoration: none;
+  text-decoration: none;
 
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 
-    font-weight: 600;
+  font-weight: 600;
 
-    line-height: 1.3;
+  line-height: 1.3;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
 
 .accessibility-service-explore:hover {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 
-    background: #2962ff;
+  background: #2962ff;
 
-    border-color: #2962ff;
+  border-color: #2962ff;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    box-shadow:
-        0 10px 24px rgba(41, 98, 255, 0.2);
+  box-shadow: 0 10px 24px rgba(41, 98, 255, 0.2);
 }
 
-
+/* =========================================================
+   ARROW
+========================================================= */
 
 .explore-arrow {
-    display: inline-flex;
+  display: inline-flex;
 
-    font-size: 18px;
+  font-size: 18px;
 
-    line-height: 1;
+  line-height: 1;
 
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .accessibility-service-explore:hover .explore-arrow {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 
+/* =========================================================
+   BUTTON FOCUS
+========================================================= */
 
 .accessibility-service-explore:focus-visible {
-    outline: 3px solid #7aa5ff;
+  outline: 3px solid #7aa5ff;
 
-    outline-offset: 4px;
+  outline-offset: 4px;
 }
 
+/* =========================================================
+   LARGE TABLET
+========================================================= */
 
+@media (max-width: 1200px) {
+  .services {
+    padding: 70px 5%;
+  }
 
-.accessibility-service-row {
-    animation: accessibilityServiceFade 0.8s ease both;
+  .accessibility-service-content {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin-left: 2%;
+  }
+
+  .accessibility-service-description {
+    max-width: 1050px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+  }
 }
 
-@keyframes accessibilityServiceFade {
+/* =========================================================
+   TABLET
+========================================================= */
 
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+@media (max-width: 900px) {
+  .services {
+    padding: 60px 5%;
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  .accessibility-service-row {
+    min-height: 280px;
+
+    padding: 75px 0;
+  }
+
+  .accessibility-service-content {
+    width: 92%;
+
+    max-width: 900px;
+
+    margin-left: 0;
+  }
+
+  .accessibility-service-title {
+    font-size: 2.4rem;
+  }
+
+  .accessibility-service-description {
+    max-width: 100%;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+  }
 }
 
-
-.accessibility-service-row:nth-child(1) {
-    animation-delay: 0.05s;
-}
-
-.accessibility-service-row:nth-child(2) {
-    animation-delay: 0.12s;
-}
-
-.accessibility-service-row:nth-child(3) {
-    animation-delay: 0.19s;
-}
-
-.accessibility-service-row:nth-child(4) {
-    animation-delay: 0.26s;
-}
-
-
-
-@media (max-width: 1100px) {
-
-    .services {
-        padding: 65px 5%;
-    }
-
-    .accessibility-service-row,
-    .accessibility-service-row.accessibility-reverse {
-
-        grid-template-columns: 1fr;
-
-        direction: ltr;
-
-        gap: 50px;
-
-        padding: 80px 0;
-
-        text-align: center;
-    }
-
-
-    /* Image */
-
-    .accessibility-service-image {
-
-        width: 100%;
-
-        max-width: 650px;
-
-        min-height: 400px;
-
-        margin: 0 auto;
-    }
-
-
-    /* Content */
-
-    .accessibility-service-content {
-        align-items: center;
-    }
-
-
-    /* Description */
-
-    .accessibility-service-description {
-        max-width: 700px;
-
-        text-align: center;
-    }
-
-
-    /* Button */
-
-    .accessibility-service-explore {
-        margin-inline: auto;
-    }
-}
-
-
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
 
 @media (max-width: 768px) {
+  .services {
+    padding: 55px 5%;
+  }
 
-    .services {
-        padding: 55px 5%;
-    }
+  .accessibility-service-row {
+    min-height: auto;
 
+    padding: 65px 0;
 
-    .accessibility-service-row {
-        gap: 38px;
+    justify-content: flex-start;
+  }
 
-        padding: 70px 0;
-    }
+  .accessibility-service-content {
+    width: 100%;
 
+    max-width: 100%;
 
-    /* Image */
+    margin: 0;
 
-    .accessibility-service-image {
-        min-height: auto;
+    align-items: flex-start;
+  }
 
-        padding: 32px;
+  /* =====================================================
+     TITLE
+  ===================================================== */
 
-        border-radius: 28px;
-    }
+  .accessibility-service-title {
+    font-size: 2rem;
 
+    line-height: 1.15;
 
-    .accessibility-service-image img {
-        max-width: 320px;
-    }
+    letter-spacing: -0.5px;
 
+    margin-bottom: 12px;
+  }
 
-    /* Title */
+  /* =====================================================
+     SUBTITLE
+  ===================================================== */
 
-    .accessibility-service-title {
-        font-size: 2rem;
+  .service-subtitle {
+    font-size: 19px;
 
-        line-height: 1.15;
+    line-height: 1.4;
 
-        letter-spacing: -0.5px;
-    }
+    margin-bottom: 20px;
+  }
 
+  /* =====================================================
+     DESCRIPTION
+  ===================================================== */
 
-    /* Description */
+  .accessibility-service-description {
+    width: 100%;
 
-    .accessibility-service-description {
-        font-size: 1rem;
+    max-width: 100%;
 
-        line-height: 1.8;
-    }
+    font-size: 1rem;
 
+    line-height: 1.8;
 
-    /* Button */
+    margin-bottom: 24px;
+  }
 
-    .accessibility-service-explore {
-        padding: 11px 19px;
+  /* =====================================================
+     BUTTON
+  ===================================================== */
 
-        font-size: 0.9rem;
-    }
+  .accessibility-service-explore {
+    padding: 11px 19px;
+
+    font-size: 0.9rem;
+  }
 }
 
-
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 600px) {
+  .services {
+    padding: 45px 5%;
+  }
 
-    .services {
-        padding: 45px 5%;
-    }
+  .accessibility-service-row {
+    padding: 55px 0;
+  }
 
+  .accessibility-service-content {
+    width: 100%;
+  }
 
-    .accessibility-service-row {
-        gap: 30px;
+  /* TITLE */
 
-        padding: 60px 0;
-    }
+  .accessibility-service-title {
+    font-size: 1.75rem;
 
+    line-height: 1.15;
 
-    /* Image */
+    margin-bottom: 12px;
+  }
 
-    .accessibility-service-image {
-        padding: 24px;
+  /* SUBTITLE */
 
-        border-radius: 24px;
-    }
+  .service-subtitle {
+    font-size: 18px;
 
+    line-height: 1.4;
 
-    .accessibility-service-image::before {
-        width: 190px;
+    margin-bottom: 18px;
+  }
 
-        height: 190px;
+  /* DESCRIPTION */
 
-        top: -90px;
+  .accessibility-service-description {
+    font-size: 0.95rem;
 
-        right: -80px;
-    }
+    line-height: 1.75;
 
+    margin-bottom: 22px;
+  }
 
-    .accessibility-service-image::after {
-        width: 130px;
+  /* BUTTON */
 
-        height: 130px;
+  .accessibility-service-explore {
+    padding: 10px 17px;
 
-        bottom: -55px;
+    font-size: 0.87rem;
+  }
 
-        left: -55px;
-    }
-
-
-    .accessibility-service-image img {
-        max-width: 270px;
-    }
-
-
-    /* Title */
-
-    .accessibility-service-title {
-        font-size: 1.75rem;
-
-        line-height: 1.15;
-    }
-
-
-    /* Description */
-
-    .accessibility-service-description {
-        font-size: 0.95rem;
-
-        line-height: 1.75;
-
-        margin-bottom: 22px;
-    }
-
-
-    /* Button */
-
-    .accessibility-service-explore {
-        padding: 10px 17px;
-
-        font-size: 0.87rem;
-    }
-
-
-    .explore-arrow {
-        font-size: 16px;
-    }
+  .explore-arrow {
+    font-size: 16px;
+  }
 }
 
-
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 400px) {
+  .services {
+    padding: 40px 4%;
+  }
 
-    .services {
-        padding: 40px 4%;
-    }
+  .accessibility-service-row {
+    padding: 50px 0;
 
+    gap: 25px;
+  }
 
-    .accessibility-service-row {
-        padding: 50px 0;
+  .accessibility-service-content {
+    width: 100%;
+  }
 
-        gap: 25px;
-    }
+  /* TITLE */
 
+  .accessibility-service-title {
+    font-size: 1.55rem;
 
-    .accessibility-service-image {
-        padding: 20px;
+    letter-spacing: -0.3px;
+  }
 
-        border-radius: 21px;
-    }
+  /* SUBTITLE */
 
+  .service-subtitle {
+    font-size: 17px;
 
-    .accessibility-service-image img {
-        max-width: 230px;
-    }
+    line-height: 1.4;
 
+    margin-bottom: 16px;
+  }
 
-    .accessibility-service-title {
-        font-size: 1.55rem;
-    }
+  /* DESCRIPTION */
 
+  .accessibility-service-description {
+    font-size: 0.9rem;
 
-    .accessibility-service-description {
-        font-size: 0.9rem;
-    }
+    line-height: 1.7;
+  }
 
+  /* BUTTON */
 
-    .accessibility-service-explore {
-        padding: 9px 15px;
+  .accessibility-service-explore {
+    padding: 9px 15px;
 
-        font-size: 0.84rem;
-    }
+    font-size: 0.84rem;
+  }
 }
 
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
-
-    .accessibility-service-row {
-        animation: none;
-    }
-
-    .accessibility-service-image,
-    .accessibility-service-image img,
-    .accessibility-service-explore,
-    .explore-arrow {
-        transition: none;
-    }
+  .accessibility-service-explore,
+  .explore-arrow {
+    transition: none;
+  }
 }

@@ -1,41 +1,31 @@
 import "./Services.css";
 import { Link } from "react-router-dom";
 
-import pdf from "../../../assets/pdf.png";
-import ebook from "../../../assets/ebook.jpeg";
-import alttext from "../../../assets/alttext.png";
-import srt from "../../../assets/srt.png";
-
 function Services() {
   const services = [
+     {
+  id: "digital-publishing",
+  title: "Digital Publishing Services",
+  subtitle: "Make every publication accessible. Make every reader count.",
+  description:
+    "We transform traditional and digital content into accessible, structured, and engaging publications that work across devices, platforms, and assistive technologies. Our digital publishing solutions help publishers, businesses, and organizations deliver content that is easier to access, navigate, and consume. From content conversion and document remediation to accessible EPUBs, PDFs, and eBooks, we ensure accessibility is integrated throughout the publishing workflow rather than treated as an afterthought."
+},
+    {
+      id: "document-remediation",
+      title: "Document Remediation",
+      description:
+        "Our document remediation services transform inaccessible files into fully accessible documents compatible with screen readers and assistive technologies. Every document is remediated according to international accessibility standards."
+    },
     {
       id: "alt-text",
       title: "Alt Text Services",
-      image: alttext,
       description:
         "We create accurate, meaningful, and standards-compliant alternative text for images, charts, graphs, diagrams, tables, and other visual content. With nearly a decade of experience, we help publishers, EdTech organizations, and enterprises deliver accessible digital content that complies with global accessibility standards."
     },
 
     {
-      id: "document-remediation",
-      title: "Document Remediation",
-      image: pdf,
-      description:
-        "Our document remediation services transform inaccessible files into fully accessible documents compatible with screen readers and assistive technologies. Every document is remediated according to international accessibility standards."
-    },
-
-    {
-      id: "digital-publishing",
-      title: "Digital Publishing Services",
-      image: ebook,
-      description:
-        "We provide end-to-end digital publishing solutions for publishers, educational institutions, and enterprises. Our workflows ensure accurate, standards-compliant, and high-quality digital publications."
-    },
-
-    {
       id: "multimedia-accessibility",
       title: "Multimedia Accessibility",
-      image: srt,
       description:
         "We make multimedia content accessible by providing professional captioning, transcription, audio description, and video accessibility services that ensure an inclusive experience for every user."
     }
@@ -44,26 +34,12 @@ function Services() {
   return (
     <section className="services">
 
-      {services.map((service, index) => (
+      {services.map((service) => (
         <div
           id={service.id}
           key={service.id}
-          className={`accessibility-service-row ${
-            index % 2 !== 0 ? "accessibility-reverse" : ""
-          }`}
+          className="accessibility-service-row"
         >
-
-          {/* =========================
-              Image
-          ========================= */}
-
-          <div className="accessibility-service-image">
-            <img
-              src={service.image}
-              alt={service.title}
-            />
-          </div>
-
 
           {/* =========================
               Content
@@ -71,31 +47,25 @@ function Services() {
 
           <div className="accessibility-service-content">
 
-            
-
-
             {/* Service Heading */}
             <h3 className="accessibility-service-title">
               {service.title}
             </h3>
-
-
+            {service.subtitle && (
+              <h4 className="service-subtitle">{service.subtitle}</h4>
+            )}
             {/* Description */}
             <p className="accessibility-service-description">
               {service.description}
             </p>
 
-
-            {/* =========================
-                Explore Service Button
-            ========================= */}
-
+            {/* Explore Service Button */}
             <Link
               to={`/services/${service.id}`}
               className="accessibility-service-explore"
               aria-label={`Explore ${service.title}`}
             >
-              <span>Explore Service</span>
+              <span>Explore More</span>
 
               <span
                 className="explore-arrow"

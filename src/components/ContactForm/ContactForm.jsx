@@ -52,9 +52,10 @@ function ContactForm() {
         <div className="form-grid">
 
           <div className="form-group">
-            <label>Full Name *</label>
+            <label for ="fullname">Full Name *</label>
 
             <input
+              id= "fullname"
               type="text"
               name="name"
               placeholder="John Doe"
@@ -65,24 +66,26 @@ function ContactForm() {
           </div>
 
           <div className="form-group">
-            <label>Company</label>
+            <label for="companyname">Company</label>
 
             <input
+              id="companyname"
               type="text"
               name="company"
-              placeholder="ABC Technologies"
+              placeholder="Company Name"
               value={formData.company}
               onChange={handleChange}
             />
           </div>
 
           <div className="form-group">
-            <label>Work Email *</label>
+            <label for="email">Work Email *</label>
 
             <input
+              id="email"
               type="email"
               name="email"
-              placeholder="john@company.com"
+              placeholder="xyz@gmail.com"
               value={formData.email}
               onChange={handleChange}
               required
@@ -90,12 +93,13 @@ function ContactForm() {
           </div>
 
           <div className="form-group">
-            <label>Phone Number</label>
+            <label for="phoneno">Phone Number</label>
 
             <input
+              id="phoneno"
               type="tel"
               name="phone"
-              placeholder="+91 9876543210"
+              placeholder="+91 8778394612"
               value={formData.phone}
               onChange={handleChange}
             />
@@ -104,25 +108,25 @@ function ContactForm() {
         </div>
 
         <div className="form-group">
+  <label for="ServiceRequired"> Service Required *</label>
 
-          <label>Service Required *</label>
-
-          <select
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select a Service</option>
-            <option>Accessibility Testing</option>
-            <option>Quality Assurance</option>
-            <option>Salesforce Development</option>
-            <option>Staffing Solutions</option>
-            <option>Product Engineering</option>
-            <option>Other</option>
-          </select>
-
-        </div>
+  <select
+    id="ServiceRequired"
+    name="service"
+    value={formData.service}
+    onChange={handleChange}
+    required
+    aria-required="true"
+  >
+    <option value="">Select a Service</option>
+    <option value="Accessibility Testing">Accessibility Testing</option>
+    <option value="Quality Assurance">Quality Assurance</option>
+    <option value="Salesforce Development">Salesforce Development</option>
+    <option value="Staffing Solutions">Staffing Solutions</option>
+    <option value="Product Engineering">Product Engineering</option>
+    <option value="Other">Other</option>
+  </select>
+</div>
 
         <div className="form-group">
 

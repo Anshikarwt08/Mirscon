@@ -50,37 +50,7 @@ function ServiceDetails() {
 
       <main className="service-details-page">
 
-        {/* =====================================================
-            HERO SECTION
-        ===================================================== */}
-
-        <section className="service-details-hero">
-
-          <div className="service-details-hero-content">
-
-            
-
-            <h1>
-              {service.title}
-            </h1>
-
-            <p>
-              {service.description}
-            </p>
-
-          </div>
-
-
-          <div className="service-details-hero-image">
-
-            <img
-              src={service.image}
-              alt={service.title}
-            />
-
-          </div>
-
-        </section>
+        
 
 
         {/* =====================================================

@@ -1,8 +1,3 @@
-import pdf from "../../assets/pdf.png";
-import ebook from "../../assets/ebook.jpeg";
-import alttext from "../../assets/alttext.png";
-import srt from "../../assets/srt.png";
-
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -10,8 +5,6 @@ const serviceData = {
 
   "alt-text": {
     title: "Alt Text Services",
-
-    image: alttext,
 
     description:
       "We create accurate, meaningful, and standards-compliant alternative text for images, charts, graphs, diagrams, tables, and other visual content. Our accessibility experts help publishers, educational institutions, and enterprises meet global accessibility standards.",
@@ -165,6 +158,7 @@ const serviceData = {
           "Approved content is delivered in the required format according to project specifications."
       }
     ],
+
     faqs: [
       {
         question: "What is alt text?",
@@ -181,7 +175,7 @@ const serviceData = {
         answer:
           "Yes. Our workflows can support large-scale accessibility and publishing projects while maintaining quality and consistency."
       }
-    ],
+    ]
   },
 
 
@@ -191,8 +185,6 @@ const serviceData = {
 
   "document-remediation": {
     title: "Document Remediation",
-
-    image: pdf,
 
     description:
       "Transform inaccessible documents into fully accessible PDFs, Word, Excel, and PowerPoint files compatible with screen readers and assistive technologies.",
@@ -380,8 +372,7 @@ const serviceData = {
         answer:
           "Yes. Remediated documents can be reviewed against applicable accessibility requirements and project specifications."
       }
-    ],
-
+    ]
   },
 
 
@@ -391,8 +382,6 @@ const serviceData = {
 
   "digital-publishing": {
     title: "Digital Publishing Services",
-
-    image: ebook,
 
     description:
       "End-to-end digital publishing solutions for publishers, universities, and enterprises delivering high-quality, standards-compliant digital publications.",
@@ -580,8 +569,7 @@ const serviceData = {
         answer:
           "Yes. EPUB publications can be reviewed and validated as part of the publishing workflow."
       }
-    ],
-
+    ]
   },
 
 
@@ -591,8 +579,6 @@ const serviceData = {
 
   "multimedia-accessibility": {
     title: "Multimedia Accessibility",
-
-    image: srt,
 
     description:
       "Professional captioning, transcription, subtitles, audio description, and video accessibility services for inclusive multimedia experiences.",
@@ -780,7 +766,7 @@ const serviceData = {
         answer:
           "Yes. Captioning and subtitle files can be synchronized with the corresponding multimedia content."
       }
-    ],
+    ]
   }
 };
 

@@ -1,37 +1,34 @@
 import React, { useEffect, useState } from "react";
 import "./Home2.css";
 
-import {
-  FaUniversalAccess,
-  FaLaptopCode,
-  FaGraduationCap,
-  FaClipboardCheck,
-} from "react-icons/fa";
+import { IoIosPeople } from "react-icons/io";
+import { LuLaptopMinimalCheck, LuShieldCheck } from "react-icons/lu";
+import { HiOutlineLightBulb } from "react-icons/hi";
 
 const services = [
   {
     title: "Expertise",
     description:
       "Deep domain knowledge and accessibility expertise across content formats, standards and complex content.",
-    icon: <FaUniversalAccess aria-hidden="true" />,
+    icon: < IoIosPeople aria-hidden="true" />,
   },
   {
     title: "Delivery",
     description:
       "Structured process, skilled teams and scalable capacity enables us to manage projects of varied sizes and complexity.",
-    icon: <FaLaptopCode aria-hidden="true" />,
+    icon: <LuLaptopMinimalCheck  aria-hidden="true" />,
   },
   {
     title: "Quality",
     description:
       "Quality is built into every stage through defined processes, multiple levels of review, validation and continuous improvement.",
-    icon: <FaGraduationCap aria-hidden="true" />,
+    icon: <LuShieldCheck  aria-hidden="true" />,
   },
   {
     title: "Innovation",
     description:
       "Automate and include new workflows in smarter ways to improve efficiency keeping human expertise at the core of delivery.",
-    icon: <FaClipboardCheck aria-hidden="true" />,
+    icon: <HiOutlineLightBulb aria-hidden="true" />,
   },
 ];
 
@@ -93,8 +90,7 @@ function Home2() {
         </h2>
 
         <p>
-        Mirscon brings human expertise and technology together at every stage, combining the scale
-        and efficiency of technology with the insight, judgement and quality control of experienced accessibility professionals.
+        Mirscon brings human expertise and technology together at every stage, combining the scale and efficiency of technology with the insight, judgement and quality control of experienced accessibility professionals.
         </p>
 
       </div>
