@@ -1,3 +1,5 @@
+import Ebook1 from "../../assets/Ebook1.png";
+import Ebook2 from "../../assets/Ebook2.png";
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -394,6 +396,8 @@ const serviceData = {
         title: "eBook Production & Audio Integration",
         image: pdfImage,
 
+        title: "eBook Production with Audio Intergration",
+        images: [Ebook1,Ebook2],
         paragraphs: [
           "We convert print-ready and digital source content into professionally structured eBooks suitable for modern digital publishing workflows.",
 

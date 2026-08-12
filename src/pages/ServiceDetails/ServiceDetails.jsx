@@ -49,9 +49,6 @@ function ServiceDetails() {
 
       <main className="service-details-page">
 
-        
-
-
         {/* =====================================================
             WHAT WE OFFER
         ===================================================== */}
@@ -61,72 +58,170 @@ function ServiceDetails() {
 
             <div className="service-details-section-heading">
 
-              
-
               <h2>
                 Comprehensive {service.title}
               </h2>
 
-              <p>Explore the different services and solutions we provide to support accessible and high-quality digital content.</p>
+              <p>
+                Explore the different services and solutions we
+                provide to support accessible and high-quality
+                digital content.
+              </p>
 
             </div>
 
-
             <div className="service-details-features-grid">
 
-              {service.features.map((feature, index) => (
+              {service.features.map((feature, index) => {
 
-                <article
-                  className="service-details-feature-card"
-                  key={`${service.title}-feature-${index}`}
-                >
+                const hasMultipleImages =
+                  Array.isArray(feature.images) &&
+                  feature.images.length > 0;
 
-                  
+                const hasSingleImage =
+                  feature.image &&
+                  typeof feature.image !== "object";
 
+                const hasImage =
+                  hasMultipleImages || hasSingleImage;
 
-                  {/* Feature Title */}
+                return (
+                  <article
+                    className={`service-details-feature-card ${
+                      hasImage ? "feature-with-image" : ""
+                    }`}
+                    key={`${service.title}-feature-${index}`}
+                  >
 
-                  <h3>
-                    {feature.title}
-                  </h3>
+                    {/* =================================================
+                        FEATURE TITLE
+                    ================================================= */}
 
-
-                  {/* Feature Content */}
-
-                  <div className="service-details-feature-paragraphs">
-
-                    {Array.isArray(feature.paragraphs) &&
-                      feature.paragraphs.map(
-                        (paragraph, paragraphIndex) => (
-
-                          <p
-                            key={`${feature.title}-paragraph-${paragraphIndex}`}
-                          >
-                            {paragraph}
-                          </p>
-
-                        )
-                      )
-                    }
+                    <h3>
+                      {feature.title}
+                    </h3>
 
 
-                    {/* Old data fallback */}
+                    {/* =================================================
+                        FIRST IMAGE
+                        Directly After Heading
+                    ================================================= */}
 
-                    {!Array.isArray(feature.paragraphs) &&
-                      feature.description && (
+                    {hasMultipleImages && feature.images[0] && (
+                      <div className="service-details-feature-image feature-image-first">
 
-                        <p>
-                          {feature.description}
-                        </p>
+                        <img
+                          src={feature.images[0]}
+                          alt={`${feature.title} 1`}
+                        />
 
-                      )
-                    }
+                      </div>
+                    )}
 
-                  </div>
 
-                </article>
+                    {/* =================================================
+                        CONTENT + SECOND IMAGE
+                        60% CONTENT + 40% IMAGE
+                    ================================================= */}
 
-              ))}
+                    {hasMultipleImages && feature.images[1] ? (
+                      <div className="service-details-feature-layout">
+
+                        {/* ---------------------------------------------
+                            LEFT CONTENT
+                        --------------------------------------------- */}
+
+                        <div className="service-details-feature-paragraphs">
+
+                          {Array.isArray(feature.paragraphs) &&
+                            feature.paragraphs.map(
+                              (paragraph, paragraphIndex) => (
+                                <p
+                                  key={`${feature.title}-paragraph-${paragraphIndex}`}
+                                >
+                                  {paragraph}
+                                </p>
+                              )
+                            )
+                          }
+
+                          {!Array.isArray(feature.paragraphs) &&
+                            feature.description && (
+                              <p>
+                                {feature.description}
+                              </p>
+                            )
+                          }
+
+                        </div>
+
+
+                        {/* ---------------------------------------------
+                            SECOND IMAGE
+                            CENTERED IN RIGHT COLUMN
+                        --------------------------------------------- */}
+
+                        <div className="service-details-feature-image feature-image-second">
+
+                          <img
+                            src={feature.images[1]}
+                            alt={`${feature.title} 2`}
+                          />
+
+                        </div>
+
+                      </div>
+                    ) : (
+
+                      /* =================================================
+                         CONTENT WHEN THERE IS NO SECOND IMAGE
+                      ================================================= */
+
+                      <div className="service-details-feature-paragraphs">
+
+                        {Array.isArray(feature.paragraphs) &&
+                          feature.paragraphs.map(
+                            (paragraph, paragraphIndex) => (
+                              <p
+                                key={`${feature.title}-paragraph-${paragraphIndex}`}
+                              >
+                                {paragraph}
+                              </p>
+                            )
+                          )
+                        }
+
+                        {!Array.isArray(feature.paragraphs) &&
+                          feature.description && (
+                            <p>
+                              {feature.description}
+                            </p>
+                          )
+                        }
+
+                      </div>
+                    )}
+
+
+                    {/* =================================================
+                        SINGLE IMAGE FALLBACK
+                    ================================================= */}
+
+                    {!hasMultipleImages &&
+                      hasSingleImage && (
+                        <div className="service-details-feature-image feature-image-single">
+
+                          <img
+                            src={feature.image}
+                            alt={feature.title}
+                          />
+
+                        </div>
+                    )}
+
+                  </article>
+                );
+              })}
 
             </div>
 
@@ -154,7 +249,6 @@ function ServiceDetails() {
               </p>
 
             </div>
-
 
             <div className="service-details-benefits-list">
 
@@ -195,8 +289,6 @@ function ServiceDetails() {
 
             <div className="service-details-section-heading">
 
-            
-
               <h2>
                 Supporting Different Industries
               </h2>
@@ -208,7 +300,6 @@ function ServiceDetails() {
               </p>
 
             </div>
-
 
             <div className="service-details-industries-grid">
 
@@ -238,8 +329,6 @@ function ServiceDetails() {
 
             <div className="service-details-section-heading">
 
-              
-
               <h2>
                 How We Work
               </h2>
@@ -251,7 +340,6 @@ function ServiceDetails() {
               </p>
 
             </div>
-
 
             <div className="service-details-process-grid">
 
@@ -305,7 +393,6 @@ function ServiceDetails() {
 
             </div>
 
-
             <div className="service-details-faq-list">
 
               {service.faqs.map((faq, index) => (
@@ -342,25 +429,26 @@ function ServiceDetails() {
 
           </section>
         )}
-  {/* Floating Back Button */}
 
-      <button
-        type="button"
-        className="service-details-floating-back"
-        onClick={() => navigate("/accessibility")}
-        aria-label="Back to Accessibility"
-      >
-        
 
-        <span className="floating-back-text">
-          Back to Accessibility
-        </span>
-      </button>
+        {/* =====================================================
+            FLOATING BACK BUTTON
+        ===================================================== */}
 
-        
+        <button
+          type="button"
+          className="service-details-floating-back"
+          onClick={() => navigate("/accessibility")}
+          aria-label="Back to Accessibility"
+        >
+          <span className="floating-back-text">
+            Back to Accessibility
+          </span>
+        </button>
 
       </main>
-      <Footer/>
+
+      <Footer />
     </>
   );
 }

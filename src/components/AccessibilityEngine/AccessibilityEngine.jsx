@@ -14,7 +14,12 @@ function AccessibilityEngine() {
       <div className="accessibility-engine-container">
         
         <h2 className="accessibility-engine-heading">
-          Where People, Process &amp; Technology Create Impact
+          <strong>
+              The Mirscon difference.
+            </strong>< br/>
+            <span className="heading-sub">
+              Technology, expertise and quality working together to transform content into accessible experience.
+            </span>
         </h2>
 
 
@@ -80,15 +85,6 @@ function AccessibilityEngine() {
               </p>
             </div>
 
-          </div>
-
-          <div className="difference-message">
-            <strong>
-              Technology accelerates. Expertise understands. Quality validates.
-            </strong>
-            <span>
-              That's the Mirscon difference.
-            </span>
           </div>
 
         </div>
