@@ -95,6 +95,14 @@ function Footer() {
         <div>
           <h3>Industries</h3>
 
+<ul>
+  <li>Publishing & Media</li>
+  <li>Education & EdTech</li>
+  <li>Healthcare</li>
+  <li>Technology</li>
+  <li>Banking & Financial Services</li>
+  <li>Government & Public Sector</li>
+</ul>
           <ul>
             <li>Publishing and Media</li>
             <li>EdTech and Learning</li>
@@ -104,6 +112,7 @@ function Footer() {
             <li>Legal and Professional </li>
             
           </ul>
+
         </div>
 
         {/* About */}
