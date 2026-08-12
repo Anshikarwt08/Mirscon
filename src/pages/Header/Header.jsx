@@ -34,7 +34,7 @@ function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   // -----------------------------
-  // Dropdown Items
+  // About Dropdown Items
   // -----------------------------
 
   const aboutItems = [
@@ -49,16 +49,39 @@ function Header() {
     },
   ];
 
+  // -----------------------------
+  // Services Dropdown Items
+  // -----------------------------
+
   const serviceItems = [
-    {
-      label: "Accessibility",
-      to: "/accessibility",
-    },
-    {
-      label: "Resource Outsourcing",
-      to: "/resource-outsourcing",
-    },
-  ];
+  {
+    label: "Digital Accessibility Solutions",
+    to: "/accessibility",
+    children: [
+      {
+        label: "Digital Publishing",
+        to: "/accessibility#digital-publishing",
+      },
+      {
+        label: "Document Remediation",
+        to: "/accessibility#document-remediation",
+      },
+      {
+        label: "Alt Text Services",
+        to: "/accessibility#alt-text",
+      },
+      {
+        label: "Multimedia Accessibility",
+        to: "/accessibility#multimedia-accessibility",
+      },
+    ],
+  },
+
+  {
+    label: "Resource Outsourcing",
+    to: "/resource-outsourcing",
+  },
+];
 
   return (
     <>
@@ -70,7 +93,11 @@ function Header() {
       <header className="mirscon-header">
         {/* Logo */}
         <div className="mirscon-logo">
-          <Link to="/" aria-label="Go to Home page" onClick={closeMenu}>
+          <Link
+            to="/"
+            aria-label="Go to Home page"
+            onClick={closeMenu}
+          >
             <img src={logo} alt="Mirscon Logo" />
           </Link>
         </div>
@@ -96,7 +123,10 @@ function Header() {
           />
 
           {/* Industries */}
-          <Link to="/industries" onClick={closeMenu}>
+          <Link
+            to="/industries"
+            onClick={closeMenu}
+          >
             Industries
           </Link>
 

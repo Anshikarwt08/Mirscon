@@ -5,16 +5,22 @@ import "./Dropdown.css";
 
 function Dropdown({ title, items, onItemClick }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
 
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
+
   const navigate = useNavigate();
 
   const closeDropdown = () => {
     setIsOpen(false);
+    setOpenSubmenu(null);
   };
 
-  // Close when clicking outside
+  /* ==========================================
+     Close when clicking outside
+  ========================================== */
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -25,53 +31,223 @@ function Dropdown({ title, items, onItemClick }) {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener(
+      "mousedown",
+      handleClickOutside
+    );
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener(
+        "mousedown",
+        handleClickOutside
+      );
     };
   }, []);
 
-  // Close with Escape
+  /* ==========================================
+     Escape key
+  ========================================== */
+
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === "Escape" && isOpen) {
-        closeDropdown();
-        buttonRef.current?.focus();
+      if (event.key === "Escape") {
+        if (openSubmenu !== null) {
+          setOpenSubmenu(null);
+          return;
+        }
+
+        if (isOpen) {
+          closeDropdown();
+          buttonRef.current?.focus();
+        }
       }
     };
 
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener(
+      "keydown",
+      handleKeyDown
+    );
 
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener(
+        "keydown",
+        handleKeyDown
+      );
     };
-  }, [isOpen]);
+  }, [isOpen, openSubmenu]);
+
+  /* ==========================================
+     Normal link click
+  ========================================== */
+
+  const handleItemClick = () => {
+    closeDropdown();
+    onItemClick?.();
+  };
+
+  /* ==========================================
+     Hash navigation
+  ========================================== */
+
+  const handleHashClick = (item) => {
+    closeDropdown();
+    onItemClick?.();
+
+    navigate(item.to);
+
+    setTimeout(() => {
+      const element = document.querySelector(
+        item.hash
+      );
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 300);
+  };
 
   return (
-    <div className="mirscon-dropdown" ref={dropdownRef}>
-      {/* Dropdown Button */}
+    <div
+      className="mirscon-dropdown"
+      ref={dropdownRef}
+    >
+
+      {/* ========================================
+          MAIN DROPDOWN BUTTON
+      ======================================== */}
+
       <button
         ref={buttonRef}
         type="button"
         className="dropdown-toggle"
-        onClick={() => setIsOpen((prev) => !prev)}
+        onClick={() => {
+          setIsOpen((prev) => !prev);
+          setOpenSubmenu(null);
+        }}
         aria-expanded={isOpen}
+        aria-haspopup="true"
       >
         <span>{title}</span>
 
         <FiChevronDown
-          className={`dropdown-icon ${isOpen ? "rotate" : ""}`}
+          className={`dropdown-icon ${
+            isOpen ? "rotate" : ""
+          }`}
         />
       </button>
 
-      {/* Dropdown Menu */}
+
+      {/* ========================================
+          MAIN DROPDOWN MENU
+      ======================================== */}
+
       <div
-        className={`dropdown-menu ${isOpen ? "show" : ""}`}
+        className={`dropdown-menu ${
+          isOpen ? "show" : ""
+        }`}
         role="menu"
       >
+
         {items.map((item) => {
-          // Items with hash
+
+          /* ======================================
+             ITEM WITH SUBMENU
+          ====================================== */
+
+          if (item.children) {
+            const submenuOpen =
+              openSubmenu === item.label;
+
+            return (
+              <div
+                key={item.label}
+                className="nested-dropdown"
+
+                onMouseEnter={() => {
+                  setOpenSubmenu(item.label);
+                }}
+
+                onMouseLeave={() => {
+                  setOpenSubmenu(null);
+                }}
+              >
+
+                {/* ==================================
+                    DIGITAL ACCESSIBILITY SOLUTIONS
+                    NO ARROW
+                ================================== */}
+
+                <Link
+                  to={item.to}
+                  className="accessibility-link"
+                  role="menuitem"
+                  onClick={handleItemClick}
+                >
+                  {item.label}
+                </Link>
+
+
+                {/* ==================================
+                    ACCESSIBILITY SUBMENU
+                ================================== */}
+
+                <div
+                  className={`nested-menu ${
+                    submenuOpen ? "show" : ""
+                  }`}
+                  role="menu"
+                >
+
+                  {item.children.map((child) => {
+
+                    /* Hash child */
+
+                    if (child.hash) {
+                      return (
+                        <button
+                          key={child.label}
+                          type="button"
+                          className="dropdown-item nested-item"
+                          role="menuitem"
+                          onClick={() =>
+                            handleHashClick(child)
+                          }
+                        >
+                          {child.label}
+                        </button>
+                      );
+                    }
+
+
+                    /* Normal child */
+
+                    return (
+                      <Link
+                        key={child.label}
+                        to={child.to}
+                        className="dropdown-item nested-item"
+                        role="menuitem"
+                        onClick={handleItemClick}
+                      >
+                        {child.label}
+                      </Link>
+                    );
+                  })}
+
+                </div>
+
+              </div>
+            );
+          }
+
+
+          /* ======================================
+             HASH ITEM
+          ====================================== */
+
           if (item.hash) {
             return (
               <button
@@ -79,46 +255,36 @@ function Dropdown({ title, items, onItemClick }) {
                 type="button"
                 className="dropdown-item"
                 role="menuitem"
-                onClick={() => {
-                  closeDropdown();
-                  onItemClick?.();
-
-                  navigate(item.to);
-
-                  setTimeout(() => {
-                    const element = document.querySelector(item.hash);
-
-                    if (element) {
-                      element.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
-                    }
-                  }, 300);
-                }}
+                onClick={() =>
+                  handleHashClick(item)
+                }
               >
                 {item.label}
               </button>
             );
           }
 
-          // Normal links
+
+          /* ======================================
+             NORMAL LINK
+          ====================================== */
+
           return (
             <Link
               key={item.label}
               to={item.to}
               className="dropdown-item"
               role="menuitem"
-              onClick={() => {
-                closeDropdown();
-                onItemClick?.();
-              }}
+              onClick={handleItemClick}
             >
               {item.label}
             </Link>
           );
+
         })}
+
       </div>
+
     </div>
   );
 }
