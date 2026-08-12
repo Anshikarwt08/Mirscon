@@ -19,7 +19,8 @@ function Header() {
 
     window.addEventListener("keydown", handleKeyDown);
 
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () =>
+      window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   // Prevent body scroll when mobile menu is open
@@ -33,9 +34,9 @@ function Header() {
 
   const closeMenu = () => setMenuOpen(false);
 
-  // -----------------------------
-  // About Dropdown Items
-  // -----------------------------
+  // --------------------------------
+  // About Dropdown
+  // --------------------------------
 
   const aboutItems = [
     {
@@ -49,39 +50,67 @@ function Header() {
     },
   ];
 
-  // -----------------------------
-  // Services Dropdown Items
-  // -----------------------------
+  // --------------------------------
+  // Services Dropdown
+  // --------------------------------
 
   const serviceItems = [
-  {
-    label: "Digital Accessibility Solutions",
-    to: "/accessibility",
-    children: [
-      {
-        label: "Digital Publishing",
-        to: "/accessibility#digital-publishing",
-      },
-      {
-        label: "Document Remediation",
-        to: "/accessibility#document-remediation",
-      },
-      {
-        label: "Alt Text Services",
-        to: "/accessibility#alt-text",
-      },
-      {
-        label: "Multimedia Accessibility",
-        to: "/accessibility#multimedia-accessibility",
-      },
-    ],
-  },
+    {
+      label: "Digital Accessibility Solutions",
+      to: "/accessibility",
 
-  {
-    label: "Resource Outsourcing",
-    to: "/resource-outsourcing",
-  },
-];
+      children: [
+        {
+          label: "Digital Publishing",
+          to: "/accessibility#digital-publishing",
+        },
+        {
+          label: "Document Remediation",
+          to: "/accessibility#document-remediation",
+        },
+        {
+          label: "Alt Text Services",
+          to: "/accessibility#alt-text",
+        },
+        {
+          label: "Multimedia Accessibility",
+          to: "/accessibility#multimedia-accessibility",
+        },
+      ],
+    },
+
+    {
+      label: "Resource Outsourcing",
+      to: "/resource-outsourcing",
+    },
+  ];
+
+  // --------------------------------
+  // Industries Dropdown
+  // --------------------------------
+
+  const industryItems = [
+    {
+      label: "Healthcare",
+      to: "/industries#healthcare",
+    },
+    {
+      label: "Education",
+      to: "/industries#education",
+    },
+    {
+      label: "Banking & Finance",
+      to: "/industries#banking-finance",
+    },
+    {
+      label: "Publishing",
+      to: "/industries#publishing",
+    },
+    {
+      label: "Technology",
+      to: "/industries#technology",
+    },
+  ];
 
   return (
     <>
@@ -91,6 +120,7 @@ function Header() {
       </a>
 
       <header className="mirscon-header">
+
         {/* Logo */}
         <div className="mirscon-logo">
           <Link
@@ -105,9 +135,12 @@ function Header() {
         {/* Navigation */}
         <nav
           id="primary-navigation"
-          className={`nav-links ${menuOpen ? "open" : ""}`}
+          className={`nav-links ${
+            menuOpen ? "open" : ""
+          }`}
           aria-label="Primary Navigation"
         >
+
           {/* About */}
           <Dropdown
             title="About"
@@ -123,14 +156,13 @@ function Header() {
           />
 
           {/* Industries */}
-          <Link
-            to="/industries"
-            onClick={closeMenu}
-          >
-            Industries
-          </Link>
+          <Dropdown
+            title="Industries"
+            items={industryItems}
+            onItemClick={closeMenu}
+          />
 
-          {/* Career */}
+          {/* Careers */}
           <Link
             to="/career"
             className="career-btn"
@@ -138,6 +170,7 @@ function Header() {
           >
             Careers
           </Link>
+
         </nav>
 
         {/* Contact Button */}
@@ -160,10 +193,13 @@ function Header() {
           }
           aria-expanded={menuOpen}
           aria-controls="primary-navigation"
-          onClick={() => setMenuOpen((prev) => !prev)}
+          onClick={() =>
+            setMenuOpen((prev) => !prev)
+          }
         >
           {menuOpen ? <FiX /> : <FiMenu />}
         </button>
+
       </header>
 
       {/* Mobile Overlay */}

@@ -1,4 +1,4 @@
-import Ebook from "../../assets/Ebook.png";
+import Ebook1 from "../../assets/Ebook1.png";
 import Ebook2 from "../../assets/Ebook2.png";
 const serviceData = {
   /* =========================================================
@@ -393,8 +393,8 @@ const serviceData = {
 
     features: [
       {
-        title: "eBook Production & Audio Intergration",
-        image: Ebook,
+        title: "eBook Production with Audio Intergration",
+        images: [Ebook1,Ebook2],
         paragraphs: [
           "We convert print-ready and digital source content into professionally structured eBooks suitable for modern digital publishing workflows.",
 

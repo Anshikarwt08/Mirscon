@@ -82,12 +82,12 @@ function Footer() {
           <h3>Services</h3>
 
           <ul>
-            <li>Accessibility Services</li>
-<li>Resource Outsourcing</li>
-<li>Alt Text Services</li>
-<li>Document Remediation</li>
-<li>Digital Publishing Services</li>
-<li>Multimedia Accessibility</li>
+            <li>Digital Publishing</li>
+            <li>Document Remediation</li>
+            <li>Image Accessibility</li>
+            <li>Document Remediation</li>
+            <li>Multimedia Accessibility</li>
+            <li>Resource Outsourcing</li>
           </ul>
         </div>
 
