@@ -308,38 +308,25 @@ const serviceData = {
 
     features: [
       {
+       
+
         title: "eBook Production with Audio Intergration",
         images: [Ebook1,Ebook2],
-        paragraphs: [
-          "We convert print-ready and digital source content into professionally structured eBooks suitable for modern digital publishing workflows.",
+      paragraphs: [
+  "From PDF to polished eBook, we transform your source content into a digital reading experience that stays true to the original design.",
 
-          "Our process considers content structure, typography, navigation, metadata, images, tables, and other elements required to create a consistent digital publication.",
+  "Make your eBooks more immersive with synchronized audio, allowing readers to listen to professionally narrated content while following the text through seamless, precisely timed audio synchronization.",
 
-          "The resulting digital content can be prepared according to the requirements of the target platform and publishing workflow."
-        ]
+]
       },
 
       {
-        title: "EPUB 3 Reflowable",
+        title: "EPUB 3 Reflowable & Fixed Layout",
         images: [Epub1,Epub2],
         paragraphs: [
-          "We create reflowable EPUB 3 publications designed to adapt to different screen sizes and reading environments.",
+          "We create flexible EPUB 3 publications that adapt seamlessly across phones, tablets, eReaders, and desktops. Content flows naturally according to screen size while maintaining clear structure, intuitive navigation, consistent formatting, and a smooth reading experience.",
 
-          "Reflowable publications allow content to adjust according to the reader's device and preferences while maintaining logical structure and navigation.",
-
-          "We focus on content organization, navigation, formatting, and digital usability throughout the conversion process."
-        ]
-      },
-
-      {
-        title: "EPUB 3 Fixed Layout",
-
-        paragraphs: [
-          "For publications where visual presentation and page composition are important, we provide fixed-layout EPUB development.",
-
-          "This approach can be useful for illustrated books, children's books, educational materials, highly designed publications, and other content where preserving the original visual arrangement is important.",
-
-          "We work to maintain the intended visual structure while organizing the content for digital distribution."
+          "For visually rich publications, we create fixed-layout EPUB 3 experiences that preserve the original design with precision. Typography, images, page composition, and interactive elements remain carefully positioned, delivering a polished digital experience without compromising the publication’s visual identity."
         ]
       },
 

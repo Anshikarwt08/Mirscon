@@ -3,7 +3,6 @@ import "./ServiceDetails.css";
 import serviceData from "./serviceData";
 import Header from "../Header/Header";
 import Footer from "../../components/Footer/Footer";
-
 function ServiceDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
