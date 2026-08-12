@@ -1,0 +1,319 @@
+/* =========================================
+   ACCESSIBILITY ENGINE SECTION
+========================================= */
+
+.accessibility-engine-section {
+  width: 80%;
+  padding: 60px 20px;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+.accessibility-engine-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.accessibility-engine-heading {
+  width: 100%;
+  margin: 0 0 30px;
+
+  text-align: center;
+
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+
+  color: #172554;
+
+  transform: translateY(-25px);
+}
+/* =========================================
+   ENGINE IMAGE
+========================================= */
+
+.accessibility-engine-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+
+/* =========================================
+   MIRSCon DIFFERENCE SECTION
+========================================= */
+
+.mirscon-difference {
+  width: 100%;
+  margin-top: 30px;
+}
+
+
+/* =========================================
+   DIFFERENCE ITEMS
+========================================= */
+
+.difference-items {
+  width: 100%;
+  min-height: 135px;
+  padding: 18px 30px;
+
+  background: #eef6ff;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+/* =========================================
+   INDIVIDUAL ITEMS
+========================================= */
+
+.difference-item {
+  flex: 1;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   ICONS
+========================================= */
+
+.difference-icon {
+  font-size: 40px;
+  margin-bottom: 6px;
+}
+
+.people-icon {
+  color: #2563eb;
+}
+
+.process-icon {
+  color: #10a981;
+}
+
+.technology-icon {
+  color: #7c3aed;
+}
+
+.impact-icon {
+  color: #0f9f91;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.difference-item h4 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  color: #172554;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.difference-item p {
+  margin: 5px 0 0;
+
+  font-size: 17px;
+  line-height: 1.4;
+
+  color: #1e293b;
+}
+
+
+/* =========================================
+   PLUS / EQUAL SYMBOLS
+========================================= */
+
+.difference-symbol {
+  flex: 0 0 45px;
+
+  text-align: center;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  color: #1e40af;
+}
+
+
+/* =========================================
+   BOTTOM MESSAGE
+========================================= */
+
+.difference-message {
+  margin-top: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  color: #172554;
+
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.difference-message strong {
+  font-weight: 700;
+}
+
+.difference-message span {
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .accessibility-engine-section {
+    width: 90%;
+    padding: 50px 15px;
+  }
+
+  .accessibility-engine-container {
+    width: 100%;
+  }
+
+  .difference-items {
+    min-height: 125px;
+    padding: 18px 20px;
+  }
+
+  .difference-icon {
+    font-size: 30px;
+  }
+
+  .difference-item h4 {
+    font-size: 13px;
+  }
+
+  .difference-item p {
+    font-size: 8px;
+  }
+
+  .difference-symbol {
+    flex: 0 0 35px;
+    font-size: 16px;
+  }
+
+  .difference-message {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .accessibility-engine-section {
+    width: 100%;
+    padding: 40px 10px;
+  }
+
+  .accessibility-engine-image {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .mirscon-difference {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .difference-items {
+    width: 100%;
+    min-width: 700px;
+    min-height: 120px;
+
+    padding: 15px 20px;
+  }
+
+  .difference-icon {
+    font-size: 28px;
+  }
+
+  .difference-item h4 {
+    font-size: 12px;
+  }
+
+  .difference-item p {
+    font-size: 8px;
+  }
+
+  .difference-symbol {
+    flex: 0 0 30px;
+    font-size: 15px;
+  }
+
+  .difference-message {
+    font-size: 11px;
+    padding: 0 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .accessibility-engine-section {
+    padding: 30px 8px;
+  }
+
+  .difference-items {
+    min-width: 650px;
+  }
+
+  .difference-icon {
+    font-size: 26px;
+  }
+
+  .difference-item h4 {
+    font-size: 11px;
+  }
+
+  .difference-item p {
+    font-size: 7px;
+  }
+
+  .difference-message {
+    font-size: 10px;
+  }
+}

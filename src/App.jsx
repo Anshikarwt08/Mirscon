@@ -9,16 +9,17 @@ import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import Accessibility from "./pages/Accessiblity/Accessibility";
 import About from "./pages/About/About";
-import Career from "./pages/Careers/Careers";
+import Careers from "./pages/Careers/Careers";
 
-import Technology from "./pages/Technology/Technology";
 import ContactBanner from "./pages/ContactBanner/ContactBanner";
 import Footer from "./components/Footer/Footer";
-import Careers from "./pages/Careers/Careers";
 import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import ResourceOutsourcing from "./pages/ResourceOutsourcing/ResourceOutsourcing";
 import GetStarted from "./pages/GetStarted/GetStarted";
 import Industries from "./pages/Industries/Industries";
+
+import AccessibilityEngine from "./components/AccessibilityEngine/AccessibilityEngine";
+
 
 function MainPage() {
   return (
@@ -27,7 +28,9 @@ function MainPage() {
 
       <main>
         <Home />
-        <Technology />
+
+        <AccessibilityEngine />
+
         <ContactBanner />
       </main>
 
@@ -35,6 +38,7 @@ function MainPage() {
     </>
   );
 }
+
 
 function App() {
   useEffect(() => {
@@ -44,36 +48,106 @@ function App() {
     }
   }, []);
 
+
   return (
     <>
       <ScrollToHash />
 
       <Routes>
-        <Route path="/" element={<MainPage />} />
 
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/accessibility" element={<Accessibility />} />
+        {/* =====================================
+            HOME
+        ====================================== */}
+
         <Route
-  path="/services/:id"
-  element={<ServiceDetails />}
-/>
-<Route
-  path="/resource-outsourcing"
-  element={<ResourceOutsourcing />}
-/>
-<Route
-  path="/get-started"
-  element={<GetStarted />}
-/>
-<Route
-  path="/industries"
-  element={<Industries />}
-/>
-        <Route path="/career" element={<Careers />} />
+          path="/"
+          element={<MainPage />}
+        />
+
+
+        {/* =====================================
+            ABOUT
+        ====================================== */}
+
+        <Route
+          path="/about"
+          element={<About />}
+        />
+
+
+        {/* =====================================
+            CONTACT
+        ====================================== */}
+
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+
+
+        {/* =====================================
+            MAIN ACCESSIBILITY PAGE
+        ====================================== */}
+
+        <Route
+          path="/accessibility"
+          element={<Accessibility />}
+        />
+
+
+        {/* =====================================
+            ACCESSIBILITY SERVICE DETAILS
+        ====================================== */}
+
+        <Route
+          path="/services/:id"
+          element={<ServiceDetails />}
+        />
+
+
+        {/* =====================================
+            RESOURCE OUTSOURCING
+        ====================================== */}
+
+        <Route
+          path="/resource-outsourcing"
+          element={<ResourceOutsourcing />}
+        />
+
+
+        {/* =====================================
+            GET STARTED
+        ====================================== */}
+
+        <Route
+          path="/get-started"
+          element={<GetStarted />}
+        />
+
+
+        {/* =====================================
+            INDUSTRIES
+        ====================================== */}
+
+        <Route
+          path="/industries"
+          element={<Industries />}
+        />
+
+
+        {/* =====================================
+            CAREERS
+        ====================================== */}
+
+        <Route
+          path="/career"
+          element={<Careers />}
+        />
+
       </Routes>
     </>
   );
 }
+
 
 export default App;

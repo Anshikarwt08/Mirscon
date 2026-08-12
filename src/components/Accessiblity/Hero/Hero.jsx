@@ -21,7 +21,7 @@ function Hero() {
 
         <p className="accessibility-hero-description">
           Mirscon empowers organizations to create accessible PDFs,
-          Microsoft Office documents, EPUBs, websites, and multimedia
+          Office documents, EPUBs, websites, and multimedia
           that comply with global accessibility standards. Our experts
           ensure every user can access, navigate, and interact with
           your digital content confidently.
@@ -29,19 +29,18 @@ function Hero() {
 
         <div className="hero-service-cards">
 
-          <a href="#alt-text" className="hero-service-card">
-            <FaRegFileAlt className="service-icon" />
-            <span>Alt Text Services</span>
+          <a href="#digital-publishing" className="hero-service-card">
+            <FaBookOpen className="service-icon" />
+            <span>Digital Publishing</span>
           </a>
-
           <a href="#document-remediation" className="hero-service-card">
             <FaFilePdf className="service-icon" />
             <span>Document Remediation</span>
           </a>
 
-          <a href="#digital-publishing" className="hero-service-card">
-            <FaBookOpen className="service-icon" />
-            <span>Digital Publishing</span>
+          <a href="#alt-text" className="hero-service-card">
+            <FaRegFileAlt className="service-icon" />
+            <span>Alt Text Services</span>
           </a>
 
           <a href="#multimedia-accessibility" className="hero-service-card">
