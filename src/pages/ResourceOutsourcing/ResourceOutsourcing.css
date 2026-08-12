@@ -16,7 +16,6 @@
 
 .section-label {
   display: inline-block;
-
   margin-bottom: 14px;
 
   color: #2563eb;
@@ -35,11 +34,9 @@
 
 .resource-hero {
   width: min(1400px, 94%);
-
   min-height: 430px;
 
   margin: 35px auto 90px;
-
   padding: 70px 65px;
 
   position: relative;
@@ -53,7 +50,6 @@
   overflow: hidden;
 
   border: 1px solid #dce8f7;
-
   border-radius: 32px;
 
   background:
@@ -79,7 +75,9 @@
 }
 
 
-/* Decorative circles */
+/* =========================================
+   HERO DECORATIVE CIRCLES
+========================================= */
 
 .resource-hero::before {
   content: "";
@@ -114,7 +112,9 @@
 }
 
 
-/* Hero content */
+/* =========================================
+   HERO CONTENT
+========================================= */
 
 .resource-hero-content {
   width: 60%;
@@ -127,13 +127,11 @@
   display: inline-block;
 
   margin-bottom: 20px;
-
   padding: 8px 16px;
 
   border-radius: 30px;
 
   background: #e4efff;
-
   color: #2457b8;
 
   font-size: 14px;
@@ -149,7 +147,7 @@
 
   font-size: clamp(2.7rem, 5vw, 4rem);
 
-  font-weight: 800; 
+  font-weight: 800;
 
   line-height: 1.08;
 
@@ -181,7 +179,6 @@
   border-radius: 10px;
 
   background: #2563eb;
-
   color: #ffffff;
 
   font-size: 16px;
@@ -219,7 +216,7 @@
 }
 
 
-/* Connecting lines */
+/* Connecting circle */
 
 .resource-hero-visual::before {
   content: "";
@@ -238,7 +235,9 @@
 }
 
 
-/* Main circle */
+/* =========================================
+   RESOURCE CIRCLES
+========================================= */
 
 .resource-circle {
   position: absolute;
@@ -361,7 +360,9 @@
 }
 
 
-/* Grid */
+/* =========================================
+   SERVICE GRID
+========================================= */
 
 .resource-service-grid {
   display: grid;
@@ -374,7 +375,9 @@
 }
 
 
-/* Card */
+/* =========================================
+   SERVICE CARD
+========================================= */
 
 .resource-service-card {
   min-height: 275px;
@@ -430,7 +433,9 @@
 }
 
 
-/* Number */
+/* =========================================
+   SERVICE NUMBER
+========================================= */
 
 .resource-card-number {
   width: 48px;
@@ -453,7 +458,9 @@
 }
 
 
-/* Card content */
+/* =========================================
+   SERVICE CONTENT
+========================================= */
 
 .resource-card-content h3 {
   margin: 0 0 15px;
@@ -479,63 +486,183 @@
 
 
 /* =========================================
-   CTA
+   TECHNOLOGY SECTION
 ========================================= */
 
-.resource-cta {
-  width: min(1200px, 92%);
+.technology {
+  width: 100%;
 
-  margin: 0 auto 100px;
+  padding: 80px 6%;
 
-  padding: 45px 50px;
+  box-sizing: border-box;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: #ffffff;
 
-  gap: 40px;
-
-  border: 1px solid #d8e5f7;
-
-  border-radius: 25px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #edf7ff,
-      #f3f6ff
-    );
-}
-
-.resource-cta-content {
-  max-width: 760px;
-}
-
-.resource-cta h2 {
-  margin: 0 0 12px;
-
-  color: #173474;
-
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-
-  font-weight: 750;
-
-  line-height: 1.2;
-}
-
-.resource-cta p {
-  margin: 0;
-
-  color: #66748b;
-
-  font-size: 16px;
-
-  line-height: 1.7;
+  overflow: hidden;
 }
 
 
 /* =========================================
-   RESPONSIVE
+   TECHNOLOGY HEADER
+========================================= */
+
+.technology-header {
+  max-width: 850px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.technology-header h2 {
+  margin: 0 0 18px;
+
+  color: #18213a;
+
+  font-size: 46px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.technology-header p {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.technology-header .line {
+  width: 60px;
+  height: 4px;
+
+  margin: 22px auto 0;
+
+  background: #2563eb;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TECHNOLOGY GRID
+========================================= */
+
+.logo-grid {
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   TECHNOLOGY CARD
+========================================= */
+
+.logo-card {
+  width: 100%;
+
+  min-height: 165px;
+
+  padding: 22px 15px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #dce7f7;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #4f6bed;
+
+  box-shadow:
+    0 15px 35px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Technology logo */
+
+.logo-card img {
+  width: 130px;
+  height: 55px;
+
+  object-fit: contain;
+
+  margin-bottom: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+.logo-card:hover img {
+  transform: scale(1.08);
+}
+
+
+/* Technology name */
+
+.logo-card h3 {
+  margin: 0 0 5px;
+
+  color: #18213a;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+
+/* Technology category */
+
+.logo-card p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   RESPONSIVE - 1100px
 ========================================= */
 
 @media (max-width: 1100px) {
@@ -550,6 +677,7 @@
 
   .resource-hero-visual {
     transform: scale(0.85);
+
     margin-right: -30px;
   }
 
@@ -557,8 +685,35 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .logo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
+
+/* =========================================
+   RESPONSIVE - 992px
+========================================= */
+
+@media (max-width: 992px) {
+
+  .technology {
+    padding: 70px 6%;
+  }
+
+  .technology-header h2 {
+    font-size: 42px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 800px
+========================================= */
 
 @media (max-width: 800px) {
 
@@ -581,16 +736,38 @@
 
   .resource-hero-visual {
     margin: 10px auto 0;
+
+    transform: none;
   }
 
-  .resource-cta {
-    flex-direction: column;
-
-    text-align: center;
+  .technology-header h2 {
+    font-size: 36px;
   }
 
+  .technology-header p {
+    font-size: 16px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+  .logo-card {
+    min-height: 155px;
+  }
+
+  .logo-card img {
+    width: 105px;
+    height: 50px;
+  }
 }
 
+
+/* =========================================
+   RESPONSIVE - 600px
+========================================= */
 
 @media (max-width: 600px) {
 
@@ -614,6 +791,7 @@
 
   .resource-hero-visual {
     width: 300px;
+
     height: 250px;
 
     transform: scale(0.8);
@@ -633,12 +811,56 @@
     margin-bottom: 75px;
   }
 
-  .resource-cta {
-    width: 94%;
-
-    padding: 40px 25px;
-
-    margin-bottom: 70px;
+  .technology {
+    padding: 60px 6%;
   }
 
+  .technology-header {
+    margin-bottom: 45px;
+  }
+
+  .technology-header h2 {
+    font-size: 32px;
+  }
+
+  .technology-header p {
+    font-size: 16px;
+  }
+
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-card {
+    min-height: 150px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+  .technology {
+    padding: 50px 6%;
+  }
+
+  .technology-header h2 {
+    font-size: 29px;
+  }
+
+  .technology-header p {
+    font-size: 15px;
+  }
+
+  .logo-card {
+    min-height: 145px;
+  }
+
+  .logo-card img {
+    width: 100px;
+    height: 50px;
+  }
 }

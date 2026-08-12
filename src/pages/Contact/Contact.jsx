@@ -5,7 +5,7 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import WhyChoose from "../../components/WhyChoose/WhyChoose";
 import CTA from "../../components/CTA/CTA";
 import Header from "../Header/Header";
-
+import Footer from "../../components/Footer/Footer";
 
 function Contact() {
   return (
@@ -55,6 +55,7 @@ function Contact() {
        
 
       </main>
+      <Footer/>
     </>
   );
 }

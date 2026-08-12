@@ -3,6 +3,68 @@ import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../../components/Footer/Footer";
 
+import azure from "../../assets/technology/Azure.png";
+import azureSynapse from "../../assets/technology/azureSynapse.png";
+import databricks from "../../assets/technology/databricks.png";
+import dell from "../../assets/technology/Dell.png";
+import informatica from "../../assets/technology/Informatica.png";
+import powerBi from "../../assets/technology/PowerBi.png";
+import snapLogic from "../../assets/technology/snapLogic.png";
+import snowflake from "../../assets/technology/snowflake.png";
+import tableau from "../../assets/technology/tableau.png";
+import salesforce from "../../assets/salesforce.png";
+const technologies = [
+  {
+    image: azure,
+    name: "Microsoft Azure",
+    category: "Cloud Platform",
+  },
+  {
+    image: azureSynapse,
+    name: "Azure Synapse",
+    category: "Analytics",
+  },
+  {
+    image: databricks,
+    name: "Databricks",
+    category: "Data Engineering",
+  },
+  {
+    image: dell,
+    name: "Dell Boomi",
+    category: "Integration",
+  },
+  {
+    image: informatica,
+    name: "Informatica",
+    category: "ETL Platform",
+  },
+  {
+    image: powerBi,
+    name: "Power BI",
+    category: "Business Intelligence",
+  },
+  {
+    image: snapLogic,
+    name: "SnapLogic",
+    category: "Integration",
+  },
+  {
+    image: snowflake,
+    name: "Snowflake",
+    category: "Cloud Data Warehouse",
+  },
+  {
+    image: tableau,
+    name: "Tableau",
+    category: "Visualization",
+  },
+  {
+    image: salesforce,
+    name: "Salesforce",
+    category: "CRM Platform",
+  },
+];
 function ResourceOutsourcing() {
   const navigate = useNavigate();
 
@@ -167,38 +229,56 @@ function ResourceOutsourcing() {
       </section>
 
 
-      {/* =========================
-          CTA
-      ========================= */}
+{/* =========================
+    TECHNOLOGY
+========================= */}
 
-      <section className="resource-cta">
+<section className="technology">
 
-        <div className="resource-cta-content">
+  <div className="technology-header">
 
-          <span className="section-label">
-            Let's Work Together
-          </span>
+    <h2>
+      OUR TECHNOLOGY
+    </h2>
 
-          <h2>
-            Need the Right Resources for Your Business?
-          </h2>
+    <p>
+      We leverage industry-leading cloud, analytics, CRM and integration
+      platforms to build secure, scalable and high-performing digital
+      solutions.
+    </p>
 
-          <p>
-            Let's discuss how our resource outsourcing solutions
-            can support your organization.
-          </p>
+    <div className="line"></div>
 
-        </div>
+  </div>
 
-        <button
-          className="resource-primary-btn"
-          onClick={() => navigate("/contact")}
-        >
-          Contact Us
-        </button>
 
-      </section>
+  <div className="logo-grid">
 
+    {technologies.map((tech, index) => (
+      <div
+        className="logo-card"
+        key={index}
+      >
+
+        <img
+          src={tech.image}
+          alt={tech.name}
+        />
+
+        <h3>
+          {tech.name}
+        </h3>
+
+        <p>
+          {tech.category}
+        </p>
+
+      </div>
+    ))}
+
+  </div>
+
+</section>
     </main>
     <Footer/>
     </>

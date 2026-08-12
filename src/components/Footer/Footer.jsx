@@ -93,15 +93,14 @@ function Footer() {
         <div>
           <h3>Industry</h3>
 
-          <ul>
-            <li>Gaming</li>
-            <li>Finance & Insurance</li>
-            <li>Healthcare & Life Sciences</li>
-            <li>Retail & Ecommerce</li>
-            <li>Technology</li>
-            <li>Media Entertainment</li>
-            <li>Telecom</li>
-          </ul>
+<ul>
+  <li>Publishing & Media</li>
+  <li>Education & EdTech</li>
+  <li>Healthcare</li>
+  <li>Technology</li>
+  <li>Banking & Financial Services</li>
+  <li>Government & Public Sector</li>
+</ul>
         </div>
 
         {/* About */}
