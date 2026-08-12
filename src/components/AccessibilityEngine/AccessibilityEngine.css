@@ -43,11 +43,11 @@
 
 .accessibility-engine-image {
   width: 100%;
-<<<<<<< HEAD
+
   height: 40%;
-=======
+
   height: 550px;
->>>>>>> 681a3576fe90ecc3c0f37e92b81be119bb3429a2
+
   display: block;
   object-fit: contain;
   border-radius: 20px;
