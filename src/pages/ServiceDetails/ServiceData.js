@@ -4,6 +4,12 @@ import Pdf1 from "../../assets/Pdf1.png";
 import Pdf2 from "../../assets/Pdf2.png";
 import Epub1 from "../../assets/Epub1.png";
 import Epub2 from "../../assets/Epub2.png";
+import Xml1 from "../../assets/Xml1.png";
+import Xml2 from "../../assets/Xml2.png";
+import Ppt1 from "../../assets/Ppt1.png";
+import Ppt2 from "../../assets/Ppt2.png";
+import Word1 from "../../assets/Word1.png";
+import Word2 from "../../assets/Word2.png";
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -14,9 +20,6 @@ const serviceData = {
 
     description:
       "We create accurate, meaningful, and standards-compliant alternative text for images, charts, graphs, diagrams, tables, and other visual content. Our accessibility experts help publishers, educational institutions, and enterprises meet global accessibility standards.",
-
-    overview:
-      "Our Alt Text Services help organizations make visual content accessible to people who use screen readers and other assistive technologies. We create descriptions that communicate the purpose and essential information of visual content while maintaining accuracy, clarity, and appropriate context.",
 
     features: [
 
@@ -66,15 +69,8 @@ const serviceData = {
 
           "This approach helps preserve the essential technical information while making complex visual content more accessible."
         ]
-      },
-
-      
+      },      
     ],
-
-   
-
-    
-
     industries: [
       "Educational Publishing",
       "Higher Education",
@@ -159,8 +155,8 @@ const serviceData = {
       },
 
       {
-        title: "Microsoft Word Accessibility",
-
+        title: "Word Accessibility",
+        images: [Word1,Word2],
         paragraphs: [
           "We improve Microsoft Word documents by applying accessible document structures that make content easier to navigate and understand.",
 
@@ -172,7 +168,7 @@ const serviceData = {
 
       {
         title: "PowerPoint Accessibility",
-
+        images: [Ppt1,Ppt2],
         paragraphs: [
           "We make PowerPoint presentations more accessible by reviewing slide titles, reading order, images, charts, tables, links, and other presentation elements.",
 
@@ -195,46 +191,9 @@ const serviceData = {
       },
     ],
 
-    services: [
-      {
-        title: "PDF Remediation",
-        description:
-          "Tagging, structure, reading order, navigation, tables, links, and accessibility improvements."
-      },
-      {
-        title: "Word Remediation",
-        description:
-          "Accessible headings, lists, tables, links, document structure, and alternative text."
-      },
-      {
-        title: "PowerPoint Remediation",
-        description:
-          "Accessible slide structure, reading order, images, charts, tables, and navigation."
-      },
-      {
-        title: "Excel Accessibility",
-        description:
-          "Accessible worksheets, headers, tables, formulas, labels, and navigation."
-      },
-      {
-        title: "Reading Order",
-        description:
-          "Logical content sequencing for documents with complex layouts."
-      },
-      {
-        title: "Accessibility QA",
-        description:
-          "Review of remediated documents for consistency and accessibility requirements."
-      }
-    ],
+    
 
-    benefits: [
-      "Improved document accessibility",
-      "Better compatibility with assistive technologies",
-      "Consistent document structure",
-      "Improved navigation and usability",
-      "Support for accessibility compliance initiatives"
-    ],
+   
 
     industries: [
       "Educational Institutions",
@@ -332,7 +291,7 @@ const serviceData = {
 
       {
         title: "XML Conversion",
-
+        images: [Xml1,Xml2],
         paragraphs: [
           "We convert publishing content into structured XML formats to support content reuse, distribution, and downstream publishing workflows.",
 
@@ -342,39 +301,6 @@ const serviceData = {
         ]
       },
 
-    ],
-
-    services: [
-      {
-        title: "eBook Conversion",
-        description:
-          "Conversion of print and digital content into professionally structured digital publications."
-      },
-      {
-        title: "EPUB 3 Development",
-        description:
-          "Reflowable and fixed-layout EPUB publications for different digital reading environments."
-      },
-      {
-        title: "EPUB Validation",
-        description:
-          "Technical and structural validation of EPUB publications."
-      },
-      {
-        title: "XML Conversion",
-        description:
-          "Structured XML conversion for modern publishing workflows."
-      },
-      {
-        title: "Content Structuring",
-        description:
-          "Logical organization of headings, paragraphs, tables, images, references, and other content."
-      },
-      {
-        title: "Accessible Publishing",
-        description:
-          "Accessibility considerations integrated into the digital publishing workflow."
-      }
     ],
 
     industries: [
@@ -485,14 +411,10 @@ const serviceData = {
       },
 
       {
-        title: "Audio Description",
+        title: "Audio Engineering",
 
         paragraphs: [
-          "Audio description provides narration of important visual information that may not be communicated through the original audio.",
-
-          "We create descriptions that help communicate relevant actions, settings, characters, on-screen information, transitions, and other visual details where appropriate.",
-
-          "The descriptions are developed with consideration for the context and purpose of the multimedia content."
+          
         ]
       },
 
@@ -508,29 +430,9 @@ const serviceData = {
         ]
       },
 
-      {
-        title: "Multimedia Quality Review",
+      
 
-        paragraphs: [
-          "Our review process focuses on accuracy, timing, synchronization, consistency, terminology, and overall content quality.",
-
-          "Depending on the project, multiple accessibility components can be combined into a single workflow, such as transcription followed by captioning and subtitle creation.",
-
-          "Quality review helps maintain consistency across individual videos as well as large multimedia collections."
-        ]
-      },
-
-      {
-        title: "Educational & Corporate Multimedia",
-
-        paragraphs: [
-          "We support accessibility workflows for lectures, online courses, training programs, webinars, instructional videos, presentations, and other learning content.",
-
-          "Making multimedia content more accessible can help organizations provide more consistent access to their educational and training resources.",
-
-          "Our workflows can be scaled to support both individual multimedia files and larger content libraries."
-        ]
-      }
+      
     ],
 
     services: [

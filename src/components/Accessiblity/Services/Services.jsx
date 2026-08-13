@@ -20,7 +20,7 @@ function Services() {
       id: "alt-text",
       title: "Alt Text Services",
       description:
-        "We create accurate, meaningful, and standards-compliant alternative text for images, charts, graphs, diagrams, tables, and other visual content. With nearly a decade of experience, we help publishers, EdTech organizations, and enterprises deliver accessible digital content that complies with global accessibility standards."
+        "We provide accurate, context-rich, and standards-compliant alt text for diverse digital content across multiple languages and specialised subject areas. Our services include alt text creation for Spanish and Italian content, as well as highly specialised descriptions for disciplines such as chemistry and neuroscience. We carefully capture the essential information conveyed through images, charts, graphs, diagrams, tables, and other visual elements, helping publishers, educators, and organisations create accessible digital content that is clear, meaningful, and aligned with global accessibility standards."
     },
 
     {
