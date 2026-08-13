@@ -1,17 +1,21 @@
 import "./Consultation.css";
 import { useState } from "react";
+import { submitForm } from "../../utils/api";
+
+const EMPTY_FORM = {
+  name: "",
+  email: "",
+  phone: "",
+  company: "",
+  service: "",
+  date: "",
+  time: "",
+  message: "",
+};
 
 function ConsultationForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    service: "",
-    date: "",
-    time: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -20,21 +24,20 @@ function ConsultationForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
-    alert("Consultation Request Submitted Successfully!");
-
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      service: "",
-      date: "",
-      time: "",
-      message: "",
-    });
+    try {
+      await submitForm("/consultation", formData);
+      alert("Consultation Request Submitted Successfully!");
+      setFormData(EMPTY_FORM);
+    } catch (error) {
+      alert(error.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -211,8 +214,8 @@ function ConsultationForm() {
 
 
         {/* Submit */}
-        <button type="submit">
-          Schedule Consultation
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Sending..." : "Schedule Consultation"}
         </button>
 
       </form>

@@ -1,15 +1,19 @@
 import "./ContactForm.css";
 import { useState } from "react";
+import { submitForm } from "../../utils/api";
+
+const EMPTY_FORM = {
+  name: "",
+  company: "",
+  email: "",
+  phone: "",
+  service: "",
+  message: "",
+};
 
 function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(EMPTY_FORM);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -18,21 +22,20 @@ function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
 
-    console.log(formData);
-
-    alert("Thank you! We'll get back to you shortly.");
-
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: "",
-    });
+    try {
+      await submitForm("/contact", formData);
+      alert("Thank you! We'll get back to you shortly.");
+      setFormData(EMPTY_FORM);
+    } catch (error) {
+      alert(error.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -146,8 +149,9 @@ function ContactForm() {
         <button
           type="submit"
           className="contact-submit-btn"
+          disabled={isSubmitting}
         >
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
 
       </form>

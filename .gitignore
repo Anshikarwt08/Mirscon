@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Local secrets
+.env
+
+# Server data
+server/mirscon.db
+server/uploads/

@@ -1,5 +1,9 @@
 import Ebook1 from "../../assets/Ebook1.png";
 import Ebook2 from "../../assets/Ebook2.png";
+import Pdf1 from "../../assets/Pdf1.png";
+import Pdf2 from "../../assets/Pdf2.png";
+import Epub1 from "../../assets/Epub1.png";
+import Epub2 from "../../assets/Epub2.png";
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -15,17 +19,6 @@ const serviceData = {
       "Our Alt Text Services help organizations make visual content accessible to people who use screen readers and other assistive technologies. We create descriptions that communicate the purpose and essential information of visual content while maintaining accuracy, clarity, and appropriate context.",
 
     features: [
-      {
-        title: "Image Alt Text",
-
-        paragraphs: [
-          "We create concise and meaningful alternative text for photographs, illustrations, icons, screenshots, and other visual elements. Our descriptions focus on the information that is important for understanding the content and its surrounding context.",
-
-          "Our specialists consider the purpose of each visual rather than simply describing everything that can be seen. This helps ensure that descriptions remain useful, relevant, and appropriate for screen reader users.",
-
-          "Descriptions can be developed according to the requirements of educational, publishing, enterprise, and digital content projects."
-        ]
-      },
 
       {
         title: "Charts & Graphs",
@@ -75,54 +68,12 @@ const serviceData = {
         ]
       },
 
-      {
-        title: "Accessibility Review & Quality Assurance",
-
-        paragraphs: [
-          "Our workflows include review processes designed to improve the accuracy, consistency, and usefulness of alternative text.",
-
-          "Descriptions can be reviewed for context, terminology, completeness, consistency, and alignment with the requirements defined for the project.",
-
-          "Quality review helps maintain consistent accessibility standards across both individual projects and large content collections."
-        ]
-      }
+      
     ],
 
-    services: [
-      {
-        title: "Image Description",
-        description:
-          "Meaningful descriptions for photographs, illustrations, icons, and other visual elements."
-      },
-      {
-        title: "Complex Image Description",
-        description:
-          "Detailed descriptions for visuals that communicate multiple pieces of information."
-      },
-      {
-        title: "Chart & Graph Accessibility",
-        description:
-          "Descriptions that communicate trends, comparisons, relationships, and important data."
-      },
-      {
-        title: "Diagram Accessibility",
-        description:
-          "Structured descriptions for diagrams, flowcharts, processes, and technical visuals."
-      },
-      {
-        title: "Scientific Content",
-        description:
-          "Specialized descriptions for medical, scientific, engineering, and mathematical content."
-      }
-    ],
+   
 
-    benefits: [
-      "Improved accessibility for screen reader users",
-      "Better alignment with accessibility requirements",
-      "Consistent descriptions across large content collections",
-      "Improved usability of educational and digital publications",
-      "Scalable workflows for high-volume projects"
-    ],
+    
 
     industries: [
       "Educational Publishing",
@@ -197,7 +148,7 @@ const serviceData = {
     features: [
       {
         title: "PDF Remediation",
-
+        images: [Pdf1,Pdf2],
         paragraphs: [
           "Our PDF remediation services transform existing PDF files into structured and accessible documents that can be navigated effectively using screen readers and other assistive technologies.",
 
@@ -242,42 +193,6 @@ const serviceData = {
           "The completed workbook is checked for consistency and accessibility before final delivery."
         ]
       },
-
-      {
-        title: "Reading Order & Document Structure",
-
-        paragraphs: [
-          "Correct reading order is an important part of an accessible digital document. We review the sequence in which content should be interpreted and make appropriate structural adjustments.",
-
-          "This is especially important for documents containing multiple columns, sidebars, tables, images, captions, headers, footers, and other complex layouts.",
-
-          "Our team works to create a logical content sequence that supports users navigating documents with assistive technologies."
-        ]
-      },
-
-      {
-        title: "Tables & Complex Content",
-
-        paragraphs: [
-          "Tables, charts, lists, and other structured elements require appropriate organization to communicate their relationships effectively.",
-
-          "We review these elements and apply appropriate accessibility structures based on the document type and project requirements.",
-
-          "Complex content is reviewed carefully so that important relationships and information remain understandable when accessed using assistive technologies."
-        ]
-      },
-
-      {
-        title: "Accessibility Quality Review",
-
-        paragraphs: [
-          "Following remediation, documents can go through a quality review process to identify structural, formatting, navigation, and accessibility issues.",
-
-          "Our review process helps identify inconsistencies that may affect the usability of the document and provides an additional level of quality assurance.",
-
-          "This approach helps maintain consistency across individual documents as well as large document collections."
-        ]
-      }
     ],
 
     services: [
@@ -407,7 +322,7 @@ const serviceData = {
 
       {
         title: "EPUB 3 Reflowable & Fixed Layout",
-
+        images: [Epub1,Epub2],
         paragraphs: [
           "We create flexible EPUB 3 publications that adapt seamlessly across phones, tablets, eReaders, and desktops. Content flows naturally according to screen size while maintaining clear structure, intuitive navigation, consistent formatting, and a smooth reading experience.",
 
@@ -458,14 +373,6 @@ const serviceData = {
         description:
           "Accessibility considerations integrated into the digital publishing workflow."
       }
-    ],
-
-    benefits: [
-      "High-quality digital publications",
-      "Flexible publishing workflows",
-      "Structured and reusable content",
-      "Support for multiple digital formats",
-      "Improved publishing efficiency"
     ],
 
     industries: [

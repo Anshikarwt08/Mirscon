@@ -230,57 +230,6 @@ function ServiceDetails() {
 
 
         {/* =====================================================
-            BENEFITS
-        ===================================================== */}
-
-        {service.benefits && service.benefits.length > 0 && (
-          <section className="service-details-benefits-section">
-
-            <div className="service-details-benefits-content">
-
-              <h2>
-                Why Accessible Content Matters
-              </h2>
-
-              <p>
-                Our approach helps organizations create
-                more usable, inclusive, and consistent
-                digital experiences for their audiences.
-              </p>
-
-            </div>
-
-            <div className="service-details-benefits-list">
-
-              {service.benefits.map((benefit, index) => (
-
-                <div
-                  className="service-details-benefit-item"
-                  key={`${service.title}-benefit-${index}`}
-                >
-
-                  <span
-                    className="service-details-check"
-                    aria-hidden="true"
-                  >
-                    ✓
-                  </span>
-
-                  <span>
-                    {benefit}
-                  </span>
-
-                </div>
-
-              ))}
-
-            </div>
-
-          </section>
-        )}
-
-
-        {/* =====================================================
             INDUSTRIES
         ===================================================== */}
 
