@@ -419,49 +419,12 @@ const serviceData = {
         title: "XML Conversion",
 
         paragraphs: [
-          "We convert publishing content into structured XML formats to support content reuse, distribution, and downstream publishing workflows.",
+          "We transform complex publishing content into clean, structured XML that provides a reliable foundation for modern digital publishing workflows.",
 
-          "Structured content makes it easier for organizations to manage and repurpose content across different platforms and publication formats.",
-
-          "Our workflows can be adapted to project-specific XML structures and publishing requirements."
+          "One source, multiple possibilities. Structured XML makes it easier to reuse, manage, and deliver content across eBooks, websites, databases, and diverse publishing formats.",
         ]
       },
 
-      {
-        title: "XML Validation & Quality Control",
-
-        paragraphs: [
-          "Our XML workflows include validation and quality checks to identify structural inconsistencies and formatting issues.",
-
-          "We review content organization and markup according to the requirements of the target workflow before final delivery.",
-
-          "Quality control helps ensure that structured content remains consistent and suitable for downstream publishing processes."
-        ]
-      },
-
-      {
-        title: "Digital Content Structuring",
-
-        paragraphs: [
-          "We organize content into logical structures including headings, paragraphs, lists, tables, references, images, captions, and other publishing elements.",
-
-          "A well-structured digital publication provides a stronger foundation for accessibility, conversion, distribution, and future content reuse.",
-
-          "Our team works with project-specific content structures to support consistent digital publishing workflows."
-        ]
-      },
-
-      {
-        title: "Accessible Digital Publishing",
-
-        paragraphs: [
-          "Accessibility can be incorporated throughout the digital publishing workflow rather than being treated as a final-stage activity.",
-
-          "We consider structural accessibility, navigation, alternative text, content organization, and other requirements while preparing digital publications.",
-
-          "This approach helps organizations create digital publications that are more usable and accessible across different reading environments."
-        ]
-      }
     ],
 
     services: [
