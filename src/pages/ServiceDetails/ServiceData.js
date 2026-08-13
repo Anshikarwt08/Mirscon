@@ -4,6 +4,12 @@ import Pdf1 from "../../assets/Pdf1.png";
 import Pdf2 from "../../assets/Pdf2.png";
 import Epub1 from "../../assets/Epub1.png";
 import Epub2 from "../../assets/Epub2.png";
+import Xml1 from "../../assets/Xml1.png";
+import Xml2 from "../../assets/Xml2.png";
+import Ppt1 from "../../assets/Ppt1.png";
+import Ppt2 from "../../assets/Ppt2.png";
+import Word1 from "../../assets/Word1.png";
+import Word2 from "../../assets/Word2.png";
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -14,9 +20,6 @@ const serviceData = {
 
     description:
       "We create accurate, meaningful, and standards-compliant alternative text for images, charts, graphs, diagrams, tables, and other visual content. Our accessibility experts help publishers, educational institutions, and enterprises meet global accessibility standards.",
-
-    overview:
-      "Our Alt Text Services help organizations make visual content accessible to people who use screen readers and other assistive technologies. We create descriptions that communicate the purpose and essential information of visual content while maintaining accuracy, clarity, and appropriate context.",
 
     features: [
 
@@ -53,6 +56,7 @@ const serviceData = {
 {
   title: "STEM, Medical & Technical Content",
 
+
   paragraphs: [
     "We create specialized alt text for scientific, medical, mathematical, engineering, and technical visuals, with careful attention to terminology, symbols, formulas, processes, and relationships that carry essential meaning.",
 
@@ -60,12 +64,26 @@ const serviceData = {
   ]
 },
       
+
+          "Our approach focuses on communicating the purpose of the table and the relationships between its important elements, making complex information easier to understand with assistive technologies.",
+
+          "We can support tables used across educational materials, research publications, technical documents, and enterprise content."
+        ]
+      },
+
+      {
+        title: "STEM, Medical & Technical Content",
+
+        paragraphs: [
+          "Technical and academic visuals often require subject-matter understanding in addition to accessibility expertise. We work with scientific, medical, engineering, mathematical, and other specialized content.",
+
+          "Our descriptions are developed with attention to terminology, formulas, symbols, processes, and relationships that are important to the meaning of the visual.",
+
+          "This approach helps preserve the essential technical information while making complex visual content more accessible."
+        ]
+      },      
     ],
-
-   
-
     
-
     industries: [
       "Educational Publishing",
       "Higher Education",
@@ -150,12 +168,20 @@ const serviceData = {
     {
       title: "Word Accessibility",
 
+
       paragraphs: [
         "We help organizations turn everyday Word documents into more inclusive digital content, making essential information easier to navigate and access across different user needs.",
 
         "Whether it is a report, handbook, learning material, or business document, we focus on creating a consistent accessibility experience while preserving the document's original purpose and presentation."
       ]
     },
+
+      {
+        title: "Word Accessibility",
+        images: [Word1,Word2],
+        paragraphs: [
+          "We improve Microsoft Word documents by applying accessible document structures that make content easier to navigate and understand.",
+        ]
 
 
     {
@@ -167,6 +193,11 @@ const serviceData = {
         "Our expertise supports presentations ranging from business decks and training materials to educational and technical content, helping organizations create more inclusive digital presentations."
       ]
     },
+      {
+        title: "PowerPoint Accessibility",
+        images: [Ppt1,Ppt2],
+        paragraphs: [
+          "We make PowerPoint presentations more accessible by reviewing slide titles, reading order, images, charts, tables, links, and other presentation elements.",
 
     {
       title: "Excel Accessibility",
@@ -179,46 +210,9 @@ const serviceData = {
     }
     ],
 
-    services: [
-      {
-        title: "PDF Remediation",
-        description:
-          "Tagging, structure, reading order, navigation, tables, links, and accessibility improvements."
-      },
-      {
-        title: "Word Remediation",
-        description:
-          "Accessible headings, lists, tables, links, document structure, and alternative text."
-      },
-      {
-        title: "PowerPoint Remediation",
-        description:
-          "Accessible slide structure, reading order, images, charts, tables, and navigation."
-      },
-      {
-        title: "Excel Accessibility",
-        description:
-          "Accessible worksheets, headers, tables, formulas, labels, and navigation."
-      },
-      {
-        title: "Reading Order",
-        description:
-          "Logical content sequencing for documents with complex layouts."
-      },
-      {
-        title: "Accessibility QA",
-        description:
-          "Review of remediated documents for consistency and accessibility requirements."
-      }
-    ],
+    
 
-    benefits: [
-      "Improved document accessibility",
-      "Better compatibility with assistive technologies",
-      "Consistent document structure",
-      "Improved navigation and usability",
-      "Support for accessibility compliance initiatives"
-    ],
+   
 
     industries: [
       "Educational Institutions",
@@ -316,7 +310,7 @@ const serviceData = {
 
       {
         title: "XML Conversion",
-
+        images: [Xml1,Xml2],
         paragraphs: [
           "We transform complex publishing content into clean, structured XML that provides a reliable foundation for modern digital publishing workflows.",
 
@@ -324,39 +318,6 @@ const serviceData = {
         ]
       },
 
-    ],
-
-    services: [
-      {
-        title: "eBook Conversion",
-        description:
-          "Conversion of print and digital content into professionally structured digital publications."
-      },
-      {
-        title: "EPUB 3 Development",
-        description:
-          "Reflowable and fixed-layout EPUB publications for different digital reading environments."
-      },
-      {
-        title: "EPUB Validation",
-        description:
-          "Technical and structural validation of EPUB publications."
-      },
-      {
-        title: "XML Conversion",
-        description:
-          "Structured XML conversion for modern publishing workflows."
-      },
-      {
-        title: "Content Structuring",
-        description:
-          "Logical organization of headings, paragraphs, tables, images, references, and other content."
-      },
-      {
-        title: "Accessible Publishing",
-        description:
-          "Accessibility considerations integrated into the digital publishing workflow."
-      }
     ],
 
     industries: [
@@ -471,12 +432,38 @@ const serviceData = {
  {
       title: "Video Annotation",
 
+
       paragraphs: [
         "We organize video content through detailed annotation of relevant objects, scenes, actions, and events, making complex visual information easier to categorize and work with.",
 
         "Our annotation services can support searchable content, structured datasets, media analysis, research, and other applications where precise video information is essential."
       ]
     },
+
+      {
+        title: "Audio Engineering",
+
+        paragraphs: [
+          
+        ]
+      },
+
+      {
+        title: "Video Annotation",
+
+        paragraphs: [
+          "We provide video annotation services by identifying, labeling, and tagging relevant visual elements, objects, scenes, and events within video content.",
+
+          "Annotated video data can support content organization, searchability, analysis, and data preparation workflows.",
+
+          "Annotation requirements can be customized according to the type of content and the intended use of the resulting data."
+        ]
+      },
+
+      
+
+      
+
     ],
 
     services: [
