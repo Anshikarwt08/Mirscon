@@ -10,7 +10,8 @@ import Ppt1 from "../../assets/Ppt1.png";
 import Ppt2 from "../../assets/Ppt2.png";
 import Word1 from "../../assets/Word1.png";
 import Word2 from "../../assets/Word2.png";
-
+import Excel1 from "../../assets/Excel1.png";
+import Excel2 from "../../assets/Excel2.png";
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -25,6 +26,7 @@ const serviceData = {
     features: [
       {
         title: "Charts & Graphs",
+
 
         paragraphs: [
           "We create clear, meaningful alt text for charts and graphs, capturing essential trends, comparisons, relationships, and data points so the underlying information is accessible to every reader.",
@@ -52,14 +54,47 @@ const serviceData = {
           "Our descriptions are designed to make structured and data-rich content easier to navigate and understand across educational, research, technical, and enterprise publications."
         ]
       },
+      {
+        title: "Charts & Graphs",
+
+        paragraphs: [
+          "We provide detailed descriptions for bar charts, line graphs, pie charts, scatter plots, statistical graphics, and other data visualizations. Our descriptions communicate important trends, comparisons, relationships, and data points in a structured manner.",
+
+          "For complex visualizations, we consider the surrounding content and context to determine which information is essential to communicate. This is particularly useful for academic, scientific, financial, and educational publications.",
+
+          "Our workflows can be adapted to different types of data visualizations and project-specific accessibility requirements."
+        ]
+      },
+
+      {
+        title: "Diagrams & Flowcharts",
+
+        paragraphs: [
+          "Our team creates accessible descriptions for diagrams, process flows, organizational charts, scientific illustrations, technical drawings, and other complex visuals.",
+
+          "We describe relationships, sequences, structures, and important components so that users who cannot access the visual itself can still understand the information it communicates.",
+
+          "Descriptions are developed with consideration for the surrounding content and the role of the visual within the publication or document."
+        ]
+      },
+
+      {
+        title: "Tables & Data Visualizations",
+
+        paragraphs: [
+          
+        ]
+      },
 
       {
         title: "STEM, Medical & Technical Content",
 
         paragraphs: [
+
           "We create specialized alt text for scientific, medical, mathematical, engineering, and technical visuals, with careful attention to terminology, symbols, formulas, processes, and relationships that carry essential meaning.",
 
           "Our subject-aware approach helps preserve the accuracy and context of complex visuals while making specialized information understandable and accessible to readers using assistive technologies."
+
         ]
       }
     ],
@@ -136,13 +171,13 @@ const serviceData = {
     features: [
       {
         title: "PDF Remediation",
-
         images: [Pdf1, Pdf2],
 
         paragraphs: [
           "From simple reports to complex publications, we enhance PDFs with the accessibility structures needed for clear navigation, meaningful content relationships, and a better experience with assistive technologies.",
 
           "Our expertise supports documents with complex layouts, tables, lists, links, images, and long-form content while maintaining the integrity and professional presentation of the original document."
+
         ]
       },
 
@@ -155,6 +190,7 @@ const serviceData = {
           "We help organizations turn everyday Word documents into more inclusive digital content, making essential information easier to navigate and access across different user needs.",
 
           "Whether it is a report, handbook, learning material, or business document, we focus on creating a consistent accessibility experience while preserving the document's original purpose and presentation."
+
         ]
       },
 
@@ -164,6 +200,7 @@ const serviceData = {
         images: [Ppt1, Ppt2],
 
         paragraphs: [
+
           "Accessible presentations should communicate their message clearly to every audience. We enhance PowerPoint content so that important information remains understandable beyond the visual slide experience.",
 
           "Our expertise supports presentations ranging from business decks and training materials to educational and technical content, helping organizations create more inclusive digital presentations."
@@ -172,15 +209,14 @@ const serviceData = {
 
       {
         title: "Excel Accessibility",
-
+        images:[Excel1,Excel2],
         paragraphs: [
           "Complex spreadsheets can contain large amounts of information that are difficult to navigate without a clear accessible structure. We help make data-driven Excel content more organized and usable for diverse audiences.",
 
           "From business reports and financial data to research and operational workbooks, we focus on improving the accessibility of information while preserving the purpose and functionality of the original spreadsheet."
         ]
-      }
+      },
     ],
-
     industries: [
       "Educational Institutions",
       "Publishers",
@@ -281,9 +317,12 @@ const serviceData = {
         images: [Xml1, Xml2],
 
         paragraphs: [
-          "We transform complex publishing content into clean, structured XML that provides a reliable foundation for modern digital publishing workflows.",
+          "We convert publishing content into structured XML formats to support content reuse, distribution, and downstream publishing workflows.",
 
-          "One source, multiple possibilities. Structured XML makes it easier to reuse, manage, and deliver content across eBooks, websites, databases, and diverse publishing formats."
+          "Structured content makes it easier for organizations to manage and repurpose content across different platforms and publication formats.",
+
+          "Our workflows can be adapted to project-specific XML structures and publishing requirements."
+
         ]
       }
     ],
@@ -362,6 +401,30 @@ const serviceData = {
         title: "Subtitle & SRT Creation",
 
         paragraphs: [
+          "We create and synchronize subtitle files such as SRT according to the requirements of the target platform and content.",
+
+          "Our workflow focuses on timing, segmentation, readability, synchronization, and consistency so that subtitles remain easy to follow.",
+
+          "Subtitle files can be prepared according to project-specific formatting and delivery requirements."
+        ]
+      },
+
+      {
+        title: "Transcription Services",
+
+        paragraphs: [
+          "We convert spoken content from lectures, meetings, webinars, podcasts, interviews, training sessions, and videos into structured text.",
+
+          "Transcripts can provide an alternative way to access multimedia content and can also support search, content reuse, documentation, and publishing workflows.",
+
+          "Our transcription workflows can be adapted to different content types, formats, and project requirements."
+        ]
+      },
+
+      {
+        title: "Audio Engineering",
+
+        paragraphs: [
           "We create professionally formatted subtitles that make multimedia content easier to follow across platforms, audiences, and viewing environments.",
 
           "From educational content to corporate and digital media, our subtitle solutions maintain clear segmentation, natural reading flow, and precise synchronization with the original content."
@@ -399,46 +462,7 @@ const serviceData = {
       }
     ],
 
-    services: [
-      {
-        title: "Closed Captioning",
-        description:
-          "Accurate captions synchronized with video and multimedia content."
-      },
-      {
-        title: "SRT File Creation",
-        description:
-          "Professional subtitle files prepared and synchronized for video platforms."
-      },
-      {
-        title: "Transcription",
-        description:
-          "Structured transcripts for lectures, webinars, podcasts, meetings, and videos."
-      },
-      {
-        title: "Audio Description",
-        description:
-          "Narration describing important visual information within multimedia."
-      },
-      {
-        title: "Video Annotation",
-        description:
-          "Identification and labeling of objects, scenes, events, and visual elements."
-      },
-      {
-        title: "Multimedia QA",
-        description:
-          "Review of timing, accuracy, synchronization, terminology, and consistency."
-      }
-    ],
 
-    benefits: [
-      "Improved multimedia accessibility",
-      "Better access to video and audio content",
-      "Support for diverse audiences",
-      "Accurate and synchronized captions",
-      "Accessible transcripts and descriptions"
-    ],
 
     industries: [
       "Education",
