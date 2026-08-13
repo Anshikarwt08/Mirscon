@@ -12,10 +12,15 @@ import Word1 from "../../assets/Word1.png";
 import Word2 from "../../assets/Word2.png";
 import Excel1 from "../../assets/Excel1.png";
 import Excel2 from "../../assets/Excel2.png";
+
 import TranscriptionServices from "../../assets/TranscriptionServices.png";
 import Srt from "../../assets/Srt.png";
 import AudioEngineering from "../../assets/AudioEngineering.png";
 import VideoAnnotation from "../../assets/VideoAnnotation.png";
+
+import Alt from "../../assets/Alt.png";
+import Alt2 from "../../assets/Alt2.png";
+
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -28,6 +33,27 @@ const serviceData = {
       "We create accurate, meaningful, and standards-compliant alternative text for images, charts, graphs, diagrams, tables, and other visual content. Our accessibility experts help publishers, educational institutions, and enterprises meet global accessibility standards.",
 
     features: [
+
+      {
+        title: "Charts, Graphs & Diagrams",
+        images: [Alt],
+        paragraphs: [
+          "We create clear, meaningful alt text for charts, graphs, and diagrams, capturing the key information so complex visuals remain accessible to every reader.",
+          "From data trends and comparisons to processes and technical diagrams, our descriptions focus on essential details while keeping the content concise, accurate, and easy to understand."
+        ]
+      },
+
+      {
+        title: "STEM, Medical & Technical Content",
+        images:[Alt2],
+        paragraphs: [
+          "We craft clear, accurate content for complex STEM, medical, and technical subjects, making specialized information easy to understand and accessible to every reader.",
+
+          "From scientific concepts to medical terminology and technical documentation, we ensure content is precise, well-structured, and ready for accessible digital publishing."
+
+        ]
+      },      
+
     ],
     industries: [
       "Educational Publishing",
@@ -327,6 +353,7 @@ const serviceData = {
       "Our multimedia accessibility services help organizations make video, audio, and other multimedia content more accessible. We provide services designed to support users with different accessibility needs while maintaining accuracy, synchronization, and content quality.",
 
     features: [
+
       {
         title: "Subtitle & SRT Creation",
           images: [Srt],
@@ -371,6 +398,7 @@ images: [VideoAnnotation],
           "Our annotation services can support searchable content, structured datasets, media analysis, research, and other applications where precise video information is essential."
         ]
       },
+
     ],
 
 

@@ -6,7 +6,6 @@ function Services() {
      {
   id: "digital-publishing",
   title: "Digital Publishing Services",
-  subtitle: "Make every publication accessible. Make every reader count.",
   description:
     "We transform traditional and digital content into accessible, structured, and engaging publications that work across devices, platforms, and assistive technologies. Our digital publishing solutions help publishers, businesses, and organizations deliver content that is easier to access, navigate, and consume. From content conversion and document remediation to accessible EPUBs, PDFs, and eBooks, we ensure accessibility is integrated throughout the publishing workflow rather than treated as an afterthought."
 },
@@ -14,7 +13,8 @@ function Services() {
       id: "document-remediation",
       title: "Document Remediation",
       description:
-        "Our document remediation services transform inaccessible files into fully accessible documents compatible with screen readers and assistive technologies. Every document is remediated according to international accessibility standards."
+        "Our document remediation services transform PDFs, Word files, PowerPoint presentations, and other digital documents into accessible, structured, and user-friendly formats. We improve document structure, headings, reading order, tables, links, images, and accessibility tags to support screen readers and assistive technologies while helping organizations meet accessibility standards."
+
     },
     {
       id: "alt-text",
@@ -27,7 +27,7 @@ function Services() {
       id: "multimedia-accessibility",
       title: "Multimedia Accessibility",
       description:
-        "We make multimedia content accessible by providing professional captioning, transcription, audio description, and video accessibility services that ensure an inclusive experience for every user."
+        "We turn multimedia content into accessible experiences that connect with every audience. From professional captions and accurate transcripts to audio descriptions and accessible video, we help your content become easier to follow, understand, and enjoy."
     }
   ];
 
