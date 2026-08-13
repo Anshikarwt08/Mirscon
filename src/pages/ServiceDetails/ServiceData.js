@@ -52,7 +52,17 @@ const serviceData = {
           "From scientific concepts to medical terminology and technical documentation, we ensure content is precise, well-structured, and ready for accessible digital publishing."
 
         ]
-      },      
+      }, 
+      {
+        title: "Accessible Language Solutions ",
+        paragraphs: [
+          
+          "From alt text and accessibility descriptions to technical and specialized content, we maintain consistency and accuracy while adapting language naturally for the target audience.",
+          
+          "We help organizations deliver inclusive digital experiences by ensuring that language is not a barrier to understanding, navigation, or access to essential information."
+
+        ]
+      },     
 
     ],
     industries: [
