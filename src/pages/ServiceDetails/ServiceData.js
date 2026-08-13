@@ -12,6 +12,8 @@ import Word1 from "../../assets/Word1.png";
 import Word2 from "../../assets/Word2.png";
 import Excel1 from "../../assets/Excel1.png";
 import Excel2 from "../../assets/Excel2.png";
+import Alt from "../../assets/Alt.png";
+import Alt2 from "../../assets/Alt2.png";
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -26,42 +28,22 @@ const serviceData = {
     features: [
 
       {
-        title: "Charts & Graphs",
-
+        title: "Charts, Graphs & Diagrams",
+        images: [Alt],
         paragraphs: [
-          "We provide detailed descriptions for bar charts, line graphs, pie charts, scatter plots, statistical graphics, and other data visualizations. Our descriptions communicate important trends, comparisons, relationships, and data points in a structured manner.",
-
-          "For complex visualizations, we consider the surrounding content and context to determine which information is essential to communicate. This is particularly useful for academic, scientific, financial, and educational publications.",
-
-          "Our workflows can be adapted to different types of data visualizations and project-specific accessibility requirements."
-        ]
-      },
-
-      {
-        title: "Diagrams & Flowcharts",
-
-        paragraphs: [
-          "Our team creates accessible descriptions for diagrams, process flows, organizational charts, scientific illustrations, technical drawings, and other complex visuals.",
-
-          "We describe relationships, sequences, structures, and important components so that users who cannot access the visual itself can still understand the information it communicates.",
-
-          "Descriptions are developed with consideration for the surrounding content and the role of the visual within the publication or document."
-        ]
-      },
-
-      {
-        title: "Tables & Data Visualizations",
-
-        paragraphs: [
-          
+          "We create clear, meaningful alt text for charts, graphs, and diagrams, capturing the key information so complex visuals remain accessible to every reader.",
+          "From data trends and comparisons to processes and technical diagrams, our descriptions focus on essential details while keeping the content concise, accurate, and easy to understand."
         ]
       },
 
       {
         title: "STEM, Medical & Technical Content",
-
+        images:[Alt2],
         paragraphs: [
-          
+          "We craft clear, accurate content for complex STEM, medical, and technical subjects, making specialized information easy to understand and accessible to every reader.",
+
+          "From scientific concepts to medical terminology and technical documentation, we ensure content is precise, well-structured, and ready for accessible digital publishing."
+
         ]
       },      
     ],
@@ -352,64 +334,6 @@ const serviceData = {
       "Our multimedia accessibility services help organizations make video, audio, and other multimedia content more accessible. We provide services designed to support users with different accessibility needs while maintaining accuracy, synchronization, and content quality.",
 
     features: [
-      {
-        title: "Closed Captioning",
-
-        paragraphs: [
-          "We create accurate captions for educational videos, webinars, training materials, lectures, corporate content, and other multimedia.",
-
-          "Captions can include spoken dialogue as well as relevant audio information needed to understand the content.",
-
-          "Our workflows focus on accuracy, timing, readability, consistency, and synchronization with the original multimedia."
-        ]
-      },
-
-      {
-        title: "Subtitle & SRT Creation",
-
-        paragraphs: [
-          "We create and synchronize subtitle files such as SRT according to the requirements of the target platform and content.",
-
-          "Our workflow focuses on timing, segmentation, readability, synchronization, and consistency so that subtitles remain easy to follow.",
-
-          "Subtitle files can be prepared according to project-specific formatting and delivery requirements."
-        ]
-      },
-
-      {
-        title: "Transcription Services",
-
-        paragraphs: [
-          "We convert spoken content from lectures, meetings, webinars, podcasts, interviews, training sessions, and videos into structured text.",
-
-          "Transcripts can provide an alternative way to access multimedia content and can also support search, content reuse, documentation, and publishing workflows.",
-
-          "Our transcription workflows can be adapted to different content types, formats, and project requirements."
-        ]
-      },
-
-      {
-        title: "Audio Engineering",
-
-        paragraphs: [
-          
-        ]
-      },
-
-      {
-        title: "Video Annotation",
-
-        paragraphs: [
-          "We provide video annotation services by identifying, labeling, and tagging relevant visual elements, objects, scenes, and events within video content.",
-
-          "Annotated video data can support content organization, searchability, analysis, and data preparation workflows.",
-
-          "Annotation requirements can be customized according to the type of content and the intended use of the resulting data."
-        ]
-      },
-
-      
-
       
     ],
 
