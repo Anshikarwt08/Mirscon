@@ -10,6 +10,8 @@ import Ppt1 from "../../assets/Ppt1.png";
 import Ppt2 from "../../assets/Ppt2.png";
 import Word1 from "../../assets/Word1.png";
 import Word2 from "../../assets/Word2.png";
+import Excel1 from "../../assets/Excel1.png";
+import Excel2 from "../../assets/Excel2.png";
 const serviceData = {
   /* =========================================================
      ALT TEXT SERVICES
@@ -51,11 +53,7 @@ const serviceData = {
         title: "Tables & Data Visualizations",
 
         paragraphs: [
-          "We create descriptions and accessibility support for tables containing structured information, statistics, comparisons, and other data.",
-
-          "Our approach focuses on communicating the purpose of the table and the relationships between its important elements, making complex information easier to understand with assistive technologies.",
-
-          "We can support tables used across educational materials, research publications, technical documents, and enterprise content."
+          
         ]
       },
 
@@ -63,11 +61,7 @@ const serviceData = {
         title: "STEM, Medical & Technical Content",
 
         paragraphs: [
-          "Technical and academic visuals often require subject-matter understanding in addition to accessibility expertise. We work with scientific, medical, engineering, mathematical, and other specialized content.",
-
-          "Our descriptions are developed with attention to terminology, formulas, symbols, processes, and relationships that are important to the meaning of the visual.",
-
-          "This approach helps preserve the essential technical information while making complex visual content more accessible."
+          
         ]
       },      
     ],
@@ -146,11 +140,7 @@ const serviceData = {
         title: "PDF Remediation",
         images: [Pdf1,Pdf2],
         paragraphs: [
-          "Our PDF remediation services transform existing PDF files into structured and accessible documents that can be navigated effectively using screen readers and other assistive technologies.",
-
-          "We work on document structure, tagging, headings, lists, tables, links, reading order, bookmarks, and other important accessibility elements to improve the overall usability of the document.",
-
-          "Each remediated document is reviewed to ensure that the required accessibility elements have been properly implemented according to the project requirements."
+          
         ]
       },
 
@@ -158,11 +148,7 @@ const serviceData = {
         title: "Word Accessibility",
         images: [Word1,Word2],
         paragraphs: [
-          "We improve Microsoft Word documents by applying accessible document structures that make content easier to navigate and understand.",
-
-          "Our work can include accessible headings, lists, tables, links, reading order, document structure, and alternative text for relevant visual content.",
-
-          "The final document is reviewed for consistency and usability before delivery."
+          
         ]
       },
 
@@ -170,23 +156,15 @@ const serviceData = {
         title: "PowerPoint Accessibility",
         images: [Ppt1,Ppt2],
         paragraphs: [
-          "We make PowerPoint presentations more accessible by reviewing slide titles, reading order, images, charts, tables, links, and other presentation elements.",
-
-          "Our team works to ensure that information is presented in a logical sequence so that users accessing the presentation with assistive technologies can follow the content effectively.",
-
-          "Presentations are reviewed to ensure that the implemented accessibility features work consistently throughout the deck."
+          
         ]
       },
 
       {
         title: "Excel Accessibility",
-
+        images:[Excel1,Excel2],
         paragraphs: [
-          "We help improve the accessibility of spreadsheets by working with worksheet structure, column and row headers, tables, labels, formulas, and navigation.",
-
-          "For complex workbooks, we review how information is organized so that important relationships between data elements are easier to understand and navigate.",
-
-          "The completed workbook is checked for consistency and accessibility before final delivery."
+          
         ]
       },
     ],
@@ -433,47 +411,6 @@ const serviceData = {
       
 
       
-    ],
-
-    services: [
-      {
-        title: "Closed Captioning",
-        description:
-          "Accurate captions synchronized with video and multimedia content."
-      },
-      {
-        title: "SRT File Creation",
-        description:
-          "Professional subtitle files prepared and synchronized for video platforms."
-      },
-      {
-        title: "Transcription",
-        description:
-          "Structured transcripts for lectures, webinars, podcasts, meetings, and videos."
-      },
-      {
-        title: "Audio Description",
-        description:
-          "Narration describing important visual information within multimedia."
-      },
-      {
-        title: "Video Annotation",
-        description:
-          "Identification and labeling of objects, scenes, events, and visual elements."
-      },
-      {
-        title: "Multimedia QA",
-        description:
-          "Review of timing, accuracy, synchronization, terminology, and consistency."
-      }
-    ],
-
-    benefits: [
-      "Improved multimedia accessibility",
-      "Better access to video and audio content",
-      "Support for diverse audiences",
-      "Accurate and synchronized captions",
-      "Accessible transcripts and descriptions"
     ],
 
     industries: [
