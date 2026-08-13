@@ -20,54 +20,45 @@ const serviceData = {
 
     features: [
 
-      {
-        title: "Charts & Graphs",
+{
+  title: "Charts & Graphs",
 
-        paragraphs: [
-          "We provide detailed descriptions for bar charts, line graphs, pie charts, scatter plots, statistical graphics, and other data visualizations. Our descriptions communicate important trends, comparisons, relationships, and data points in a structured manner.",
+  paragraphs: [
+    "We create clear, meaningful alt text for charts and graphs, capturing essential trends, comparisons, relationships, and data points so the underlying information is accessible to every reader.",
 
-          "For complex visualizations, we consider the surrounding content and context to determine which information is essential to communicate. This is particularly useful for academic, scientific, financial, and educational publications.",
+    "From bar charts and line graphs to pie charts, scatter plots, and statistical visualizations, our descriptions are tailored to the context and purpose of each visual, making complex data easier to understand."
+  ]
+},
 
-          "Our workflows can be adapted to different types of data visualizations and project-specific accessibility requirements."
-        ]
-      },
+{
+  title: "Diagrams & Flowcharts",
 
-      {
-        title: "Diagrams & Flowcharts",
+  paragraphs: [
+    "We create precise alt text for diagrams, flowcharts, organizational charts, scientific illustrations, and technical visuals, describing the key components, relationships, and processes they communicate.",
 
-        paragraphs: [
-          "Our team creates accessible descriptions for diagrams, process flows, organizational charts, scientific illustrations, technical drawings, and other complex visuals.",
+    "Our descriptions preserve the essential meaning and sequence of complex visuals, helping readers understand structures, workflows, and connections even without access to the original visual."
+  ]
+},
 
-          "We describe relationships, sequences, structures, and important components so that users who cannot access the visual itself can still understand the information it communicates.",
+   {
+  title: "Tables & Data Visualizations",
 
-          "Descriptions are developed with consideration for the surrounding content and the role of the visual within the publication or document."
-        ]
-      },
+  paragraphs: [
+    "We provide thoughtful alt text and accessibility support for tables and data visualizations, focusing on their purpose, key information, comparisons, and relationships between important elements.",
 
-      {
-        title: "Tables & Data Visualizations",
+    "Our descriptions are designed to make structured and data-rich content easier to navigate and understand across educational, research, technical, and enterprise publications."
+  ]
+},
 
-        paragraphs: [
-          "We create descriptions and accessibility support for tables containing structured information, statistics, comparisons, and other data.",
+{
+  title: "STEM, Medical & Technical Content",
 
-          "Our approach focuses on communicating the purpose of the table and the relationships between its important elements, making complex information easier to understand with assistive technologies.",
+  paragraphs: [
+    "We create specialized alt text for scientific, medical, mathematical, engineering, and technical visuals, with careful attention to terminology, symbols, formulas, processes, and relationships that carry essential meaning.",
 
-          "We can support tables used across educational materials, research publications, technical documents, and enterprise content."
-        ]
-      },
-
-      {
-        title: "STEM, Medical & Technical Content",
-
-        paragraphs: [
-          "Technical and academic visuals often require subject-matter understanding in addition to accessibility expertise. We work with scientific, medical, engineering, mathematical, and other specialized content.",
-
-          "Our descriptions are developed with attention to terminology, formulas, symbols, processes, and relationships that are important to the meaning of the visual.",
-
-          "This approach helps preserve the essential technical information while making complex visual content more accessible."
-        ]
-      },
-
+    "Our subject-aware approach helps preserve the accuracy and context of complex visuals while making specialized information understandable and accessible to readers using assistive technologies."
+  ]
+},
       
     ],
 
@@ -146,53 +137,46 @@ const serviceData = {
       "Our document remediation services help organizations transform existing digital documents into accessible formats. We focus on document structure, reading order, tagging, navigation, alternative text, tables, headings, and other accessibility requirements.",
 
     features: [
-      {
-        title: "PDF Remediation",
-        images: [Pdf1,Pdf2],
-        paragraphs: [
-          "Our PDF remediation services transform existing PDF files into structured and accessible documents that can be navigated effectively using screen readers and other assistive technologies.",
+    {
+      title: "PDF Remediation",
+      images: [Pdf1, Pdf2],
+      paragraphs: [
+        "From simple reports to complex publications, we enhance PDFs with the accessibility structures needed for clear navigation, meaningful content relationships, and a better experience with assistive technologies.",
 
-          "We work on document structure, tagging, headings, lists, tables, links, reading order, bookmarks, and other important accessibility elements to improve the overall usability of the document.",
+        "Our expertise supports documents with complex layouts, tables, lists, links, images, and long-form content while maintaining the integrity and professional presentation of the original document."
+      ]
+    },
 
-          "Each remediated document is reviewed to ensure that the required accessibility elements have been properly implemented according to the project requirements."
-        ]
-      },
+    {
+      title: "Word Accessibility",
 
-      {
-        title: "Microsoft Word Accessibility",
+      paragraphs: [
+        "We help organizations turn everyday Word documents into more inclusive digital content, making essential information easier to navigate and access across different user needs.",
 
-        paragraphs: [
-          "We improve Microsoft Word documents by applying accessible document structures that make content easier to navigate and understand.",
+        "Whether it is a report, handbook, learning material, or business document, we focus on creating a consistent accessibility experience while preserving the document's original purpose and presentation."
+      ]
+    },
 
-          "Our work can include accessible headings, lists, tables, links, reading order, document structure, and alternative text for relevant visual content.",
 
-          "The final document is reviewed for consistency and usability before delivery."
-        ]
-      },
+    {
+      title: "PowerPoint Accessibility",
 
-      {
-        title: "PowerPoint Accessibility",
+      paragraphs: [
+        "Accessible presentations should communicate their message clearly to every audience. We enhance PowerPoint content so that important information remains understandable beyond the visual slide experience.",
 
-        paragraphs: [
-          "We make PowerPoint presentations more accessible by reviewing slide titles, reading order, images, charts, tables, links, and other presentation elements.",
+        "Our expertise supports presentations ranging from business decks and training materials to educational and technical content, helping organizations create more inclusive digital presentations."
+      ]
+    },
 
-          "Our team works to ensure that information is presented in a logical sequence so that users accessing the presentation with assistive technologies can follow the content effectively.",
+    {
+      title: "Excel Accessibility",
 
-          "Presentations are reviewed to ensure that the implemented accessibility features work consistently throughout the deck."
-        ]
-      },
+      paragraphs: [
+        "Complex spreadsheets can contain large amounts of information that are difficult to navigate without a clear accessible structure. We help make data-driven Excel content more organized and usable for diverse audiences.",
 
-      {
-        title: "Excel Accessibility",
-
-        paragraphs: [
-          "We help improve the accessibility of spreadsheets by working with worksheet structure, column and row headers, tables, labels, formulas, and navigation.",
-
-          "For complex workbooks, we review how information is organized so that important relationships between data elements are easier to understand and navigate.",
-
-          "The completed workbook is checked for consistency and accessibility before final delivery."
-        ]
-      },
+        "From business reports and financial data to research and operational workbooks, we focus on improving the accessibility of information while preserving the purpose and functionality of the original spreadsheet."
+      ]
+    }
     ],
 
     services: [
@@ -446,89 +430,53 @@ const serviceData = {
       "Our multimedia accessibility services help organizations make video, audio, and other multimedia content more accessible. We provide services designed to support users with different accessibility needs while maintaining accuracy, synchronization, and content quality.",
 
     features: [
-      {
-        title: "Closed Captioning",
+     {
+      title: "Closed Captioning",
 
-        paragraphs: [
-          "We create accurate captions for educational videos, webinars, training materials, lectures, corporate content, and other multimedia.",
+      paragraphs: [
+        "We create clear and accurate captions that help audiences follow spoken content and understand essential audio information across videos, lectures, webinars, training materials, and digital media.",
 
-          "Captions can include spoken dialogue as well as relevant audio information needed to understand the content.",
-
-          "Our workflows focus on accuracy, timing, readability, consistency, and synchronization with the original multimedia."
-        ]
-      },
+        "Our captioning services are designed to support an inclusive viewing experience while maintaining natural readability, accurate timing, and consistency throughout the content."
+      ]
+    },
 
       {
-        title: "Subtitle & SRT Creation",
+      title: "Subtitle & SRT Creation",
 
-        paragraphs: [
-          "We create and synchronize subtitle files such as SRT according to the requirements of the target platform and content.",
+      paragraphs: [
+        "We create professionally formatted subtitles that make multimedia content easier to follow across platforms, audiences, and viewing environments.",
 
-          "Our workflow focuses on timing, segmentation, readability, synchronization, and consistency so that subtitles remain easy to follow.",
+        "From educational content to corporate and digital media, our subtitle solutions maintain clear segmentation, natural reading flow, and precise synchronization with the original content."
+      ]
+    },
+ {
+      title: "Transcription Services",
 
-          "Subtitle files can be prepared according to project-specific formatting and delivery requirements."
-        ]
-      },
+      paragraphs: [
+        "We transform spoken content from videos, webinars, podcasts, interviews, lectures, and training sessions into clear and structured text that can be accessed, searched, and reused.",
 
+        "Beyond accessibility, accurate transcripts can extend the value of multimedia content by supporting documentation, content repurposing, publishing, and knowledge management."
+      ]
+    },
       {
-        title: "Transcription Services",
+      title: "Audio Description",
 
-        paragraphs: [
-          "We convert spoken content from lectures, meetings, webinars, podcasts, interviews, training sessions, and videos into structured text.",
+      paragraphs: [
+        "We provide meaningful audio descriptions that communicate essential visual information, helping audiences understand important actions, settings, on-screen text, and visual context within multimedia content.",
 
-          "Transcripts can provide an alternative way to access multimedia content and can also support search, content reuse, documentation, and publishing workflows.",
+        "Our descriptions are developed to complement the original narration without distracting from the content, creating a more complete and inclusive listening experience."
+      ]
+    },
 
-          "Our transcription workflows can be adapted to different content types, formats, and project requirements."
-        ]
-      },
+ {
+      title: "Video Annotation",
 
-      {
-        title: "Audio Description",
+      paragraphs: [
+        "We organize video content through detailed annotation of relevant objects, scenes, actions, and events, making complex visual information easier to categorize and work with.",
 
-        paragraphs: [
-          "Audio description provides narration of important visual information that may not be communicated through the original audio.",
-
-          "We create descriptions that help communicate relevant actions, settings, characters, on-screen information, transitions, and other visual details where appropriate.",
-
-          "The descriptions are developed with consideration for the context and purpose of the multimedia content."
-        ]
-      },
-
-      {
-        title: "Video Annotation",
-
-        paragraphs: [
-          "We provide video annotation services by identifying, labeling, and tagging relevant visual elements, objects, scenes, and events within video content.",
-
-          "Annotated video data can support content organization, searchability, analysis, and data preparation workflows.",
-
-          "Annotation requirements can be customized according to the type of content and the intended use of the resulting data."
-        ]
-      },
-
-      {
-        title: "Multimedia Quality Review",
-
-        paragraphs: [
-          "Our review process focuses on accuracy, timing, synchronization, consistency, terminology, and overall content quality.",
-
-          "Depending on the project, multiple accessibility components can be combined into a single workflow, such as transcription followed by captioning and subtitle creation.",
-
-          "Quality review helps maintain consistency across individual videos as well as large multimedia collections."
-        ]
-      },
-
-      {
-        title: "Educational & Corporate Multimedia",
-
-        paragraphs: [
-          "We support accessibility workflows for lectures, online courses, training programs, webinars, instructional videos, presentations, and other learning content.",
-
-          "Making multimedia content more accessible can help organizations provide more consistent access to their educational and training resources.",
-
-          "Our workflows can be scaled to support both individual multimedia files and larger content libraries."
-        ]
-      }
+        "Our annotation services can support searchable content, structured datasets, media analysis, research, and other applications where precise video information is essential."
+      ]
+    },
     ],
 
     services: [
