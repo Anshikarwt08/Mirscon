@@ -48,9 +48,6 @@ function GetStarted() {
 
         <div className="get-started-hero-content">
 
-          <span className="get-started-label">
-            LET'S GET STARTED
-          </span>
 
           <h1>
             Build the Right Team
@@ -77,7 +74,7 @@ function GetStarted() {
         {/* LEFT CONTENT */}
         <div className="get-started-info">
 
-          <span className="section-label">
+          <span className="resource-section-label">
             WHY Mirscon
           </span>
 

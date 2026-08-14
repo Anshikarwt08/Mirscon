@@ -21,7 +21,7 @@ function ContactCard() {
 
         <p>Speak directly with our team.</p>
 
-        <span>+91 98765 43210</span>
+        <span>+91 9582221555</span>
 
       </div>
 
