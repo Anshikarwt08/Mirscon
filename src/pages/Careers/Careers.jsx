@@ -13,43 +13,46 @@ const jobs = [
     title: "Accessibility Trainee",
     experience: "Fresher",
     responsibilities: [
-      "Create technical content.",
-      "Research industry trends.",
-      "Develop user documentation.",
-      "Collaborate with technical teams.",
+      "Learn and apply web accessibility guidelines.",
+      "Assist with accessibility testing of websites and digital content.",
+      "Review documents and digital content for accessibility issues.",
+      "Work with senior accessibility professionals to improve content quality.",
     ],
   },
+
   {
     id: 2,
     title: "Accessibility Tester",
     experience: "6 months",
     responsibilities: [
-      "Write clean PHP code.",
-      "Build reusable modules.",
-      "Debug applications.",
-      "Work with APIs.",
+      "Perform accessibility testing using manual and automated tools.",
+      "Identify accessibility issues across websites and digital content.",
+      "Test content using keyboard navigation and assistive technologies.",
+      "Document findings and work with teams to resolve accessibility issues.",
     ],
   },
+
   {
     id: 3,
     title: "Manager",
-    experience: "4-5 Years",
+    experience: "4–5 Years",
     responsibilities: [
-      "Design graphics.",
-      "Create marketing material.",
-      "Brand identity.",
-      "Social media creatives.",
+      "Manage accessibility projects and day-to-day team operations.",
+      "Coordinate with clients and internal teams to deliver projects on time.",
+      "Review project quality, performance, and deliverables.",
+      "Guide team members and ensure efficient resource allocation.",
     ],
   },
+
   {
     id: 4,
     title: "Quality Analyst",
     experience: "2–3 Years",
     responsibilities: [
-      "Keyword research.",
-      "On-page SEO.",
-      "Technical SEO.",
-      "Analytics reporting.",
+      "Perform quality checks on digital content and accessibility deliverables.",
+      "Identify errors and inconsistencies and document quality issues.",
+      "Review work against project requirements and accessibility standards.",
+      "Collaborate with teams to improve accuracy, consistency, and overall quality.",
     ],
   },
 ];
@@ -63,10 +66,10 @@ function Careers() {
 
       <main className="career-page">
 
-        {/* Hero Section */}
+        {/* =========================
+            HERO SECTION
+        ========================= */}
         <section className="career-hero">
-
-          
 
           <h1>
             Current Job Openings
@@ -78,11 +81,12 @@ function Careers() {
             the next step in your career.
           </p>
 
-          
-
         </section>
 
-        {/* Job Cards */}
+
+        {/* =========================
+            JOB CARDS
+        ========================= */}
         <section className="career-grid">
 
           {jobs.map((job) => (
@@ -95,7 +99,10 @@ function Careers() {
 
         </section>
 
-        {/* Modal */}
+
+        {/* =========================
+            CAREER MODAL
+        ========================= */}
         {selectedJob && (
           <CareerModal
             job={selectedJob}
