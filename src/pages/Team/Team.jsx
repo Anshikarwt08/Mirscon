@@ -23,7 +23,7 @@ function Team() {
   {/* Rekha */}
   <div className="team-card">
     <div className="team-image">
-      <img src={member4} alt="Rekha Singh, Founder and CEO" />
+      <img /*src={member4} */alt="Rekha Singh, Founder and CEO" />
     </div>
 
     <h3>Rekha Singh</h3>
@@ -48,7 +48,7 @@ function Team() {
   {/* Anand */}
   <div className="team-card">
     <div className="team-image">
-      <img src={member1} alt="Anand Chaudhary, Director" />
+      <img /*src={member1} */alt="Anand Chaudhary, Director" />
     </div>
 
     <h3>Anand Chaudhary</h3>
@@ -73,7 +73,7 @@ function Team() {
   {/* Sunidhi */}
   <div className="team-card">
     <div className="team-image">
-      <img src={member2} alt="Sunidhi Chauhan, Associate Vice President" />
+      <img /*src={member2}*/ alt="Sunidhi Chauhan, Associate Vice President" />
     </div>
 
     <h3>Sunidhi Chauhan</h3>
@@ -98,7 +98,7 @@ function Team() {
   {/* Rajat */}
   <div className="team-card">
     <div className="team-image">
-      <img src={member3} alt="Rajat Sinha, Associate Director" />
+      <img /*src={member3}*/ alt="Rajat Sinha, Associate Director" />
     </div>
 
     <h3>Rajat Sinha</h3>
