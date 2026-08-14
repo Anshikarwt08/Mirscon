@@ -1,6 +1,7 @@
 import "./Team.css";
 import { FaLinkedinIn } from "react-icons/fa";
 
+// Team member images commented out
 // import member1 from "../../assets/Asir.jpg";
 // import member2 from "../../assets/Mam.jpg";
 // import member3 from "../../assets/Rsir.jpg";
@@ -10,6 +11,9 @@ function Team() {
   return (
     <section className="team-section">
 
+      {/* =========================
+          TEAM HEADING
+      ========================= */}
       <div className="team-heading">
         <h2>
           Technology enables what we do Our people define how we do it
@@ -21,20 +25,19 @@ function Team() {
         </p>
       </div>
 
+
+      {/* =========================
+          TEAM CONTAINER
+      ========================= */}
       <div className="team-container">
 
-        {/* Rekha */}
+        {/* =========================
+            REKHA
+        ========================= */}
         <div className="team-card">
-          <div className="team-image">
-            {/* 
-            <img
-              src={member4}
-              alt="Rekha Singh, Founder and CEO"
-            />
-            */}
-          </div>
 
           <h3>Rekha Singh</h3>
+
           <h4>Founder & CEO</h4>
 
           <p>
@@ -50,21 +53,17 @@ function Team() {
           >
             <FaLinkedinIn aria-hidden="true" />
           </a>
+
         </div>
 
 
-        {/* Anand */}
+        {/* =========================
+            ANAND
+        ========================= */}
         <div className="team-card">
-          <div className="team-image">
-            {/*
-            <img
-              src={member1}
-              alt="Anand Chaudhary, Director"
-            />
-            */}
-          </div>
 
           <h3>Anand Chaudhary</h3>
+
           <h4>Director</h4>
 
           <p>
@@ -80,21 +79,17 @@ function Team() {
           >
             <FaLinkedinIn aria-hidden="true" />
           </a>
+
         </div>
 
 
-        {/* Sunidhi */}
+        {/* =========================
+            SUNIDHI
+        ========================= */}
         <div className="team-card">
-          <div className="team-image">
-            {/*
-            <img
-              src={member2}
-              alt="Sunidhi Chauhan, Associate Vice President"
-            />
-            */}
-          </div>
 
           <h3>Sunidhi Chauhan</h3>
+
           <h4>Associate Vice President</h4>
 
           <p>
@@ -110,21 +105,17 @@ function Team() {
           >
             <FaLinkedinIn aria-hidden="true" />
           </a>
+
         </div>
 
 
-        {/* Rajat */}
+        {/* =========================
+            RAJAT
+        ========================= */}
         <div className="team-card">
-          <div className="team-image">
-            {/*
-            <img
-              src={member3}
-              alt="Rajat Sinha, Associate Director"
-            />
-            */}
-          </div>
 
           <h3>Rajat Sinha</h3>
+
           <h4>Associate Director</h4>
 
           <p>
@@ -140,9 +131,11 @@ function Team() {
           >
             <FaLinkedinIn aria-hidden="true" />
           </a>
+
         </div>
 
       </div>
+
     </section>
   );
 }
