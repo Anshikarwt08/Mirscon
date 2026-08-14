@@ -223,7 +223,9 @@ function Industries() {
 
         <section className="industries-hero">
 
+
           <div className="industries-hero-content">
+
 
             <span className="industries-label">
               INDUSTRIES
@@ -234,6 +236,7 @@ function Industries() {
               <br />
               Built Around Your Industry
             </h1>
+
 
             <p>
               Every industry has different challenges, requirements, and

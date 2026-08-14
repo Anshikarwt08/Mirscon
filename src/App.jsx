@@ -15,10 +15,10 @@ import ContactBanner from "./pages/ContactBanner/ContactBanner";
 import Footer from "./components/Footer/Footer";
 import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import ResourceOutsourcing from "./pages/ResourceOutsourcing/ResourceOutsourcing";
-import GetStarted from "./pages/GetStarted/GetStarted";
 import Industries from "./pages/Industries/Industries";
 
 import AccessibilityEngine from "./components/AccessibilityEngine/AccessibilityEngine";
+import GetStarted from "./pages/GetStarted/GetStarted";
 
 
 function MainPage() {
@@ -114,16 +114,16 @@ function App() {
           path="/resource-outsourcing"
           element={<ResourceOutsourcing />}
         />
-
-
         {/* =====================================
-            GET STARTED
+            Get Started
         ====================================== */}
 
         <Route
           path="/get-started"
           element={<GetStarted />}
         />
+
+        
 
 
         {/* =====================================

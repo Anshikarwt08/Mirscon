@@ -20,6 +20,7 @@ import VideoAnnotation from "../../assets/VideoAnnotation.png";
 
 import Alt from "../../assets/Alt.png";
 import Alt2 from "../../assets/Alt2.png";
+import Alt3 from "../../assets/Alt3.png";
 
 const serviceData = {
   /* =========================================================
@@ -55,11 +56,15 @@ const serviceData = {
       }, 
       {
         title: "Accessible Language Solutions ",
+        images: [Alt3],
         paragraphs: [
           
           "From alt text and accessibility descriptions to technical and specialized content, we maintain consistency and accuracy while adapting language naturally for the target audience.",
           
-          "We help organizations deliver inclusive digital experiences by ensuring that language is not a barrier to understanding, navigation, or access to essential information."
+          "We help organizations deliver inclusive digital experiences by ensuring that language is not a barrier to understanding, navigation, or access to essential information.",
+
+          "Our approach combines linguistic clarity with accessibility best practices, helping organizations make digital content easier to understand, navigate, and access for everyone."
+
 
         ]
       },     
