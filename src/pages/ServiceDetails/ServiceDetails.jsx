@@ -58,9 +58,10 @@ function ServiceDetails() {
 
             <div className="service-details-section-heading">
 
-             
+
               <h2 >
                  {service.title}
+
               </h2>
 
               <p>
