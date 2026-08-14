@@ -58,8 +58,13 @@ function ServiceDetails() {
 
             <div className="service-details-section-heading">
 
+<<<<<<< HEAD
+              <h2>
+               {service.title}
+=======
               <h2 >
                  {service.title}
+>>>>>>> ca58495d09d3ed6b9fb16442f58969124c5ba6b5
               </h2>
 
               <p>
