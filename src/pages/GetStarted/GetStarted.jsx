@@ -1,384 +1,426 @@
+import "./GetStarted.css";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { useNavigate } from "react-router-dom";
+import { submitForm } from "../../utils/api";
 
-const industries = [
-  {
-    title: "Publishing and Media",
-    id: "publishing-media",
-
-    intro:
-      "Publishing is evolving from traditional print toward digital-first content, accessible publications, and flexible content experiences.",
-
-    points: [
-      {
-        title: "The Publishing Landscape",
-        text:
-          "Publishers today manage content across print, eBooks, EPUBs, websites, learning platforms, and digital repositories. Delivering consistent, high-quality content across these formats requires flexible workflows and well-structured digital content.",
-      },
-
-      {
-        title: "The Shift to Digital",
-        text:
-          "Publishing is moving toward structured, reusable, and accessible digital content. EPUB 3, XML workflows, multimedia integration, and digital-first distribution are enabling publishers to create content that can be efficiently adapted across platforms and formats.",
-      },
-
-      {
-        title: "The Role of Accessibility",
-        text:
-          "Accessibility helps publishers create inclusive digital experiences by making publications, documents, images, and multimedia easier to access and navigate with assistive technologies. It also helps ensure that essential content can reach a broader audience.",
-      },
-
-      {
-        title: "Our Capabilities",
-        text:
-          "We support publishers with digital publishing, EPUB and XML conversion, alt text, document remediation, multimedia accessibility, and other accessibility-focused content services tailored to modern publishing workflows.",
-      },
-    ],
-  },
-
-  {
-    title: "EdTech and Learning",
-    id: "edtech-learning",
-
-    intro:
-      "Education is becoming increasingly digital, creating new opportunities to deliver learning experiences that are flexible, inclusive, and accessible.",
-
-    points: [
-      {
-        title: "The EdTech Landscape",
-        text:
-          "Educational institutions and EdTech organizations rely on digital platforms, eBooks, online courses, videos, documents, and interactive resources to support teaching and learning. These resources need to be clear, structured, engaging, and accessible across different learning environments.",
-      },
-
-      {
-        title: "The Shift to Digital",
-        text:
-          "Learning is moving toward personalized, technology-enabled, and multimedia-rich experiences. Digital platforms increasingly bring together structured content, video, audio, interactive resources, and data to support more flexible and connected learning.",
-      },
-
-      {
-        title: "The Role of Accessibility",
-        text:
-          "Accessibility helps create learning experiences that can be used by students with different needs and abilities. Accessible documents, captions, alt text, and well-structured digital content help learners access information more independently.",
-      },
-
-      {
-        title: "Our Capabilities",
-        text:
-          "We support education and EdTech organizations with document remediation, alt text, digital publishing, EPUB services, multimedia accessibility, accessibility testing, and structured content solutions designed for digital learning environments.",
-      },
-    ],
-  },
-
-  {
-    title: "Healthcare & Life Sciences",
-    id: "healthcare-life-sciences",
-
-    intro:
-      "Healthcare organizations increasingly depend on digital information, from patient resources and medical publications to research, training materials, and online services.",
-
-    points: [
-      {
-        title: "The Healthcare & Life Sciences Landscape",
-        text:
-          "Healthcare and life sciences organizations work with patient information, medical publications, research, training materials, reports, digital forms, and online resources. This content must remain accurate, well-structured, and easy to navigate across different digital environments.",
-      },
-
-      {
-        title: "The Shift to Digital",
-        text:
-          "Healthcare and life sciences are moving toward connected digital experiences, online information delivery, digital documentation, and technology-enabled services. These developments are creating new ways to deliver and access information across platforms.",
-      },
-
-      {
-        title: "The Role of Accessibility",
-        text:
-          "Accessibility helps make essential healthcare and life sciences information easier to access and understand. Properly structured documents, meaningful alternative text, captions, and accessible digital experiences can help reduce barriers to important information.",
-      },
-
-      {
-        title: "Our Capabilities",
-        text:
-          "We support healthcare and life sciences organizations with document remediation, alt text, digital content services, multimedia accessibility, accessibility testing, and structured publishing solutions for specialized content.",
-      },
-    ],
-  },
-
-  {
-    title: "Finance and Insurance",
-    id: "finance-insurance",
-
-    intro:
-      "Financial services are becoming increasingly digital, with customers relying on websites, mobile platforms, digital documents, and online services for everyday financial activities.",
-
-    points: [
-      {
-        title: "The Finance and Insurance Landscape",
-        text:
-          "Banks, insurers, and financial organizations deliver services through digital channels such as online banking, customer portals, mobile applications, financial documents, and self-service platforms. Clear and reliable digital information is essential across these experiences.",
-      },
-
-      {
-        title: "The Shift to Digital",
-        text:
-          "The sector is moving toward connected, automated, and technology-driven financial experiences. Cloud platforms, automation, data-driven services, and digital self-service are transforming how organizations deliver information and interact with customers.",
-      },
-
-      {
-        title: "The Role of Accessibility",
-        text:
-          "Accessibility helps customers independently access financial information, complete digital tasks, and interact with online services. Accessible documents, websites, applications, and digital content can create more inclusive financial experiences.",
-      },
-
-      {
-        title: "Our Capabilities",
-        text:
-          "We support financial and insurance organizations with accessibility testing, document remediation, alt text, quality automation, cloud solutions, and technology services that help create reliable and accessible digital experiences.",
-      },
-    ],
-  },
-
-  {
-    title: "Enterprise and Technology",
-    id: "enterprise-technology",
-
-    intro:
-      "Technology and enterprise organizations operate in a fast-changing digital environment where scalable platforms, reliable systems, and accessible user experiences are increasingly important.",
-
-    points: [
-      {
-        title: "The Enterprise and Technology Landscape",
-        text:
-          "Technology companies and enterprises manage complex products, applications, platforms, cloud environments, documentation, and customer experiences. These digital ecosystems require reliable systems, well-structured information, and consistent experiences across users and platforms.",
-      },
-
-      {
-        title: "The Shift to Digital",
-        text:
-          "The technology landscape is evolving toward cloud-based platforms, automation, data-driven solutions, integrated systems, and AI-enabled workflows. Organizations are increasingly connecting technologies to create more efficient and scalable digital experiences.",
-      },
-
-      {
-        title: "The Role of Accessibility",
-        text:
-          "Accessibility helps technology products and digital platforms serve a broader range of users. Building accessibility into digital experiences can also support clearer navigation, better usability, and more consistent interactions across platforms.",
-      },
-
-      {
-        title: "Our Capabilities",
-        text:
-          "We support technology and enterprise organizations through accessibility testing, quality automation, product engineering, cloud solutions, digital content services, and technology-focused accessibility solutions.",
-      },
-    ],
-  },
-
-  {
-    title: "Legal and Professional",
-    id: "legal-professional",
-
-    intro:
-      "Legal and professional organizations depend on accurate, structured, and accessible information to serve clients, manage documentation, and deliver professional services.",
-
-    points: [
-      {
-        title: "The Legal and Professional Landscape",
-        text:
-          "Legal and professional organizations work with contracts, reports, case materials, policies, research, client documentation, presentations, and other information-rich content. Managing this information effectively is essential for communication, collaboration, and service delivery.",
-      },
-
-      {
-        title: "The Shift to Digital",
-        text:
-          "The sector is moving toward digital documentation, cloud-based collaboration, online client services, searchable information, and technology-enabled workflows. These changes are helping organizations manage information more efficiently and deliver services through digital channels.",
-      },
-
-      {
-        title: "The Role of Accessibility",
-        text:
-          "Accessibility helps ensure that important legal and professional information can be accessed, navigated, and understood by a broader range of users. Accessible documents, websites, and digital platforms can help create more inclusive professional experiences.",
-      },
-
-      {
-        title: "Our Capabilities",
-        text:
-          "We support legal and professional organizations with document remediation, alt text, accessibility testing, digital content services, structured publishing, multimedia accessibility, and technology solutions tailored to their digital requirements.",
-      },
-    ],
-  },
-];
-
-function Industries() {
+function GetStarted() {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+    setIsSubmitting(true);
+
+    try {
+      const form = e.target;
+      const payload = {
+        fullName: form.fullName.value,
+        email: form.email.value,
+        company: form.company.value,
+        phone: form.phone.value,
+        service: form.service.value,
+        requirements: form.requirements.value,
+      };
+
+      await submitForm("/get-started", payload);
+      alert("Thank you! We will get in touch with you soon.");
+      form.reset();
+    } catch (error) {
+      alert(error.message || "Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
-      <Header />
+    <Header/>
 
-      <main className="industries-page">
+    <main className="get-started-page">
 
-        {/* =========================================
-            HERO
-        ========================================= */}
+      {/* =========================
+          HERO
+      ========================= */}
+      <section className="get-started-hero">
 
-        <section className="industries-hero">
-
-
-          <div className="industries-hero-content">
+        <div className="get-started-hero-content">
 
 
-            <span className="industries-label">
-              INDUSTRIES
-            </span>
+          <h1>
+            Build the Right Team
+            <br />
+            for Your Business
+          </h1>
 
-            <h1>
-              Technology Solutions
-              <br />
-              Built Around Your Industry
-            </h1>
+          <p>
+            Tell us about your project, resource requirements, and
+            business goals. Our team will help you find the right
+            professionals and flexible resource solutions.
+          </p>
 
+        </div>
 
-            <p>
-              Every industry has different challenges, requirements, and
-              digital priorities. We combine technology, accessibility, and
-              specialized expertise to support organizations across
-              industries.
-            </p>
-
-          </div>
-
-        </section>
+      </section>
 
 
-        {/* =========================================
-            INTRO
-        ========================================= */}
+      {/* =========================
+          MAIN SECTION
+      ========================= */}
+      <section className="get-started-main">
 
-        <section className="industries-section-heading">
+        {/* LEFT CONTENT */}
+        <div className="get-started-info">
 
-          <span className="industries-label">
-            OUR INDUSTRIES
+          <span className="resourcesection-label">
+            WHY Mirscon
           </span>
 
           <h2>
-            Solutions That Understand
+            Get the Resources
             <br />
-            Your Industry
+            Your Business Needs
           </h2>
 
           <p>
-            We understand that every industry operates differently.
-            Our solutions are designed around the unique content,
-            technology, accessibility, and business requirements of
-            each sector.
+            Finding the right professionals can be challenging.
+            Our resource outsourcing solutions help you access
+            skilled talent without the complexity of building
+            and managing an entire team internally.
           </p>
 
-        </section>
+          <div className="benefits-list">
 
+            <div className="benefit-item">
+              <div className="benefit-icon">✓</div>
 
-        {/* =========================================
-            INDUSTRIES
-        ========================================= */}
-
-        <section className="industry-list">
-
-          {industries.map((industry) => (
-
-            <section
-              className="industry-block"
-              id={industry.id}
-              key={industry.id}
-            >
-
-              {/* INDUSTRY HEADING */}
-
-              <div className="industry-heading">
-
-                <h2>
-                  {industry.title}
-                </h2>
-
+              <div>
+                <h3>Skilled Professionals</h3>
                 <p>
-                  {industry.intro}
+                  Access qualified professionals with the skills
+                  required for your business needs.
                 </p>
-
               </div>
+            </div>
 
 
-              {/* FOUR CONTENT POINTS */}
+            <div className="benefit-item">
+              <div className="benefit-icon">✓</div>
 
-              <div className="industry-points">
-
-                {industry.points.map((point) => (
-
-                  <article
-                    className="industry-point"
-                    key={point.title}
-                  >
-
-                    <div className="point-content">
-
-                      <h3>
-                        {point.title}
-                      </h3>
-
-                      <p>
-                        {point.text}
-                      </p>
-
-                    </div>
-
-                  </article>
-
-                ))}
-
+              <div>
+                <h3>Flexible Engagement</h3>
+                <p>
+                  Choose resource models that fit your project,
+                  timeline, and business requirements.
+                </p>
               </div>
-
-            </section>
-
-          ))}
-
-        </section>
+            </div>
 
 
-        {/* =========================================
-            CTA
-        ========================================= */}
+            <div className="benefit-item">
+              <div className="benefit-icon">✓</div>
 
-        <section className="industries-cta">
+              <div>
+                <h3>Scalable Teams</h3>
+                <p>
+                  Scale your team efficiently as your business
+                  requirements grow.
+                </p>
+              </div>
+            </div>
 
-          <div className="industries-cta-content">
 
-            <span className="industries-label">
-              LET'S WORK TOGETHER
-            </span>
+            <div className="benefit-item">
+              <div className="benefit-icon">✓</div>
+
+              <div>
+                <h3>Reliable Support</h3>
+                <p>
+                  Get dependable resources who work alongside
+                  your team and support your business goals.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        {/* RIGHT FORM */}
+        <div className="get-started-form-card">
+
+          <div className="form-heading">
+
+            <span>START A CONVERSATION</span>
 
             <h2>
-              Looking for the Right
-              Technology Partner?
+              Tell Us About Your Requirements
             </h2>
 
             <p>
-              Tell us about your industry, challenges, and goals.
-              Let's find the right solution for your organization.
+              Fill in the details below and our team will
+              get back to you.
             </p>
 
           </div>
 
-          <button
-            onClick={() => navigate("/contact")}
-          >
-            Contact Us
-            <span>→</span>
-          </button>
 
-        </section>
+          <form onSubmit={handleSubmit}>
 
-      </main>
+            <div className="form-row">
 
-      <Footer />
-    </>
+              <div className="form-group">
+                <label htmlFor="fullName">
+                  Full Name
+                </label>
+
+                <input
+                  id="fullName"
+                  name="fullName"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+
+              <div className="form-group">
+                <label htmlFor="email">
+                  Work Email
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+            </div>
+
+
+            <div className="form-row">
+
+              <div className="form-group">
+                <label htmlFor="company">
+                  Company Name
+                </label>
+
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  placeholder="Enter company name"
+                />
+              </div>
+
+
+              <div className="form-group">
+                <label htmlFor="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  placeholder="Enter phone number"
+                />
+              </div>
+
+            </div>
+
+
+            <div className="form-group">
+
+              <label htmlFor="service">
+                Service Required
+              </label>
+
+              <select id="service" name="service" required>
+
+                <option value="">
+                  Select a service
+                </option>
+
+                <option value="dedicated-resources">
+                  Dedicated Resources
+                </option>
+
+                <option value="staff-augmentation">
+                  Staff Augmentation
+                </option>
+
+                <option value="project-based">
+                  Project-Based Resources
+                </option>
+
+                <option value="managed-resources">
+                  Managed Resources
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div className="form-group">
+
+              <label htmlFor="requirements">
+                Tell Us About Your Requirements
+              </label>
+
+              <textarea
+                id="requirements"
+                name="requirements"
+                rows="5"
+                placeholder="Tell us about your project, required skills, team size, timeline, or any other requirements..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              className="submit-requirement-btn"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Sending..." : "Submit Requirement"}
+              <span>→</span>
+            </button>
+
+          </form>
+
+        </div>
+
+      </section>
+
+
+      {/* =========================
+          WHAT HAPPENS NEXT
+      ========================= */}
+      <section className="what-next-section">
+
+        <span className="section-label">
+          SIMPLE PROCESS
+        </span>
+
+        <h2>
+          What Happens Next?
+        </h2>
+
+        <p className="what-next-intro">
+          We make the process simple, transparent, and focused
+          on finding the right solution for your business.
+        </p>
+
+
+        <div className="steps-grid">
+
+          <div className="step-card">
+
+            <span className="step-number">
+              01
+            </span>
+
+            <h3>
+              Share Your Needs
+            </h3>
+
+            <p>
+              Tell us about your project, skills, timeline,
+              and resource requirements.
+            </p>
+
+          </div>
+
+
+          <div className="step-card">
+
+            <span className="step-number">
+              02
+            </span>
+
+            <h3>
+              Discuss Your Requirements
+            </h3>
+
+            <p>
+              Our team understands your requirements and
+              recommends the right resource model.
+            </p>
+
+          </div>
+
+
+          <div className="step-card">
+
+            <span className="step-number">
+              03
+            </span>
+
+            <h3>
+              Build Your Team
+            </h3>
+
+            <p>
+              Get the right professionals to support your
+              business and project goals.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =========================
+          BOTTOM CTA
+      ========================= */}
+      <section className="get-started-bottom-cta">
+
+        <div>
+
+          <span>
+            READY TO SCALE?
+          </span>
+
+          <h2>
+            Let's Build Your Team Together.
+          </h2>
+
+          <p>
+            Have questions before getting started?
+            Our team is ready to help.
+          </p>
+
+        </div>
+
+        <button
+          onClick={() => navigate("/contact")}
+          className="bottom-contact-btn"
+        >
+          Contact Us
+          <span>→</span>
+        </button>
+
+      </section>
+        
+    </main>
+    <Footer/>
+        </>
   );
 }
 
-export default Industries;
+export default GetStarted;
