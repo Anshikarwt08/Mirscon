@@ -89,28 +89,32 @@ function Header() {
   // Industries Dropdown
   // --------------------------------
 
-  const industryItems = [
-    {
-      label: "Healthcare",
-      to: "/industries#healthcare",
-    },
-    {
-      label: "Education",
-      to: "/industries#education",
-    },
-    {
-      label: "Banking & Finance",
-      to: "/industries#banking-finance",
-    },
-    {
-      label: "Publishing",
-      to: "/industries#publishing",
-    },
-    {
-      label: "Technology",
-      to: "/industries#technology",
-    },
-  ];
+ const industryItems = [
+  {
+    label: "Publishing & Media",
+    to: "/industries#publishing-media",
+  },
+  {
+    label: "EdTech & Learning",
+    to: "/industries#edtech-learning",
+  },
+  {
+    label: "Healthcare & Life Sciences",
+    to: "/industries#healthcare-life-sciences",
+  },
+  {
+    label: "Finance & Insurance",
+    to: "/industries#finance-insurance",
+  },
+  {
+    label: "Enterprise & Technology",
+    to: "/industries#enterprise-technology",
+  },
+  {
+    label: "Legal & Professional",
+    to: "/industries#legal-professional",
+  },
+];
 
   return (
     <>

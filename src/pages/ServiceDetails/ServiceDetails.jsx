@@ -59,7 +59,7 @@ function ServiceDetails() {
             <div className="service-details-section-heading">
 
               <h2>
-                Comprehensive {service.title}
+               {service.title}
               </h2>
 
               <p>
