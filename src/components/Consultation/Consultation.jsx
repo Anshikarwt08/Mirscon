@@ -215,7 +215,7 @@ function ConsultationForm() {
 
         {/* Submit */}
         <button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "Sending..." : "Schedule Consultation"}
+          {isSubmitting ? "Sending..." : "Submit"}
         </button>
 
       </form>

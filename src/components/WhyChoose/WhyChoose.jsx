@@ -5,7 +5,6 @@ import {
   FaShieldAlt,
   FaLaptopCode,
   FaUsers,
-  FaArrowRight,
 } from "react-icons/fa";
 
 function WhyChoose() {
@@ -74,10 +73,7 @@ function WhyChoose() {
 
             </div>
 
-            <button>
-              Learn More
-              <FaArrowRight />
-            </button>
+            
 
           </div>
 

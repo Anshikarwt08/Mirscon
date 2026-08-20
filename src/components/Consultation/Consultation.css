@@ -224,7 +224,7 @@
 
   border-radius: 12px;
 
-  background: #2563eb;
+  background: #000;
 
   color: #ffffff;
 
@@ -242,7 +242,7 @@
 }
 
 .consultation-form button:hover {
-  background: #1d4ed8;
+  background: #0d2361;
 
   transform: translateY(-2px);
 

@@ -8,29 +8,26 @@ const industries = [
     title: "Publishing and Media",
     id: "publishing-media",
 
-    intro:
-      "Publishing is evolving from traditional print toward digital-first content, accessible publications, and flexible content experiences.",
-
     points: [
       {
         title: "The Publishing Landscape",
         text:
-          "Publishers today manage content across print, eBooks, EPUBs, websites, learning platforms, and digital repositories. Delivering consistent, high-quality content across these formats requires flexible workflows and well-structured digital content.",
+          "The publishing landscape has transformed from static, traditional print models into a dynamic, multi-channel digital ecosystem. Today's publishers, media companies and digital creators need fast, scalable solutions to manage content, reach global audiences, and adapt to shifting readers behaviours.",
       },
       {
         title: "The Shift to Digital",
         text:
-          "Publishing is moving toward structured, reusable, and accessible digital content. EPUB 3, XML workflows, multimedia integration, and digital-first distribution are enabling publishers to efficiently adapt content across platforms and formats.",
+          "It is the evolution of content from static, physical pages to fluid, screen- agnostic formats. It replaces rigid print cycles with instant, global delivery across smartphones, e-readers, and browsers. More than a new medium, it tranforms reading from a one-way experience into an interactive, data-driven ecosystem.",
       },
       {
         title: "The Role of Accessibility",
         text:
-          "Accessibility helps publishers create inclusive digital experiences by making publications, documents, images, and multimedia easier to access and navigate with assistive technologies. It also helps ensure essential content can reach a broader audience.",
+          "Accessibility turns digital content into an inclusive experience. Structuring content for assistive technology, screen readers, and customizable displays does not just meet legal mandates like WCAG, but it also expands reach to millions of previously underserved readers.",
       },
       {
         title: "Our Capabilities",
         text:
-          "We support publishers with digital publishing, EPUB and XML conversion, alt text, document remediation, multimedia accessibility, and other accessibility-focused content services tailored to modern publishing workflows.",
+          "We provide end-to-end support across digital publishing, content conversion, EPUB and XML services, accessibility remediation, alt text, document processing, and multimedia accessibility. Our approach combines technology, quality, and domain expertise to support efficient publishing workflows.",
       },
     ],
   },
@@ -39,29 +36,26 @@ const industries = [
     title: "EdTech and Learning",
     id: "edtech-learning",
 
-    intro:
-      "Education is becoming increasingly digital, creating new opportunities to deliver learning experiences that are flexible, inclusive, and accessible.",
-
     points: [
       {
         title: "The EdTech and Learning Landscape",
         text:
-          "Educational institutions and EdTech organizations rely on digital platforms, eBooks, online courses, videos, documents, and interactive resources to support teaching and learning. These resources need to be clear, structured, engaging, and accessible across different learning environments.",
+          "Technology and human potential are converging to reshape the future of learning. Today’s EdTech landscape moves beyond passive content delivery, prioritizing intuitive digital design, interactive environments, and personalized learning pathways.",
       },
       {
         title: "The Shift to Digital",
         text:
-          "Learning is moving toward personalized, technology-enabled, and multimedia-rich experiences. Digital platforms increasingly bring together structured content, video, audio, interactive resources, and data to support more flexible and connected learning.",
+          "The shift to digital isn't just about new tools—it's a complete transformation of how we learn. By combining smart software with interactive formats, it turns rigid instruction into flexible, personalized pathways for lifelong growth.",
       },
       {
         title: "The Role of Accessibility",
         text:
-          "Accessibility helps create learning experiences that can be used by students with different needs and abilities. Accessible documents, captions, alt text, and well-structured digital content help learners access information more independently.",
+          "Accessibility ensures digital learning remains open to every learner, regardless of physical, sensory, or cognitive abilities. By following WCAG standards, supporting screen readers, and applying universal design, we help remove barriers and create equal learning opportunities for everyone.",
       },
       {
         title: "Our Capabilities",
         text:
-          "We support education and EdTech organizations with document remediation, alt text, digital publishing, EPUB services, multimedia accessibility, accessibility testing, and structured content solutions designed for digital learning environments.",
+          "We combine intuitive UI/UX design, robust digital architecture, and universal accessibility to build seamless, high-impact EdTech platforms. By bridging the gap between innovative technology and sound pedagogy, we craft engaging, outcome-driven learning ecosystems that empower every user to succeed.",
       },
     ],
   },
@@ -70,29 +64,27 @@ const industries = [
     title: "Healthcare & Life Sciences",
     id: "healthcare-life-sciences",
 
-    intro:
-      "Healthcare organizations increasingly depend on digital information, from patient resources and medical publications to research, training materials, and online services.",
-
+    
     points: [
       {
         title: "The Healthcare & Life Sciences Landscape",
         text:
-          "Healthcare and life sciences organizations work with patient information, medical publications, research, training materials, reports, digital forms, and online resources. This content must remain accurate, well-structured, and easy to navigate across different digital environments.",
+          "The Healthcare & Life Sciences Landscape is an ecosystem at the intersection of medicine, biotechnology, clinical research, software engineering, and regulatory compliance. It encompasses everything from patient care delivery and pharmaceuticals to medical device manufacturing and public health systems.",
       },
       {
         title: "The Shift to Digital",
         text:
-          "Healthcare and life sciences are moving toward connected digital experiences, online information delivery, digital documentation, and technology-enabled services. These developments are creating new ways to deliver and access information across platforms.",
+          "The Shift to Digital in healthcare and life sciences represents a fundamental transition from legacy, paper-based processes and siloed data toward integrated, technology-driven ecosystems. It reshapes how clinical research is conducted, how regulatory data is managed, and how patient care is delivered across platforms.",
       },
       {
         title: "The Role of Accessibility",
         text:
-          "Accessibility helps make essential healthcare and life sciences information easier to access and understand. Properly structured documents, meaningful alternative text, captions, and accessible digital experiences can help reduce barriers to important information.",
+        "Accessibility ensures essential medical resources and digital care platforms are usable by everyone. By integrating screen reader support and structured formatting, healthcare organizations empower every patient and professional to access vital information independently.",
       },
       {
         title: "Our Capabilities",
         text:
-          "We support healthcare and life sciences organizations with document remediation, alt text, digital content services, multimedia accessibility, accessibility testing, and structured publishing solutions for specialized content.",
+          "From clinical research and patient portals to regulatory documentation, we build and remediate healthcare digital assets to meet strict global accessibility standards—ensuring seamless navigation, regulatory compliance, and universal access for all users.",
       },
     ],
   },
@@ -101,9 +93,7 @@ const industries = [
     title: "Finance and Insurance",
     id: "finance-insurance",
 
-    intro:
-      "Financial services are becoming increasingly digital, with customers relying on websites, mobile platforms, digital documents, and online services for everyday financial activities.",
-
+    
     points: [
       {
         title: "The Finance and Insurance Landscape",
@@ -132,9 +122,7 @@ const industries = [
     title: "Enterprise and Technology",
     id: "enterprise-technology",
 
-    intro:
-      "Technology and enterprise organizations operate in a fast-changing digital environment where scalable platforms, reliable systems, and accessible user experiences are increasingly important.",
-
+    
     points: [
       {
         title: "The Enterprise and Technology Landscape",
@@ -163,29 +151,27 @@ const industries = [
     title: "Legal and Professional",
     id: "legal-professional",
 
-    intro:
-      "Legal and professional organizations depend on accurate, structured, and accessible information to serve clients, manage documentation, and deliver professional services.",
-
+    
     points: [
       {
         title: "The Legal and Professional Landscape",
         text:
-          "Legal and professional organizations work with contracts, reports, case materials, policies, research, client documentation, presentations, and other information-rich content. Managing this information effectively is essential for communication, collaboration, and service delivery.",
+          "Legal and professional services handle contracts, compliance filings, client records, and regulatory disclosures. This content must remain secure, highly accurate, and easy to navigate across multi-platform environments.",
       },
       {
         title: "The Shift to Digital",
         text:
-          "The sector is moving toward digital documentation, cloud-based collaboration, online client services, searchable information, and technology-enabled workflows. These changes are helping organizations manage information more efficiently and deliver services through digital channels.",
+          "Legal and professional services are moving toward secure digital workflows, virtual client consultations, automated contract management, and cloud-based document delivery. These developments streamline collaboration and create new ways to access critical legal and advisory resources across platforms.",
       },
       {
         title: "The Role of Accessibility",
         text:
-          "Accessibility helps ensure that important legal and professional information can be accessed, navigated, and understood by a broader range of users. Accessible documents, websites, and digital platforms can help create more inclusive professional experiences.",
+          "Accessibility ensures that essential legal filings, contracts, compliance reports, and advisory resources are easy to access and understand. Properly structured documents, clear typography, screen-reader compatibility, and accessible digital portals help eliminate barriers for clients, legal professionals, and regulatory bodies alike.",
       },
       {
         title: "Our Capabilities",
         text:
-          "We support legal and professional organizations with document remediation, alt text, accessibility testing, digital content services, structured publishing, multimedia accessibility, and technology solutions tailored to their digital requirements.",
+          "We help legal and professional service firms transform complex documents and platforms into fully compliant, accessible digital assets. Our solutions span WCAG-compliant document remediation, secure client portal UI design, structured publishing, and comprehensive accessibility auditing to mitigate risk and ensure seamless usability for all clients.",
       },
     ],
   },
